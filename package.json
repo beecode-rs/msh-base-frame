@@ -4,7 +4,7 @@
   },
   "author": "Milos Bugarinovic <milos.bugarinovic@gmail.com> (http://milos.bugarinovic.com)",
   "bin": {
-    "msh-base": "bin/msh-base.js"
+    "msh-base": "./bin/msh-base.js"
   },
   "bugs": {
     "url": "https://github.com/beecode-rs/msh-base-frame/issues"
@@ -130,5 +130,5 @@
     "test:int": "#mocha ./src/test/{**/,/}*.ts",
     "test:unit": "mocha ./src/{**/,/}*.test.ts"
   },
-  "version": "1.0.4"
+  "version": "0.0.0"
 }
