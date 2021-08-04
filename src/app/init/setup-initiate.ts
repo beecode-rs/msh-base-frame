@@ -11,7 +11,7 @@ export class SetupInitiate extends Initiate {
     return 'Setup'
   }
 
-  protected _loadConfig() :Promise<void> {
+  protected _loadConfig(): Promise<void> {
     return config._init()
   }
 

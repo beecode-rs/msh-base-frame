@@ -12,5 +12,4 @@ export const gitService = {
       stream.on('error', reject)
     })
   },
-
 }

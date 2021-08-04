@@ -20,7 +20,7 @@ export const gitUseCase = {
     await Promise.all(files.map(templateService.renderAndOverrideFile))
   },
   copyFilesFromBaseIfTheyDontExist: async (): Promise<void> => {
-    await fileService.copyFilesIfNotExists( constant.tempFolderPath, process.cwd())
+    await fileService.copyFilesIfNotExists(constant.tempFolderPath, process.cwd())
     await fileService.removeFolder(constant.tempFolderPath)
-  }
+  },
 }
