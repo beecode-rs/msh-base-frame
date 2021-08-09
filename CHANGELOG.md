@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/beecode-rs/msh-base-frame/compare/v1.0.0...v1.1.0) (2021-08-09)
+
+
+### Features
+
+* allow unknown config/template keys, cleanup ([eb4c080](https://github.com/beecode-rs/msh-base-frame/commit/eb4c0800df43f3a4a3066fde1d2a72c592592b66))
+
 # 1.0.0 (2021-08-04)
 
 
