@@ -15,7 +15,7 @@ export type ConfigurationType = {
 
 export const configSchema = Joi.object<ConfigurationType>()
   .keys({
-    template: Joi.object<ConfigurationTemplateType>().keys({ projectName: Joi.string().required() }),
+    template: Joi.object<ConfigurationTemplateType>().keys({ projectName: Joi.string().required() }).unknown(),
     gitZipUrl: Joi.string().required(),
   })
   .required()
