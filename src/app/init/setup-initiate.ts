@@ -7,12 +7,9 @@ export class SetupInitiate extends Initiate {
     super()
     this.Logger = logger
   }
+
   public get Name(): string {
     return 'Setup'
-  }
-
-  protected _loadConfig(): Promise<void> {
-    return config._init()
   }
 
   protected async _destroyFn(): Promise<void> {
@@ -20,6 +17,6 @@ export class SetupInitiate extends Initiate {
   }
 
   protected async _initFn(): Promise<void> {
-    await this._loadConfig()
+    await config._init()
   }
 }
