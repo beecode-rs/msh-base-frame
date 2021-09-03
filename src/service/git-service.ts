@@ -8,7 +8,7 @@ export const gitService = {
     const { githubPersonAccessToken } = config.get()
     const axiosHeader = githubPersonAccessToken ? { Authorization: `token ${githubPersonAccessToken}` } : {}
     const { data: stream } = await axios.get(config.get().gitZipUrl, { responseType: 'stream', headers: axiosHeader })
-    stream.pipe(fs.createWriteStream(constant.templateZipPath))
+    stream.pipe(fs.createWriteStream(constant().templateZipPath))
     return new Promise((resolve, reject) => {
       stream.on('end', resolve)
       stream.on('error', reject)
