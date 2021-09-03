@@ -26,8 +26,8 @@ export const configSchema = Joi.object<ConfigurationType>()
 
 export const config = {
   _init: async (): Promise<void> => {
-    if (!(await fs.stat(constant.configFilePath))) throw Error(`Config file missing [${constant.configFilePath}]`)
-    const jsonContent = JSON.parse(await fs.readFile(constant.configFilePath, 'utf8'))
+    if (!(await fs.stat(constant().configFilePath))) throw Error(`Config file missing [${constant().configFilePath}]`)
+    const jsonContent = JSON.parse(await fs.readFile(constant().configFilePath, 'utf8'))
     const userJsonContent = await config._getUserConfigIfExists()
     logger.debug('jsonContent', { jsonContent, userJsonContent })
     config._conf = validationUtil.validate({ ...userJsonContent, ...jsonContent }, configSchema)
