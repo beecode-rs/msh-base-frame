@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/beecode-rs/msh-base-frame/compare/v1.1.0...v1.2.0) (2021-09-13)
+
+
+### Features
+
+* use github person token if temp is private repo ([744f70d](https://github.com/beecode-rs/msh-base-frame/commit/744f70d67d49c96cf8600ef44a99ed8c5e82c71f))
+
 # [1.1.0](https://github.com/beecode-rs/msh-base-frame/compare/v1.0.0...v1.1.0) (2021-08-09)
 
 
