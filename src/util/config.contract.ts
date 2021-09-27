@@ -8,11 +8,9 @@ export default contractFactory(
   {
     module: config,
     subjectName: 'config',
-    mock: {
-      jest: (): ContractMockRevertFns => {
-        config.config._conf = dummyConfig
-        return []
-      },
+    mock: (): ContractMockRevertFns => {
+      config.config._conf = dummyConfig
+      return []
     },
   },
   {
