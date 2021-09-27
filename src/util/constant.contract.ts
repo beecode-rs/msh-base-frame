@@ -7,12 +7,10 @@ export default contractFactory(
   {
     module: constant,
     subjectName: 'constant',
-    mock: {
-      jest: (): ContractMockRevertFns => {
-        const spyCwd: jest.SpyInstance = jest.spyOn(process, 'cwd')
-        spyCwd.mockReturnValue('/home/dummy')
-        return [(): void => spyCwd.mockRestore()]
-      },
+    mock: (): ContractMockRevertFns => {
+      const spyCwd: jest.SpyInstance = jest.spyOn(process, 'cwd')
+      spyCwd.mockReturnValue('/home/dummy')
+      return [(): void => spyCwd.mockRestore()]
     },
   },
   {
