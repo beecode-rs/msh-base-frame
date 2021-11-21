@@ -1,21 +1,16 @@
-import { Initiate } from '@beecode/msh-node-app'
+import { LifeCycle } from '@beecode/msh-node-app'
 import { actionUseCase } from 'src/use-case/action-use-case'
-import { logger } from 'src/util/logger'
 
-export class CloneInitiate extends Initiate {
+export class CloneInitiate extends LifeCycle {
   constructor() {
-    super()
-    this.Logger = logger
+    super({ name: 'Clone' })
   }
-  public get Name(): string {
-    return 'Clone'
+
+  protected async _createFn(): Promise<void> {
+    await actionUseCase.clone()
   }
 
   protected async _destroyFn(): Promise<void> {
     return Promise.resolve(undefined)
-  }
-
-  protected async _initFn(): Promise<void> {
-    await actionUseCase.clone()
   }
 }
