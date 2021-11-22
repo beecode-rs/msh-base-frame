@@ -1,4 +1,4 @@
-import { joiUtil } from '@beecode/msh-node-util'
+import { joiUtil } from '@beecode/msh-node-util/lib/joi-util'
 import { ObjectSchema, Schema } from 'joi'
 import { logger } from 'src/util/logger'
 

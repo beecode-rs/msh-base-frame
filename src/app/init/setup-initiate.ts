@@ -1,25 +1,16 @@
-import { Initiate } from '@beecode/msh-node-app'
+import { LifeCycle } from '@beecode/msh-node-app'
 import { config } from 'src/util/config'
-import { logger } from 'src/util/logger'
 
-export class SetupInitiate extends Initiate {
+export class SetupInitiate extends LifeCycle {
   constructor() {
-    super()
-    this.Logger = logger
-  }
-  public get Name(): string {
-    return 'Setup'
+    super({ name: 'Setup' })
   }
 
-  protected _loadConfig(): Promise<void> {
-    return config._init()
+  protected async _createFn(): Promise<void> {
+    await config._init()
   }
 
   protected async _destroyFn(): Promise<void> {
     return Promise.resolve(undefined)
-  }
-
-  protected async _initFn(): Promise<void> {
-    await this._loadConfig()
   }
 }
