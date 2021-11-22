@@ -32,6 +32,7 @@ describe('config', () => {
       constantMockRestore()
       // validationUtilMockRestore()
       jest.restoreAllMocks()
+      jest.resetAllMocks()
     })
 
     it('should fail if config file does not exist', async () => {
@@ -51,7 +52,7 @@ describe('config', () => {
 
       await config._init()
       expect(spy_constantContract).toHaveBeenCalledTimes(2)
-      expect(spy_fsReadFile).toHaveBeenCalledTimes(1)
+      expect(spy_fsReadFile).toHaveBeenCalledTimes(2)
       expect(spy_fsReadFile).toHaveBeenCalledWith('/home/milos/code/beecode/msh/base-frame/.base-frame', 'utf8')
       // expect(spy_validationUtilContract.validate).toHaveBeenCalledTimes(1)
 
