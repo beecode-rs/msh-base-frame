@@ -1,3 +1,10 @@
+## [0.2.3](https://github.com/beecode-rs/msh-base-frame/compare/v0.2.2...v0.2.3) (2022-02-27)
+
+
+### Bug Fixes
+
+* update package.json ([5c86499](https://github.com/beecode-rs/msh-base-frame/commit/5c864993d38a2b6cec748982014fd0190f771d9e))
+
 ## [0.2.2](https://github.com/beecode-rs/msh-base-frame/compare/v0.2.1...v0.2.2) (2021-12-02)
 
 
