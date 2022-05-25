@@ -1,4 +1,5 @@
 import path from 'path'
+import { config } from 'src/util/config'
 
 export type ConstantResult = {
   configFilePath: string
@@ -8,7 +9,7 @@ export type ConstantResult = {
 }
 
 export const constant = (): ConstantResult => {
-  const tempFolderPath = path.resolve(process.cwd(), './.base-frame-tmp/')
+  const tempFolderPath = config().localTemplateFolder ?? path.resolve(process.cwd(), './.base-frame-tmp/')
   const templateZipName = 'template.zip'
 
   return Object.freeze<ConstantResult>({
