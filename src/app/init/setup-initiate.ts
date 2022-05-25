@@ -1,5 +1,5 @@
 import { LifeCycle } from '@beecode/msh-node-app'
-import { config } from 'src/util/config'
+import { configSetup } from 'src/util/config'
 
 export class SetupInitiate extends LifeCycle {
   constructor() {
@@ -7,7 +7,7 @@ export class SetupInitiate extends LifeCycle {
   }
 
   protected async _createFn(): Promise<void> {
-    await config._init()
+    await configSetup.initialize()
   }
 
   protected async _destroyFn(): Promise<void> {
