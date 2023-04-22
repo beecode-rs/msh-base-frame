@@ -13,7 +13,15 @@ export const fileService = {
 		await copy(src, dest, { dot: true, overwrite: false })
 	},
 	filterFiles: async (fileFolderList: string[]): Promise<string[]> => {
-		const filtered = await Promise.all(fileFolderList.map(async (f) => ((await fileService.isFile(f)) ? f : undefined)))
+		const filtered = await Promise.all(
+			fileFolderList.map(async (f) => {
+				if (await fileService.isFile(f)) {
+					return f
+				}
+
+				return undefined
+			})
+		)
 
 		return filtered.filter(Boolean) as string[]
 	},

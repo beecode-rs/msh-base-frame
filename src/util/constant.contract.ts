@@ -5,13 +5,14 @@ import { ContractMockRevertFns } from '@beecode/msh-test-contractor/lib/types'
 
 export default contractFactory(
 	{
-		module: constant,
-		subjectName: 'constant',
 		mock: (): ContractMockRevertFns => {
 			const spyCwd: jest.SpyInstance = jest.spyOn(process, 'cwd')
 			spyCwd.mockReturnValue('/home/dummy')
+
 			return [(): void => spyCwd.mockRestore()]
 		},
+		module: constant,
+		subjectName: 'constant',
 	},
 	{
 		[SpecialFnName.SELF]: {
