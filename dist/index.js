@@ -1,18 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-require("module-alias/register");
 require("source-map-support/register");
-require("src/util/config");
+require("./util/config");
+// import { LogLevel } from '@beecode/msh-logger'
+// import { ConsoleLogStrategy } from '@beecode/msh-logger/lib/logger-strategy/console/log-strategy'
 const msh_node_app_1 = require("@beecode/msh-node-app");
-const logger_1 = require("@beecode/msh-node-app/lib/util/logger");
-const msh_node_log_1 = require("@beecode/msh-node-log");
-const console_logger_1 = require("@beecode/msh-node-log/lib/console-logger");
-const clone_app_1 = require("src/app/clone-app");
-const logger_2 = require("src/util/logger");
-process.on('uncaughtException', (error) => logger_2.logger.error('Uncaught Exception', { error }));
-process.on('unhandledRejection', (error) => logger_2.logger.error('Unhandled Rejection', { error }));
-(0, logger_1.NodeAppLogger)(new console_logger_1.ConsoleLogger({ logLevel: msh_node_log_1.LogLevelType.DEBUG }));
+// import { NodeAppLogger } from '@beecode/msh-node-app/lib/util/logger'
+const clone_app_1 = require("./app/clone-app");
+const logger_1 = require("./util/logger");
+process.on('uncaughtException', (error) => (0, logger_1.logger)().error('Uncaught Exception', { error }));
+process.on('unhandledRejection', (error) => (0, logger_1.logger)().error('Unhandled Rejection', { error }));
+// NodeAppLogger({ logger: logger() })
 (0, msh_node_app_1.appStarterFactory)(clone_app_1.CloneApp)
     .start()
     .catch((err) => console.log(err)); // eslint-disable-line no-console
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpQ0FBOEI7QUFDOUIsdUNBQW9DO0FBQ3BDLDJCQUF3QjtBQUV4Qix3REFBeUQ7QUFDekQsa0VBQXFFO0FBQ3JFLHdEQUFvRDtBQUNwRCw2RUFBd0U7QUFDeEUsaURBQTRDO0FBQzVDLDRDQUF3QztBQUV4QyxPQUFPLENBQUMsRUFBRSxDQUFDLG1CQUFtQixFQUFFLENBQUMsS0FBSyxFQUFFLEVBQUUsQ0FBQyxlQUFNLENBQUMsS0FBSyxDQUFDLG9CQUFvQixFQUFFLEVBQUUsS0FBSyxFQUFFLENBQUMsQ0FBQyxDQUFBO0FBQ3pGLE9BQU8sQ0FBQyxFQUFFLENBQUMsb0JBQW9CLEVBQUUsQ0FBQyxLQUFLLEVBQUUsRUFBRSxDQUFDLGVBQU0sQ0FBQyxLQUFLLENBQUMscUJBQXFCLEVBQUUsRUFBRSxLQUFLLEVBQUUsQ0FBQyxDQUFDLENBQUE7QUFFM0YsSUFBQSxzQkFBYSxFQUFDLElBQUksOEJBQWEsQ0FBQyxFQUFFLFFBQVEsRUFBRSwyQkFBWSxDQUFDLEtBQUssRUFBRSxDQUFDLENBQUMsQ0FBQTtBQUVsRSxJQUFBLGdDQUFpQixFQUFDLG9CQUFRLENBQUM7S0FDeEIsS0FBSyxFQUFFO0tBQ1AsS0FBSyxDQUFDLENBQUMsR0FBRyxFQUFFLEVBQUUsQ0FBQyxPQUFPLENBQUMsR0FBRyxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUEsQ0FBQyxpQ0FBaUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgJ21vZHVsZS1hbGlhcy9yZWdpc3RlcidcbmltcG9ydCAnc291cmNlLW1hcC1zdXBwb3J0L3JlZ2lzdGVyJ1xuaW1wb3J0ICdzcmMvdXRpbC9jb25maWcnXG5cbmltcG9ydCB7IGFwcFN0YXJ0ZXJGYWN0b3J5IH0gZnJvbSAnQGJlZWNvZGUvbXNoLW5vZGUtYXBwJ1xuaW1wb3J0IHsgTm9kZUFwcExvZ2dlciB9IGZyb20gJ0BiZWVjb2RlL21zaC1ub2RlLWFwcC9saWIvdXRpbC9sb2dnZXInXG5pbXBvcnQgeyBMb2dMZXZlbFR5cGUgfSBmcm9tICdAYmVlY29kZS9tc2gtbm9kZS1sb2cnXG5pbXBvcnQgeyBDb25zb2xlTG9nZ2VyIH0gZnJvbSAnQGJlZWNvZGUvbXNoLW5vZGUtbG9nL2xpYi9jb25zb2xlLWxvZ2dlcidcbmltcG9ydCB7IENsb25lQXBwIH0gZnJvbSAnc3JjL2FwcC9jbG9uZS1hcHAnXG5pbXBvcnQgeyBsb2dnZXIgfSBmcm9tICdzcmMvdXRpbC9sb2dnZXInXG5cbnByb2Nlc3Mub24oJ3VuY2F1Z2h0RXhjZXB0aW9uJywgKGVycm9yKSA9PiBsb2dnZXIuZXJyb3IoJ1VuY2F1Z2h0IEV4Y2VwdGlvbicsIHsgZXJyb3IgfSkpXG5wcm9jZXNzLm9uKCd1bmhhbmRsZWRSZWplY3Rpb24nLCAoZXJyb3IpID0+IGxvZ2dlci5lcnJvcignVW5oYW5kbGVkIFJlamVjdGlvbicsIHsgZXJyb3IgfSkpXG5cbk5vZGVBcHBMb2dnZXIobmV3IENvbnNvbGVMb2dnZXIoeyBsb2dMZXZlbDogTG9nTGV2ZWxUeXBlLkRFQlVHIH0pKVxuXG5hcHBTdGFydGVyRmFjdG9yeShDbG9uZUFwcClcbiAgLnN0YXJ0KClcbiAgLmNhdGNoKChlcnIpID0+IGNvbnNvbGUubG9nKGVycikpIC8vIGVzbGludC1kaXNhYmxlLWxpbmUgbm8tY29uc29sZVxuIl19
+//# sourceMappingURL=index.js.map

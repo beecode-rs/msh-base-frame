@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.actionUseCase = void 0;
-const git_use_case_1 = require("src/use-case/git-use-case");
-const logger_1 = require("src/util/logger");
+const git_use_case_1 = require("../use-case/git-use-case");
+const logger_1 = require("../util/logger");
 exports.actionUseCase = {
     clone: async () => {
         await git_use_case_1.gitUseCase.cleanAndGetNewCopyOfTemplateRepo();
@@ -10,7 +10,7 @@ exports.actionUseCase = {
         await git_use_case_1.gitUseCase.renderAllTemplateWithValuesFromConfig();
         await git_use_case_1.gitUseCase
             .copyFilesFromBaseIfTheyDontExist()
-            .catch((err) => logger_1.logger.error('Some file already exist, you need to compare folder manually', { err }));
+            .catch((err) => (0, logger_1.logger)().error('Some file already exist, you need to compare folder manually', { err }));
     },
 };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYWN0aW9uLXVzZS1jYXNlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3VzZS1jYXNlL2FjdGlvbi11c2UtY2FzZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSw0REFBc0Q7QUFDdEQsNENBQXdDO0FBRTNCLFFBQUEsYUFBYSxHQUFHO0lBQzNCLEtBQUssRUFBRSxLQUFLLElBQW1CLEVBQUU7UUFDL0IsTUFBTSx5QkFBVSxDQUFDLGdDQUFnQyxFQUFFLENBQUE7UUFDbkQsTUFBTSx5QkFBVSxDQUFDLDJDQUEyQyxFQUFFLENBQUE7UUFDOUQsTUFBTSx5QkFBVSxDQUFDLHFDQUFxQyxFQUFFLENBQUE7UUFDeEQsTUFBTSx5QkFBVTthQUNiLGdDQUFnQyxFQUFFO2FBQ2xDLEtBQUssQ0FBQyxDQUFDLEdBQUcsRUFBRSxFQUFFLENBQUMsZUFBTSxDQUFDLEtBQUssQ0FBQyw4REFBOEQsRUFBRSxFQUFFLEdBQUcsRUFBRSxDQUFDLENBQUMsQ0FBQTtJQUMxRyxDQUFDO0NBQ0YsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGdpdFVzZUNhc2UgfSBmcm9tICdzcmMvdXNlLWNhc2UvZ2l0LXVzZS1jYXNlJ1xuaW1wb3J0IHsgbG9nZ2VyIH0gZnJvbSAnc3JjL3V0aWwvbG9nZ2VyJ1xuXG5leHBvcnQgY29uc3QgYWN0aW9uVXNlQ2FzZSA9IHtcbiAgY2xvbmU6IGFzeW5jICgpOiBQcm9taXNlPHZvaWQ+ID0+IHtcbiAgICBhd2FpdCBnaXRVc2VDYXNlLmNsZWFuQW5kR2V0TmV3Q29weU9mVGVtcGxhdGVSZXBvKClcbiAgICBhd2FpdCBnaXRVc2VDYXNlLmV4dHJhY3RBbmRSZW1vdmVaaXBGaWxlQW5kUHJlcGFyZVRlbXBGb2xkZXIoKVxuICAgIGF3YWl0IGdpdFVzZUNhc2UucmVuZGVyQWxsVGVtcGxhdGVXaXRoVmFsdWVzRnJvbUNvbmZpZygpXG4gICAgYXdhaXQgZ2l0VXNlQ2FzZVxuICAgICAgLmNvcHlGaWxlc0Zyb21CYXNlSWZUaGV5RG9udEV4aXN0KClcbiAgICAgIC5jYXRjaCgoZXJyKSA9PiBsb2dnZXIuZXJyb3IoJ1NvbWUgZmlsZSBhbHJlYWR5IGV4aXN0LCB5b3UgbmVlZCB0byBjb21wYXJlIGZvbGRlciBtYW51YWxseScsIHsgZXJyIH0pKVxuICB9LFxufVxuIl19
+//# sourceMappingURL=action-use-case.js.map

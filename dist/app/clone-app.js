@@ -2,12 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CloneApp = void 0;
 const msh_node_app_1 = require("@beecode/msh-node-app");
-const clone_initate_1 = require("src/app/init/clone-initate");
-const setup_initiate_1 = require("src/app/init/setup-initiate");
+const clone_initate_1 = require("../app/init/clone-initate");
+const setup_initiate_1 = require("../app/init/setup-initiate");
 class CloneApp extends msh_node_app_1.AppFlow {
     constructor() {
         super(new setup_initiate_1.SetupInitiate(), new clone_initate_1.CloneInitiate());
     }
 }
 exports.CloneApp = CloneApp;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2xvbmUtYXBwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2FwcC9jbG9uZS1hcHAudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsd0RBQStDO0FBQy9DLDhEQUEwRDtBQUMxRCxnRUFBMkQ7QUFFM0QsTUFBYSxRQUFTLFNBQVEsc0JBQU87SUFDbkM7UUFDRSxLQUFLLENBQUMsSUFBSSw4QkFBYSxFQUFFLEVBQUUsSUFBSSw2QkFBYSxFQUFFLENBQUMsQ0FBQTtJQUNqRCxDQUFDO0NBQ0Y7QUFKRCw0QkFJQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEFwcEZsb3cgfSBmcm9tICdAYmVlY29kZS9tc2gtbm9kZS1hcHAnXG5pbXBvcnQgeyBDbG9uZUluaXRpYXRlIH0gZnJvbSAnc3JjL2FwcC9pbml0L2Nsb25lLWluaXRhdGUnXG5pbXBvcnQgeyBTZXR1cEluaXRpYXRlIH0gZnJvbSAnc3JjL2FwcC9pbml0L3NldHVwLWluaXRpYXRlJ1xuXG5leHBvcnQgY2xhc3MgQ2xvbmVBcHAgZXh0ZW5kcyBBcHBGbG93IHtcbiAgY29uc3RydWN0b3IoKSB7XG4gICAgc3VwZXIobmV3IFNldHVwSW5pdGlhdGUoKSwgbmV3IENsb25lSW5pdGlhdGUoKSlcbiAgfVxufVxuIl19
+//# sourceMappingURL=clone-app.js.map
