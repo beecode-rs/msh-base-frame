@@ -1,4 +1,4 @@
-import { cacheUtil } from '@beecode/msh-node-util/lib/cache-util'
+import { singletonPattern } from '@beecode/msh-util/lib/singleton/pattern'
 import { promises as fs } from 'fs'
 import Joi from 'joi'
 import os from 'os'
@@ -8,49 +8,66 @@ import { logger } from 'src/util/logger'
 import { validationUtil } from 'src/util/validation-util'
 
 export type ConfigurationTemplateType = {
-  projectName: string
+	projectName: string
 }
 
 export type ConfigurationType = {
-  template: ConfigurationTemplateType
-  gitZipUrl: string
-  githubPersonAccessToken?: string
-  localTemplateFolder?: string
+	template: ConfigurationTemplateType
+	gitZipUrl: string
+	githubPersonAccessToken?: string
+	localTemplateFolder?: string
 }
 
 export const configSchema = Joi.object<ConfigurationType>()
-  .keys({
-    template: Joi.object<ConfigurationTemplateType>().keys({ projectName: Joi.string().required() }).unknown(),
-    gitZipUrl: Joi.string().required(),
-    githubPersonAccessToken: Joi.string().allow(null).empty([null, '']).optional(),
-    localTemplateFolder: Joi.string().allow(null).empty([null, '']).optional(),
-  })
-  .required()
+	.keys({
+		githubPersonAccessToken: Joi.string().allow(null).empty([null, '']).optional(),
+		gitZipUrl: Joi.string().required(),
+		localTemplateFolder: Joi.string().allow(null).empty([null, '']).optional(),
+		template: Joi.object<ConfigurationTemplateType>().keys({ projectName: Joi.string().required() }).unknown(),
+	})
+	.required()
 
-const _self = {
-  _conf: undefined as ConfigurationType | undefined,
-  initialize: async (): Promise<void> => {
-    if (_self._conf !== undefined) throw Error('Config already initialized')
-    if (!(await fs.stat(constant().configFilePath))) throw Error(`Config file missing [${constant().configFilePath}]`)
-    const jsonContent = JSON.parse(await fs.readFile(constant().configFilePath, 'utf8'))
-    const userJsonContent = await _self._getUserConfigIfExists()
-    logger.debug('jsonContent', { jsonContent, userJsonContent })
-    _self._conf = validationUtil.validate({ ...userJsonContent, ...jsonContent }, configSchema)
-  },
+export class ConfigSetup {
+	protected _configuration?: ConfigurationType = undefined
 
-  _getUserConfigIfExists: async (): Promise<any> => {
-    try {
-      const userConfigFileLocation = path.join(os.homedir(), '.base-frame.user.json')
-      const userConfigContent = await fs.readFile(userConfigFileLocation, 'utf8')
-      return JSON.parse(userConfigContent)
-    } catch (_e) {
-      return {}
-    }
-  },
+	get configuration(): ConfigurationType | undefined {
+		return this._configuration
+	}
+
+	protected async _getUserConfigIfExists(): Promise<any> {
+		try {
+			const userConfigFileLocation = path.join(os.homedir(), '.base-frame.user.json')
+			const userConfigContent = await fs.readFile(userConfigFileLocation, 'utf8')
+
+			return JSON.parse(userConfigContent)
+		} catch (_e) {
+			return {}
+		}
+	}
+
+	async initialize(): Promise<void> {
+		if (this._configuration !== undefined) {
+			throw Error('Config already initialized')
+		}
+		if (!(await fs.stat(constant().configFilePath))) {
+			throw Error(`Config file missing [${constant().configFilePath}]`)
+		}
+		const jsonContent = JSON.parse(await fs.readFile(constant().configFilePath, 'utf8'))
+		const userJsonContent = await this._getUserConfigIfExists()
+		logger().debug('jsonContent', { jsonContent, userJsonContent })
+		this._configuration = validationUtil.validate({ ...userJsonContent, ...jsonContent }, configSchema)
+	}
 }
-export const configSetup = _self
+
+export const configSetupSingleton = singletonPattern(() => {
+	return new ConfigSetup()
+})
 
 export const config = (): ConfigurationType => {
-  if (!_self._conf) throw Error('Config not initialized')
-  return Object.freeze(_self._conf)
+	const conf = configSetupSingleton().configuration
+	if (!conf) {
+		throw Error('Config not initialized')
+	}
+
+	return conf
 }

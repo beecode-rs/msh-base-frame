@@ -1,0 +1,20 @@
+import Joi from 'joi';
+export type ConfigurationTemplateType = {
+    projectName: string;
+};
+export type ConfigurationType = {
+    template: ConfigurationTemplateType;
+    gitZipUrl: string;
+    githubPersonAccessToken?: string;
+    localTemplateFolder?: string;
+};
+export declare const configSchema: Joi.ObjectSchema<ConfigurationType>;
+export declare class ConfigSetup {
+    protected _configuration?: ConfigurationType;
+    get configuration(): ConfigurationType | undefined;
+    protected _getUserConfigIfExists(): Promise<any>;
+    initialize(): Promise<void>;
+}
+export declare const configSetupSingleton: import("@beecode/msh-util/lib/types/any-function/no-params").AnyFunctionNoParams<ConfigSetup>;
+export declare const config: () => ConfigurationType;
+//# sourceMappingURL=config.d.ts.map
