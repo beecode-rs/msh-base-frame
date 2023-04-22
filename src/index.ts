@@ -3,8 +3,8 @@ import 'src/util/config'
 
 // import { LogLevel } from '@beecode/msh-logger'
 // import { ConsoleLogStrategy } from '@beecode/msh-logger/lib/logger-strategy/console/log-strategy'
-import { appStarterFactory } from '@beecode/msh-node-app'
-// import { NodeAppLogger } from '@beecode/msh-node-app/lib/util/logger'
+import { AppStarter } from '@beecode/msh-app-boot'
+// import { NodeAppLogger } from '@beecode/msh-app-boot/lib/util/logger'
 import { CloneApp } from 'src/app/clone-app'
 import { logger } from 'src/util/logger'
 
@@ -13,6 +13,4 @@ process.on('unhandledRejection', (error) => logger().error('Unhandled Rejection'
 
 // NodeAppLogger({ logger: logger() })
 
-appStarterFactory(CloneApp)
-	.start()
-	.catch((err) => console.log(err)) // eslint-disable-line no-console
+new AppStarter(new CloneApp()).start().catch((err) => console.log(err)) // eslint-disable-line no-console
