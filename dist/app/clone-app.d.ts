@@ -1,4 +1,4 @@
-import { AppFlow } from '@beecode/msh-node-app';
+import { AppFlow } from '@beecode/msh-app-boot';
 export declare class CloneApp extends AppFlow {
     constructor();
 }

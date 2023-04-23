@@ -1,4 +1,4 @@
-import { LifeCycle } from '@beecode/msh-node-app';
+import { LifeCycle } from '@beecode/msh-app-boot';
 export declare class SetupInitiate extends LifeCycle {
     constructor();
     protected _createFn(): Promise<void>;
