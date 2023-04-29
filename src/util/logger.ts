@@ -1,8 +1,11 @@
-import { LogLevelType } from '@beecode/msh-node-log'
-import { SimpleConsoleLog } from '@beecode/msh-node-log/lib/console-log-strategy/simple-console-log'
-import { ConsoleLogger } from '@beecode/msh-node-log/lib/console-logger'
+import { LogLevel } from '@beecode/msh-logger'
+import { LoggerStrategyConsole } from '@beecode/msh-logger/lib/logger-strategy/console'
+import { ConsoleLogStrategySimple } from '@beecode/msh-logger/lib/logger-strategy/console/log-strategy/simple'
+import { singletonPattern } from '@beecode/msh-util/lib/singleton/pattern'
 
-export const logger = new ConsoleLogger({
-  logLevel: LogLevelType.DEBUG,
-  consoleLogStrategy: new SimpleConsoleLog(),
+export const logger = singletonPattern(() => {
+	return new LoggerStrategyConsole({
+		consoleLogStrategy: new ConsoleLogStrategySimple(),
+		logLevel: LogLevel.DEBUG,
+	})
 })
