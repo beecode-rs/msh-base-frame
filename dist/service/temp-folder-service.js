@@ -6,26 +6,26 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.tempFolderService = void 0;
 const path_1 = __importDefault(require("path"));
 const file_service_1 = require("../service/file-service");
-const constant_1 = require("../util/constant");
+const config_1 = require("../util/config");
 exports.tempFolderService = {
     cleanAll: async () => {
-        await file_service_1.fileService.removeFolder((0, constant_1.constant)().tempFolderPath);
+        await file_service_1.fileService.removeFolder((0, config_1.config)().tempFolderPath);
         await exports.tempFolderService.makeTempFolderIfNotExist();
     },
     flattenFolderByOneLevelAndRemoveIgnored: async () => {
-        const contentList = await file_service_1.fileService.getFolderContent((0, constant_1.constant)().tempFolderPath);
+        const contentList = await file_service_1.fileService.getFolderContent((0, config_1.config)().tempFolderPath);
         await Promise.all(contentList.map(async (folder) => {
-            const folderPath = path_1.default.resolve((0, constant_1.constant)().tempFolderPath, folder);
+            const folderPath = path_1.default.resolve((0, config_1.config)().tempFolderPath, folder);
             const ignoreFiles = await file_service_1.fileService.readIgnoreList(folderPath);
-            await file_service_1.fileService.copy(folderPath, (0, constant_1.constant)().tempFolderPath, { ignore: ignoreFiles });
-            await file_service_1.fileService.removeFolder(path_1.default.resolve((0, constant_1.constant)().tempFolderPath, folder));
+            await file_service_1.fileService.copy(folderPath, (0, config_1.config)().tempFolderPath, { ignore: ignoreFiles });
+            await file_service_1.fileService.removeFolder(path_1.default.resolve((0, config_1.config)().tempFolderPath, folder));
         }));
     },
     makeTempFolderIfNotExist: () => {
-        return file_service_1.fileService.makeFolderIfNotExist((0, constant_1.constant)().tempFolderPath);
+        return file_service_1.fileService.makeFolderIfNotExist((0, config_1.config)().tempFolderPath);
     },
     readIgnoreList: async () => {
-        return file_service_1.fileService.readIgnoreList((0, constant_1.constant)().tempFolderPath);
+        return file_service_1.fileService.readIgnoreList((0, config_1.config)().tempFolderPath);
     },
 };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGVtcC1mb2xkZXItc2VydmljZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9zZXJ2aWNlL3RlbXAtZm9sZGVyLXNlcnZpY2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUEsZ0RBQXVCO0FBQ3ZCLDJEQUFzRDtBQUN0RCxnREFBNEM7QUFFL0IsUUFBQSxpQkFBaUIsR0FBRztJQUNoQyxRQUFRLEVBQUUsS0FBSyxJQUFtQixFQUFFO1FBQ25DLE1BQU0sMEJBQVcsQ0FBQyxZQUFZLENBQUMsSUFBQSxtQkFBUSxHQUFFLENBQUMsY0FBYyxDQUFDLENBQUE7UUFDekQsTUFBTSx5QkFBaUIsQ0FBQyx3QkFBd0IsRUFBRSxDQUFBO0lBQ25ELENBQUM7SUFDRCx1Q0FBdUMsRUFBRSxLQUFLLElBQW1CLEVBQUU7UUFDbEUsTUFBTSxXQUFXLEdBQUcsTUFBTSwwQkFBVyxDQUFDLGdCQUFnQixDQUFDLElBQUEsbUJBQVEsR0FBRSxDQUFDLGNBQWMsQ0FBQyxDQUFBO1FBQ2pGLE1BQU0sT0FBTyxDQUFDLEdBQUcsQ0FDaEIsV0FBVyxDQUFDLEdBQUcsQ0FBQyxLQUFLLEVBQUUsTUFBTSxFQUFFLEVBQUU7WUFDaEMsTUFBTSxVQUFVLEdBQUcsY0FBSSxDQUFDLE9BQU8sQ0FBQyxJQUFBLG1CQUFRLEdBQUUsQ0FBQyxjQUFjLEVBQUUsTUFBTSxDQUFDLENBQUE7WUFDbEUsTUFBTSxXQUFXLEdBQUcsTUFBTSwwQkFBVyxDQUFDLGNBQWMsQ0FBQyxVQUFVLENBQUMsQ0FBQTtZQUNoRSxNQUFNLDBCQUFXLENBQUMsSUFBSSxDQUFDLFVBQVUsRUFBRSxJQUFBLG1CQUFRLEdBQUUsQ0FBQyxjQUFjLEVBQUUsRUFBRSxNQUFNLEVBQUUsV0FBVyxFQUFFLENBQUMsQ0FBQTtZQUN0RixNQUFNLDBCQUFXLENBQUMsWUFBWSxDQUFDLGNBQUksQ0FBQyxPQUFPLENBQUMsSUFBQSxtQkFBUSxHQUFFLENBQUMsY0FBYyxFQUFFLE1BQU0sQ0FBQyxDQUFDLENBQUE7UUFDaEYsQ0FBQyxDQUFDLENBQ0YsQ0FBQTtJQUNGLENBQUM7SUFDRCx3QkFBd0IsRUFBRSxHQUFrQixFQUFFO1FBQzdDLE9BQU8sMEJBQVcsQ0FBQyxvQkFBb0IsQ0FBQyxJQUFBLG1CQUFRLEdBQUUsQ0FBQyxjQUFjLENBQUMsQ0FBQTtJQUNuRSxDQUFDO0lBQ0QsY0FBYyxFQUFFLEtBQUssSUFBdUIsRUFBRTtRQUM3QyxPQUFPLDBCQUFXLENBQUMsY0FBYyxDQUFDLElBQUEsbUJBQVEsR0FBRSxDQUFDLGNBQWMsQ0FBQyxDQUFBO0lBQzdELENBQUM7Q0FDRCxDQUFBIn0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGVtcC1mb2xkZXItc2VydmljZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9zZXJ2aWNlL3RlbXAtZm9sZGVyLXNlcnZpY2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUEsZ0RBQXVCO0FBQ3ZCLDJEQUFzRDtBQUN0RCw0Q0FBd0M7QUFFM0IsUUFBQSxpQkFBaUIsR0FBRztJQUNoQyxRQUFRLEVBQUUsS0FBSyxJQUFtQixFQUFFO1FBQ25DLE1BQU0sMEJBQVcsQ0FBQyxZQUFZLENBQUMsSUFBQSxlQUFNLEdBQUUsQ0FBQyxjQUFjLENBQUMsQ0FBQTtRQUN2RCxNQUFNLHlCQUFpQixDQUFDLHdCQUF3QixFQUFFLENBQUE7SUFDbkQsQ0FBQztJQUNELHVDQUF1QyxFQUFFLEtBQUssSUFBbUIsRUFBRTtRQUNsRSxNQUFNLFdBQVcsR0FBRyxNQUFNLDBCQUFXLENBQUMsZ0JBQWdCLENBQUMsSUFBQSxlQUFNLEdBQUUsQ0FBQyxjQUFjLENBQUMsQ0FBQTtRQUMvRSxNQUFNLE9BQU8sQ0FBQyxHQUFHLENBQ2hCLFdBQVcsQ0FBQyxHQUFHLENBQUMsS0FBSyxFQUFFLE1BQU0sRUFBRSxFQUFFO1lBQ2hDLE1BQU0sVUFBVSxHQUFHLGNBQUksQ0FBQyxPQUFPLENBQUMsSUFBQSxlQUFNLEdBQUUsQ0FBQyxjQUFjLEVBQUUsTUFBTSxDQUFDLENBQUE7WUFDaEUsTUFBTSxXQUFXLEdBQUcsTUFBTSwwQkFBVyxDQUFDLGNBQWMsQ0FBQyxVQUFVLENBQUMsQ0FBQTtZQUNoRSxNQUFNLDBCQUFXLENBQUMsSUFBSSxDQUFDLFVBQVUsRUFBRSxJQUFBLGVBQU0sR0FBRSxDQUFDLGNBQWMsRUFBRSxFQUFFLE1BQU0sRUFBRSxXQUFXLEVBQUUsQ0FBQyxDQUFBO1lBQ3BGLE1BQU0sMEJBQVcsQ0FBQyxZQUFZLENBQUMsY0FBSSxDQUFDLE9BQU8sQ0FBQyxJQUFBLGVBQU0sR0FBRSxDQUFDLGNBQWMsRUFBRSxNQUFNLENBQUMsQ0FBQyxDQUFBO1FBQzlFLENBQUMsQ0FBQyxDQUNGLENBQUE7SUFDRixDQUFDO0lBQ0Qsd0JBQXdCLEVBQUUsR0FBa0IsRUFBRTtRQUM3QyxPQUFPLDBCQUFXLENBQUMsb0JBQW9CLENBQUMsSUFBQSxlQUFNLEdBQUUsQ0FBQyxjQUFjLENBQUMsQ0FBQTtJQUNqRSxDQUFDO0lBQ0QsY0FBYyxFQUFFLEtBQUssSUFBdUIsRUFBRTtRQUM3QyxPQUFPLDBCQUFXLENBQUMsY0FBYyxDQUFDLElBQUEsZUFBTSxHQUFFLENBQUMsY0FBYyxDQUFDLENBQUE7SUFDM0QsQ0FBQztDQUNELENBQUEifQ==

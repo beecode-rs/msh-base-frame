@@ -16,6 +16,9 @@ export type ConfigurationType = {
 	gitZipUrl: string
 	githubPersonAccessToken?: string
 	localTemplateFolder?: string
+
+	tempFolderPath: string
+	templateZipName: string
 }
 
 export const configSchema = Joi.object<ConfigurationType>()
@@ -23,7 +26,9 @@ export const configSchema = Joi.object<ConfigurationType>()
 		githubPersonAccessToken: Joi.string().allow(null).empty([null, '']).optional(),
 		gitZipUrl: Joi.string().required(),
 		localTemplateFolder: Joi.string().allow(null).empty([null, '']).optional(),
+		tempFolderPath: Joi.string().allow(null).empty([null, '']).required(),
 		template: Joi.object<ConfigurationTemplateType>().keys({ projectName: Joi.string().required() }).unknown(),
+		templateZipName: Joi.string().required(),
 	})
 	.required()
 
@@ -49,13 +54,19 @@ export class ConfigSetup {
 		if (this._configuration !== undefined) {
 			throw Error('Config already initialized')
 		}
-		if (!(await fs.stat(constant().configFilePath))) {
-			throw Error(`Config file missing [${constant().configFilePath}]`)
+		const { configFilePath } = constant()
+
+		if (!(await fs.stat(configFilePath))) {
+			throw Error(`Config file missing [${configFilePath}]`)
 		}
-		const jsonContent = JSON.parse(await fs.readFile(constant().configFilePath, 'utf8'))
+		const jsonContent = JSON.parse(await fs.readFile(configFilePath, 'utf8'))
 		const userJsonContent = await this._getUserConfigIfExists()
+		const defaultValues = {
+			tempFolderPath: path.resolve(process.cwd(), './.base-frame-tmp/'),
+			templateZipName: 'template.zip',
+		}
 		logger().debug('jsonContent', { jsonContent, userJsonContent })
-		this._configuration = validationUtil.validate({ ...userJsonContent, ...jsonContent }, configSchema)
+		this._configuration = validationUtil.validate({ ...defaultValues, ...userJsonContent, ...jsonContent }, configSchema)
 	}
 }
 
