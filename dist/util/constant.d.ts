@@ -1,8 +1,4 @@
-export type ConstantResult = {
-    configFilePath: string;
-    tempFolderPath: string;
-    templateZipName: string;
-    templateZipPath: string;
-};
-export declare const constant: () => ConstantResult;
+export declare const constant: import("@beecode/msh-util/lib/types/any-function/no-params").AnyFunctionNoParams<{
+    readonly configFilePath: string;
+}>;
 //# sourceMappingURL=constant.d.ts.map

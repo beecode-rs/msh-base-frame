@@ -9,8 +9,5 @@ RUN chown node:node -R .
 USER node
 
 RUN npm ci && \
-    cd test && \
-    npm ci && \
-    cd .. && \
     npm run lint && \
     npm run build
