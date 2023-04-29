@@ -7,6 +7,8 @@ export type ConfigurationType = {
     gitZipUrl: string;
     githubPersonAccessToken?: string;
     localTemplateFolder?: string;
+    tempFolderPath: string;
+    templateZipName: string;
 };
 export declare const configSchema: Joi.ObjectSchema<ConfigurationType>;
 export declare class ConfigSetup {

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import fs from 'fs'
+import path from 'path'
 import { config } from 'src/util/config'
-import { constant } from 'src/util/constant'
 
 export class GitService {
 	protected _getAxiosHeader(): Record<string, string> | undefined {
@@ -14,10 +14,10 @@ export class GitService {
 	}
 
 	async downloadZipToTempFolder(): Promise<void> {
-		const { gitZipUrl } = config()
+		const { gitZipUrl, tempFolderPath, templateZipName } = config()
 		const axiosHeader = this._getAxiosHeader()
 		const { data: stream } = await axios.get(gitZipUrl, { headers: axiosHeader, responseType: 'stream' })
-		stream.pipe(fs.createWriteStream(constant().templateZipPath))
+		stream.pipe(fs.createWriteStream(path.resolve(tempFolderPath, `./${templateZipName}`)))
 
 		return new Promise((resolve, reject) => {
 			stream.on('end', resolve)
