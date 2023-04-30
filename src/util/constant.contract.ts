@@ -21,9 +21,6 @@ export default contractFactory(
 					params: [],
 					result: {
 						configFilePath: '/home/dummy/.base-frame',
-						tempFolderPath: '/home/dummy/.base-frame-tmp',
-						templateZipName: 'template.zip',
-						templateZipPath: '/home/dummy/.base-frame-tmp/template.zip',
 					},
 				},
 			],

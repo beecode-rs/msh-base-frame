@@ -6,6 +6,9 @@ import { mocker } from '@beecode/msh-test-contractor'
 import { promises as fs } from 'fs'
 import { config, configSetupSingleton } from 'src/util/config'
 
+// get node js working directory
+const cwd = process.cwd()
+
 describe('config', () => {
 	describe('_init', () => {
 		let spy_constantContract: jest.SpyInstance
@@ -40,24 +43,29 @@ describe('config', () => {
 		it('should fail if config file does not exist', async () => {
 			spy_fsStat.mockResolvedValue(false)
 
-			await expect(configSetupSingleton().initialize()).rejects.toThrow(
-				'Config file missing [/home/milos/code/beecode/msh/base-frame/.base-frame]'
-			)
-			expect(spy_constantContract).toHaveBeenCalledTimes(2)
+			await expect(configSetupSingleton().initialize()).rejects.toThrow(`Config file missing [${cwd}/.base-frame]`)
+			expect(spy_constantContract).toHaveBeenCalledTimes(1)
 			expect(spy_fsReadFile).not.toHaveBeenCalled()
 			// expect(spy_validationUtilContract.validate).not.toHaveBeenCalled()
 		})
 
 		it('should successfully init config', async () => {
-			const dummyConfig = { gitZipUrl: 'https://test.local', template: { projectName: 'test-project' } }
+			const dummyConfig = {
+				gitZipUrl: 'https://test.local',
+				tempFolderPath: `${cwd}/.base-frame-tmp`,
+				template: {
+					projectName: 'test-project',
+				},
+				templateZipName: 'template.zip',
+			}
 
 			spy_fsStat.mockResolvedValue(true)
 			spy_fsReadFile.mockResolvedValue(JSON.stringify(dummyConfig))
 
 			await configSetupSingleton().initialize()
-			expect(spy_constantContract).toHaveBeenCalledTimes(2)
+			expect(spy_constantContract).toHaveBeenCalledTimes(1)
 			expect(spy_fsReadFile).toHaveBeenCalledTimes(2)
-			expect(spy_fsReadFile).toHaveBeenCalledWith('/home/milos/code/beecode/msh/base-frame/.base-frame', 'utf8')
+			expect(spy_fsReadFile).toHaveBeenCalledWith(`${cwd}/.base-frame`, 'utf8')
 			// expect(spy_validationUtilContract.validate).toHaveBeenCalledTimes(1)
 
 			expect(config()).toEqual(dummyConfig)
