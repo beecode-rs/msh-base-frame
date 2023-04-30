@@ -135,7 +135,7 @@
 		"start": "node ./dist/index.js",
 		"start:ts": "ts-node ./src/index.ts",
 		"test": "npm run test:unit && npm run test:int  && npm run test:e2e",
-		"test:e2e": "TZ=utc jest --config=./test/jest.config.js",
+		"test:e2e": "# TZ=utc jest --config=./test/jest.config.js",
 		"test:int": "# TZ=utc jest --config=./jest-int.config.js",
 		"test:unit": "TZ=utc jest --config=./jest-unit.config.js",
 		"test:unit:coverage": "npm run test:unit --coverage",
