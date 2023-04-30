@@ -150,5 +150,5 @@
 		"tsc:watch": "tsc-watch -p tsconfig-build.json"
 	},
 	"types": "lib/index.d.ts",
-	"version": "0.2.3"
+	"version": "0.3.0"
 }

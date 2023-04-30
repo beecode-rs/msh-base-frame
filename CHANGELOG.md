@@ -1,3 +1,17 @@
+# [0.3.0](https://github.com/beecode-rs/msh-base-frame/compare/v0.2.3...v0.3.0) (2023-04-30)
+
+
+### Bug Fixes
+
+* config update ([fbb86c6](https://github.com/beecode-rs/msh-base-frame/commit/fbb86c6c908c281d36c50b0e8e258c560d3f93cf))
+* fix lint, update project, use msh-app-boot ([ce5a657](https://github.com/beecode-rs/msh-base-frame/commit/ce5a6574fa07974e528ff66b2d396f08b0592feb))
+* update package.json ([149e320](https://github.com/beecode-rs/msh-base-frame/commit/149e320a1f050b5680a855621772ef08919f391c))
+
+
+### Features
+
+* update project ([195cf46](https://github.com/beecode-rs/msh-base-frame/commit/195cf46432524d335b01abe07d1e078fc94e08cf))
+
 ## [0.2.3](https://github.com/beecode-rs/msh-base-frame/compare/v0.2.2...v0.2.3) (2022-02-27)
 
 
