@@ -1,29 +1,30 @@
 import constantContract from './constant.contract'
 // import validationUtilContract from './validation-util.contract'
 import { mocker } from '@beecode/msh-test-contractor'
-// import { MockerJestObjectResult } from '@beecode/msh-test-contractor/lib/mocker/mocker-jest-object-strategy'
-// import { ContractMockRevertFn } from '@beecode/msh-test-contractor/lib/types'
+// import { MockerJestObjectResult } from '@beecode/msh-test-contractor/mocker/mocker-jest-object-strategy.js'
+// import { ContractMockRevertFn } from '@beecode/msh-test-contractor/types.js'
+import { jest } from '@jest/globals'
 import { promises as fs } from 'fs'
-import { config, configSetupSingleton } from 'src/util/config'
+
+import { config, configSetupSingleton } from '#/util/config.js'
 
 // get node js working directory
 const cwd = process.cwd()
 
 describe('config', () => {
 	describe('_init', () => {
-		let spy_constantContract: jest.SpyInstance
+		let spy_constantContract: jest.SpiedFunction<any>
 		// let constantMockRestore: ContractMockRevertFn
 		// let spy_validationUtilContract: MockerJestObjectResult
 		// let validationUtilMockRestore: ContractMockRevertFn
 
-		let spy_fsStat: jest.SpyInstance
-		let spy_fsReadFile: jest.SpyInstance
+		let spy_fsStat: jest.SpiedFunction<any>
+		let spy_fsReadFile: jest.SpiedFunction<any>
 
 		beforeEach(() => {
-			// @ts-expect-error
 			configSetupSingleton()._configuration = undefined
 			const constantMocker = mocker.contract(constantContract)
-			spy_constantContract = constantMocker.spy
+			spy_constantContract = constantMocker.spy as any
 			// constantMockRestore = constantMocker.mockRestore
 			// const validationUtilMocker = mocker.contract<MockerJestObjectResult>(validationUtilContract)
 			// spy_validationUtilContract = validationUtilMocker.spy

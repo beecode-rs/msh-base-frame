@@ -1,5 +1,5 @@
-import { gitUseCase } from 'src/use-case/git-use-case'
-import { logger } from 'src/util/logger'
+import { gitUseCase } from '#/use-case/git-use-case.js'
+import { logger } from '#/util/logger.js'
 
 export const actionUseCase = {
 	clone: async (): Promise<void> => {

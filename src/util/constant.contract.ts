@@ -1,7 +1,7 @@
-import * as constant from './constant'
-import { contractFactory } from '@beecode/msh-test-contractor/lib/contract/contractor-factory'
-import { SpecialFnName } from '@beecode/msh-test-contractor/lib/enum/special-fn-name'
-import { ContractMockRevertFns } from '@beecode/msh-test-contractor/lib/types'
+import * as constant from './constant.js'
+import { contractFactory } from '@beecode/msh-test-contractor/contract/contractor-factory.js'
+import { SpecialFnName } from '@beecode/msh-test-contractor/enum/special-fn-name.js'
+import { ContractMockRevertFns } from '@beecode/msh-test-contractor/types/index.js'
 
 export default contractFactory(
 	{

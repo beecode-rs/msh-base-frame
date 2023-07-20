@@ -1,5 +1,5 @@
-import * as validationUtil from './validation-util'
-import { contractFactory } from '@beecode/msh-test-contractor/lib/contract/contractor-factory'
+import * as validationUtil from './validation-util.js'
+import { contractFactory } from '@beecode/msh-test-contractor/contract/contractor-factory.js'
 import Joi from 'joi'
 
 export default contractFactory(

@@ -1,9 +1,10 @@
 import path from 'path'
-import { fileService } from 'src/service/file-service'
-import { GitService } from 'src/service/git-service'
-import { tempFolderService } from 'src/service/temp-folder-service'
-import { templateService } from 'src/service/template-service'
-import { config } from 'src/util/config'
+
+import { fileService } from '#/service/file-service.js'
+import { GitService } from '#/service/git-service.js'
+import { tempFolderService } from '#/service/temp-folder-service.js'
+import { templateService } from '#/service/template-service.js'
+import { config } from '#/util/config.js'
 
 export const gitUseCase = {
 	cleanAndGetNewCopyOfTemplateRepo: async (): Promise<void> => {
