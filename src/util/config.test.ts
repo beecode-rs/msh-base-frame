@@ -1,12 +1,11 @@
 import constantContract from './constant.contract'
 // import validationUtilContract from './validation-util.contract'
 import { mocker } from '@beecode/msh-test-contractor'
-// import { MockerJestObjectResult } from '@beecode/msh-test-contractor/mocker/mocker-jest-object-strategy.js'
-// import { ContractMockRevertFn } from '@beecode/msh-test-contractor/types.js'
+// import { MockerJestObjectResult } from '@beecode/msh-test-contractor/mocker/mocker-jest-object-strategy'
+// import { ContractMockRevertFn } from '@beecode/msh-test-contractor/types'
 import { jest } from '@jest/globals'
 import { promises as fs } from 'fs'
-
-import { config, configSetupSingleton } from '#/util/config.js'
+import { config, configSetupSingleton } from 'src/util/config'
 
 // get node js working directory
 const cwd = process.cwd()

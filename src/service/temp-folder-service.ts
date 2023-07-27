@@ -1,7 +1,6 @@
 import path from 'path'
-
-import { fileService } from '#/service/file-service.js'
-import { config } from '#/util/config.js'
+import { fileService } from 'src/service/file-service'
+import { config } from 'src/util/config'
 
 export const tempFolderService = {
 	cleanAll: async (): Promise<void> => {

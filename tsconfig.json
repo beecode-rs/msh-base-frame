@@ -15,7 +15,7 @@
 		"lib": [
 			"esnext"
 		],
-		"module": "ESNext",
+		"module": "CommonJS",
 		"moduleResolution": "NodeNext",
 		"noImplicitAny": true,
 		"noImplicitReturns": true,
@@ -23,9 +23,9 @@
 		"noUncheckedIndexedAccess": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"outDir": "./dist/esm",
+		"outDir": "./dist",
 		"paths": {
-			"#/*": [
+			"src/*": [
 				"./src/*"
 			]
 		},
