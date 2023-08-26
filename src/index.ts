@@ -1,7 +1,7 @@
 import 'source-map-support/register'
 
 import { AppStarter } from '@beecode/msh-app-boot'
-import { setAppBootLogger } from '@beecode/msh-app-boot/util/logger'
+import { setAppBootLogger } from '@beecode/msh-app-boot/dist/util/logger'
 import { CloneApp } from 'src/app/clone-app'
 import { logger } from 'src/util/logger'
 

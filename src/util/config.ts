@@ -1,4 +1,4 @@
-import { singletonPattern } from '@beecode/msh-util/singleton/pattern'
+import { singletonPattern } from '@beecode/msh-util/dist/singleton/pattern'
 import { promises as fs } from 'fs'
 import Joi from 'joi'
 import os from 'os'
