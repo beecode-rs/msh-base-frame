@@ -1,5 +1,6 @@
 import { LifeCycle } from '@beecode/msh-app-boot'
-import { configSetupSingleton } from 'src/util/config'
+
+import { configSetupSingleton } from '#/util/config'
 
 export class SetupInitiate extends LifeCycle {
 	constructor() {

@@ -1,4 +1,4 @@
-import { singletonPattern } from '@beecode/msh-util/dist/singleton/pattern'
+import { singletonPattern } from '@beecode/msh-util/singleton/pattern'
 import path from 'path'
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type

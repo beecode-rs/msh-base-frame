@@ -1,11 +1,12 @@
-import { singletonPattern } from '@beecode/msh-util/dist/singleton/pattern'
+import { singletonPattern } from '@beecode/msh-util/singleton/pattern'
 import { promises as fs } from 'fs'
 import Joi from 'joi'
 import os from 'os'
 import path from 'path'
-import { constant } from 'src/util/constant'
-import { logger } from 'src/util/logger'
-import { validationUtil } from 'src/util/validation-util'
+
+import { constant } from '#/util/constant'
+import { logger } from '#/util/logger'
+import { validationUtil } from '#/util/validation-util'
 
 export type ConfigurationTemplateType = {
 	projectName: string

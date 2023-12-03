@@ -1,11 +1,12 @@
 import constantContract from './constant.contract'
 // import validationUtilContract from './validation-util.contract'
 import { mocker } from '@beecode/msh-test-contractor'
-// import { MockerJestObjectResult } from '@beecode/msh-test-contractor/dist/mocker/mocker-jest-object-strategy'
-// import { ContractMockRevertFn } from '@beecode/msh-test-contractor/dist/types'
+// import { MockerJestObjectResult } from '@beecode/msh-test-contractor/mocker/mocker-jest-object-strategy'
+// import { ContractMockRevertFn } from '@beecode/msh-test-contractor/types'
 import { jest } from '@jest/globals'
 import { promises as fs } from 'fs'
-import { config, configSetupSingleton } from 'src/util/config'
+
+import { config, configSetupSingleton } from '#/util/config'
 
 // get node js working directory
 const cwd = process.cwd()
@@ -21,7 +22,7 @@ describe('config', () => {
 		let spy_fsReadFile: jest.SpiedFunction<any>
 
 		beforeEach(() => {
-			configSetupSingleton()._configuration = undefined
+			configSetupSingleton()['_configuration'] = undefined
 			const constantMocker = mocker.contract(constantContract)
 			spy_constantContract = constantMocker.spy as any
 			// constantMockRestore = constantMocker.mockRestore
