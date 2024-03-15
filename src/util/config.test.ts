@@ -6,7 +6,7 @@ import { mocker } from '@beecode/msh-test-contractor'
 import { jest } from '@jest/globals'
 import { promises as fs } from 'fs'
 
-import { config, configSetupSingleton } from '#/util/config'
+import { config, configSetupSingleton } from '#src/util/config'
 
 // get node js working directory
 const cwd = process.cwd()

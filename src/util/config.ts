@@ -4,9 +4,9 @@ import Joi from 'joi'
 import os from 'os'
 import path from 'path'
 
-import { constant } from '#/util/constant'
-import { logger } from '#/util/logger'
-import { validationUtil } from '#/util/validation-util'
+import { constant } from '#src/util/constant'
+import { logger } from '#src/util/logger'
+import { validationUtil } from '#src/util/validation-util'
 
 export type ConfigurationTemplateType = {
 	projectName: string

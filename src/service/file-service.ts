@@ -3,7 +3,7 @@ import { promises as fs } from 'fs'
 import { copy } from 'fs-extra'
 import { glob } from 'glob'
 
-import { logger } from '#/util/logger'
+import { logger } from '#src/util/logger'
 
 export const fileService = {
 	copy: async (src: string, dest: string, options: { ignore: string[] } = { ignore: [] }): Promise<void> => {
