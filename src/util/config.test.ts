@@ -1,12 +1,12 @@
-import constantContract from './constant.contract'
 // import validationUtilContract from './validation-util.contract'
 import { mocker } from '@beecode/msh-test-contractor'
+import { afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
 // import { MockerJestObjectResult } from '@beecode/msh-test-contractor/mocker/mocker-jest-object-strategy'
 // import { ContractMockRevertFn } from '@beecode/msh-test-contractor/types'
-import { jest } from '@jest/globals'
 import { promises as fs } from 'fs'
 
 import { config, configSetupSingleton } from '#src/util/config'
+import constantContract from '#src/util/constant.contract'
 
 // get node js working directory
 const cwd = process.cwd()
@@ -29,8 +29,8 @@ describe('config', () => {
 			// const validationUtilMocker = mocker.contract<MockerJestObjectResult>(validationUtilContract)
 			// spy_validationUtilContract = validationUtilMocker.spy
 			// validationUtilMockRestore = validationUtilMocker.mockRestore
-			spy_fsStat = jest.spyOn(fs, 'stat')
-			spy_fsReadFile = jest.spyOn(fs, 'readFile')
+			spy_fsStat = jest.spyOn(fs, 'stat') as any
+			spy_fsReadFile = jest.spyOn(fs, 'readFile') as any
 		})
 
 		afterEach(() => {
