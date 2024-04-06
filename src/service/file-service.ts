@@ -7,11 +7,7 @@ import { logger } from '#src/util/logger'
 
 export const fileService = {
 	copy: async (src: string, dest: string, options: { ignore: string[] } = { ignore: [] }): Promise<void> => {
-		const copyContentList = await glob(
-			'**/*',
-			{ cwd: src, dot: true, ignore: [...options.ignore, '.bfignore'], nodir: true },
-			() => {}
-		)
+		const copyContentList = await glob('**/*', { cwd: src, dot: true, ignore: [...options.ignore, '.bfignore'], nodir: true })
 		await Promise.all(
 			(copyContentList as any).map((file: string) => {
 				return copy(`${src}/${file}`, `${dest}/${file}`)
