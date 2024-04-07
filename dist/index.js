@@ -1,12 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-require("source-map-support/register");
-const msh_app_boot_1 = require("@beecode/msh-app-boot");
-const logger_1 = require("@beecode/msh-app-boot/lib/util/logger");
-const clone_app_1 = require("./app/clone-app");
-const logger_2 = require("./util/logger");
-process.on('uncaughtException', (error) => (0, logger_2.logger)().error('Uncaught Exception', { error }));
-process.on('unhandledRejection', (error) => (0, logger_2.logger)().error('Unhandled Rejection', { error }));
-(0, logger_1.setAppBootLogger)((0, logger_2.logger)());
-new msh_app_boot_1.AppStarter(new clone_app_1.CloneApp()).start().catch((err) => console.log(err)); // eslint-disable-line no-console
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSx1Q0FBb0M7QUFFcEMsd0RBQWtEO0FBQ2xELGtFQUF3RTtBQUN4RSxpREFBNEM7QUFDNUMsNENBQXdDO0FBRXhDLE9BQU8sQ0FBQyxFQUFFLENBQUMsbUJBQW1CLEVBQUUsQ0FBQyxLQUFLLEVBQUUsRUFBRSxDQUFDLElBQUEsZUFBTSxHQUFFLENBQUMsS0FBSyxDQUFDLG9CQUFvQixFQUFFLEVBQUUsS0FBSyxFQUFFLENBQUMsQ0FBQyxDQUFBO0FBQzNGLE9BQU8sQ0FBQyxFQUFFLENBQUMsb0JBQW9CLEVBQUUsQ0FBQyxLQUFLLEVBQUUsRUFBRSxDQUFDLElBQUEsZUFBTSxHQUFFLENBQUMsS0FBSyxDQUFDLHFCQUFxQixFQUFFLEVBQUUsS0FBSyxFQUFFLENBQUMsQ0FBQyxDQUFBO0FBRTdGLElBQUEseUJBQWdCLEVBQUMsSUFBQSxlQUFNLEdBQUUsQ0FBQyxDQUFBO0FBRTFCLElBQUkseUJBQVUsQ0FBQyxJQUFJLG9CQUFRLEVBQUUsQ0FBQyxDQUFDLEtBQUssRUFBRSxDQUFDLEtBQUssQ0FBQyxDQUFDLEdBQUcsRUFBRSxFQUFFLENBQUMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFBLENBQUMsaUNBQWlDIn0=
+import 'source-map-support/register';
+import { AppStarter } from '@beecode/msh-app-boot';
+import { setAppBootLogger } from '@beecode/msh-app-boot/util/logger';
+import { CloneApp } from './app/clone-app.js';
+import { logger } from './util/logger.js';
+process.on('uncaughtException', (error) => logger().error('Uncaught Exception', { error }));
+process.on('unhandledRejection', (error) => logger().error('Unhandled Rejection', { error }));
+setAppBootLogger(logger());
+new AppStarter(new CloneApp()).start().catch((err) => {
+    return console.log(err); // eslint-disable-line no-console
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyw2QkFBNkIsQ0FBQTtBQUVwQyxPQUFPLEVBQUUsVUFBVSxFQUFFLE1BQU0sdUJBQXVCLENBQUE7QUFDbEQsT0FBTyxFQUFFLGdCQUFnQixFQUFFLE1BQU0sbUNBQW1DLENBQUE7QUFFcEUsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLG9CQUFvQixDQUFBO0FBQzdDLE9BQU8sRUFBRSxNQUFNLEVBQUUsTUFBTSxrQkFBa0IsQ0FBQTtBQUV6QyxPQUFPLENBQUMsRUFBRSxDQUFDLG1CQUFtQixFQUFFLENBQUMsS0FBSyxFQUFFLEVBQUUsQ0FBQyxNQUFNLEVBQUUsQ0FBQyxLQUFLLENBQUMsb0JBQW9CLEVBQUUsRUFBRSxLQUFLLEVBQUUsQ0FBQyxDQUFDLENBQUE7QUFDM0YsT0FBTyxDQUFDLEVBQUUsQ0FBQyxvQkFBb0IsRUFBRSxDQUFDLEtBQUssRUFBRSxFQUFFLENBQUMsTUFBTSxFQUFFLENBQUMsS0FBSyxDQUFDLHFCQUFxQixFQUFFLEVBQUUsS0FBSyxFQUFFLENBQUMsQ0FBQyxDQUFBO0FBRTdGLGdCQUFnQixDQUFDLE1BQU0sRUFBRSxDQUFDLENBQUE7QUFFMUIsSUFBSSxVQUFVLENBQUMsSUFBSSxRQUFRLEVBQUUsQ0FBQyxDQUFDLEtBQUssRUFBRSxDQUFDLEtBQUssQ0FBQyxDQUFDLEdBQVksRUFBRSxFQUFFO0lBQzdELE9BQU8sT0FBTyxDQUFDLEdBQUcsQ0FBQyxHQUFHLENBQUMsQ0FBQSxDQUFDLGlDQUFpQztBQUMxRCxDQUFDLENBQUMsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAnc291cmNlLW1hcC1zdXBwb3J0L3JlZ2lzdGVyJ1xuXG5pbXBvcnQgeyBBcHBTdGFydGVyIH0gZnJvbSAnQGJlZWNvZGUvbXNoLWFwcC1ib290J1xuaW1wb3J0IHsgc2V0QXBwQm9vdExvZ2dlciB9IGZyb20gJ0BiZWVjb2RlL21zaC1hcHAtYm9vdC91dGlsL2xvZ2dlcidcblxuaW1wb3J0IHsgQ2xvbmVBcHAgfSBmcm9tICcjc3JjL2FwcC9jbG9uZS1hcHAnXG5pbXBvcnQgeyBsb2dnZXIgfSBmcm9tICcjc3JjL3V0aWwvbG9nZ2VyJ1xuXG5wcm9jZXNzLm9uKCd1bmNhdWdodEV4Y2VwdGlvbicsIChlcnJvcikgPT4gbG9nZ2VyKCkuZXJyb3IoJ1VuY2F1Z2h0IEV4Y2VwdGlvbicsIHsgZXJyb3IgfSkpXG5wcm9jZXNzLm9uKCd1bmhhbmRsZWRSZWplY3Rpb24nLCAoZXJyb3IpID0+IGxvZ2dlcigpLmVycm9yKCdVbmhhbmRsZWQgUmVqZWN0aW9uJywgeyBlcnJvciB9KSlcblxuc2V0QXBwQm9vdExvZ2dlcihsb2dnZXIoKSlcblxubmV3IEFwcFN0YXJ0ZXIobmV3IENsb25lQXBwKCkpLnN0YXJ0KCkuY2F0Y2goKGVycjogdW5rbm93bikgPT4ge1xuXHRyZXR1cm4gY29uc29sZS5sb2coZXJyKSAvLyBlc2xpbnQtZGlzYWJsZS1saW5lIG5vLWNvbnNvbGVcbn0pXG4iXX0=
