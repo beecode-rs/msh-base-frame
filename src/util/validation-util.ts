@@ -1,4 +1,4 @@
-import { JoiUtil } from '@beecode/msh-util/lib/joi-util'
+import { JoiUtil } from '@beecode/msh-util/joi-util'
 import { ObjectSchema, Schema } from 'joi'
 
 export const validationUtil = {
