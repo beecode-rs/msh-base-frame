@@ -1,16 +1,21 @@
 import extractZip from 'extract-zip'
 import { promises as fs } from 'fs'
+import { copy } from 'fs-extra'
 import { glob } from 'glob'
-import copy from 'recursive-copy'
-import { logger } from 'src/util/logger'
+
+import { logger } from '#src/util/logger'
 
 export const fileService = {
 	copy: async (src: string, dest: string, options: { ignore: string[] } = { ignore: [] }): Promise<void> => {
 		const copyContentList = await glob('**/*', { cwd: src, dot: true, ignore: [...options.ignore, '.bfignore'], nodir: true })
-		await Promise.all(copyContentList.map((file) => copy(`${src}/${file}`, `${dest}/${file}`)))
+		await Promise.all(
+			(copyContentList as any).map((file: string) => {
+				return copy(`${src}/${file}`, `${dest}/${file}`)
+			})
+		)
 	},
 	copyFilesIfNotExists: async (src: string, dest: string): Promise<void> => {
-		await copy(src, dest, { dot: true, overwrite: false })
+		await copy(src, dest, { overwrite: false })
 	},
 	filterFiles: async (fileFolderList: string[]): Promise<string[]> => {
 		const filtered = await Promise.all(
