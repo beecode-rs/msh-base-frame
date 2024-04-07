@@ -1,0 +1,5995 @@
+{
+	"id": 0,
+	"name": "@beecode/msh-base-frame",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 3,
+			"name": "app/clone-app",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 4,
+					"name": "CloneApp",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 15,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "base-frame/src/app/clone-app.ts",
+									"line": 7,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/clone-app.ts#L7"
+								}
+							],
+							"signatures": [
+								{
+									"id": 16,
+									"name": "new CloneApp",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/app/clone-app.ts",
+											"line": 7,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/clone-app.ts#L7"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 4,
+										"name": "CloneApp",
+										"package": "@beecode/msh-base-frame"
+									},
+									"overwrites": {
+										"type": "reference",
+										"target": -1,
+										"name": "AppFlow.constructor"
+									}
+								}
+							],
+							"overwrites": {
+								"type": "reference",
+								"target": -1,
+								"name": "AppFlow.constructor"
+							}
+						},
+						{
+							"id": 17,
+							"name": "_flowList",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isProtected": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": "app-boot/src/app-flow.ts",
+									"line": 12,
+									"character": 20,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L12"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../app-boot/src/app-flow.ts",
+									"qualifiedName": "FlowList"
+								},
+								"name": "FlowList",
+								"package": "@beecode/msh-app-boot"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"target": -1,
+								"name": "AppFlow._flowList"
+							}
+						},
+						{
+							"id": 22,
+							"name": "_topLevelReversedFlowList",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "app-boot/src/app-flow.ts",
+									"line": 26,
+									"character": 11,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L26"
+								}
+							],
+							"signatures": [
+								{
+									"id": 23,
+									"name": "_topLevelReversedFlowList",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "app-boot/src/app-flow.ts",
+											"line": 26,
+											"character": 11,
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L26"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../app-boot/src/app-flow.ts",
+											"qualifiedName": "FlowList"
+										},
+										"name": "FlowList",
+										"package": "@beecode/msh-app-boot"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"target": -1,
+										"name": "AppFlow._topLevelReversedFlowList"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"target": -1,
+								"name": "AppFlow._topLevelReversedFlowList"
+							}
+						},
+						{
+							"id": 18,
+							"name": "create",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "app-boot/src/app-flow.ts",
+									"line": 18,
+									"character": 7,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L18"
+								}
+							],
+							"signatures": [
+								{
+									"id": 19,
+									"name": "create",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "app-boot/src/app-flow.ts",
+											"line": 18,
+											"character": 7,
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L18"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"target": -1,
+										"name": "AppFlow.create"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"target": -1,
+								"name": "AppFlow.create"
+							}
+						},
+						{
+							"id": 20,
+							"name": "destroy",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "app-boot/src/app-flow.ts",
+									"line": 22,
+									"character": 7,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L22"
+								}
+							],
+							"signatures": [
+								{
+									"id": 21,
+									"name": "destroy",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "app-boot/src/app-flow.ts",
+											"line": 22,
+											"character": 7,
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L22"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"target": -1,
+										"name": "AppFlow.destroy"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"target": -1,
+								"name": "AppFlow.destroy"
+							}
+						},
+						{
+							"id": 5,
+							"name": "DeepExecFlowList",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isStatic": true
+							},
+							"sources": [
+								{
+									"fileName": "app-boot/src/app-flow.ts",
+									"line": 30,
+									"character": 14,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L30"
+								}
+							],
+							"signatures": [
+								{
+									"id": 6,
+									"name": "DeepExecFlowList",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "app-boot/src/app-flow.ts",
+											"line": 30,
+											"character": 14,
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L30"
+										}
+									],
+									"parameters": [
+										{
+											"id": 7,
+											"name": "params",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 8,
+													"name": "__type",
+													"variant": "declaration",
+													"kind": 65536,
+													"flags": {},
+													"children": [
+														{
+															"id": 10,
+															"name": "direction",
+															"variant": "declaration",
+															"kind": 1024,
+															"flags": {},
+															"sources": [
+																{
+																	"fileName": "app-boot/src/app-flow.ts",
+																	"line": 30,
+																	"character": 61,
+																	"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L30"
+																}
+															],
+															"type": {
+																"type": "reference",
+																"target": {
+																	"sourceFileName": "../app-boot/src/app-flow.ts",
+																	"qualifiedName": "FlowDirectionMapper"
+																},
+																"name": "FlowDirectionMapper",
+																"package": "@beecode/msh-app-boot"
+															}
+														},
+														{
+															"id": 9,
+															"name": "flowList",
+															"variant": "declaration",
+															"kind": 1024,
+															"flags": {},
+															"sources": [
+																{
+																	"fileName": "app-boot/src/app-flow.ts",
+																	"line": 30,
+																	"character": 41,
+																	"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L30"
+																}
+															],
+															"type": {
+																"type": "reference",
+																"target": {
+																	"sourceFileName": "../app-boot/src/app-flow.ts",
+																	"qualifiedName": "FlowList"
+																},
+																"name": "FlowList",
+																"package": "@beecode/msh-app-boot"
+															}
+														}
+													],
+													"groups": [
+														{
+															"title": "Properties",
+															"children": [
+																10,
+																9
+															]
+														}
+													],
+													"sources": [
+														{
+															"fileName": "app-boot/src/app-flow.ts",
+															"line": 30,
+															"character": 39,
+															"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L30"
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"target": -1,
+										"name": "AppFlow.DeepExecFlowList"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"target": -1,
+								"name": "AppFlow.DeepExecFlowList"
+							}
+						},
+						{
+							"id": 11,
+							"name": "ExecSyncFlowList",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isStatic": true
+							},
+							"sources": [
+								{
+									"fileName": "app-boot/src/app-flow.ts",
+									"line": 49,
+									"character": 14,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L49"
+								}
+							],
+							"signatures": [
+								{
+									"id": 12,
+									"name": "ExecSyncFlowList",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "app-boot/src/app-flow.ts",
+											"line": 49,
+											"character": 14,
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L49"
+										}
+									],
+									"parameters": [
+										{
+											"id": 13,
+											"name": "lifeCycleList",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": {
+														"sourceFileName": "../app-boot/src/life-cycle.ts",
+														"qualifiedName": "LifeCycle"
+													},
+													"typeArguments": [
+														{
+															"type": "intrinsic",
+															"name": "any"
+														}
+													],
+													"name": "LifeCycle",
+													"package": "@beecode/msh-app-boot"
+												}
+											}
+										},
+										{
+											"id": 14,
+											"name": "createOrDestroy",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../app-boot/src/app-flow.ts",
+													"qualifiedName": "FlowDirectionMapper"
+												},
+												"name": "FlowDirectionMapper",
+												"package": "@beecode/msh-app-boot"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"target": -1,
+										"name": "AppFlow.ExecSyncFlowList"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"target": -1,
+								"name": "AppFlow.ExecSyncFlowList"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								15
+							]
+						},
+						{
+							"title": "Properties",
+							"children": [
+								17
+							]
+						},
+						{
+							"title": "Methods",
+							"children": [
+								22,
+								18,
+								20,
+								5,
+								11
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "base-frame/src/app/clone-app.ts",
+							"line": 6,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/clone-app.ts#L6"
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"target": {
+								"sourceFileName": "../app-boot/src/app-flow.ts",
+								"qualifiedName": "AppFlow"
+							},
+							"name": "AppFlow",
+							"package": "@beecode/msh-app-boot"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						4
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "base-frame/src/app/clone-app.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/clone-app.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 201,
+			"name": "app/init/clone-initate",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 202,
+					"name": "CloneInitiate",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 203,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "base-frame/src/app/init/clone-initate.ts",
+									"line": 6,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/init/clone-initate.ts#L6"
+								}
+							],
+							"signatures": [
+								{
+									"id": 204,
+									"name": "new CloneInitiate",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/app/init/clone-initate.ts",
+											"line": 6,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/init/clone-initate.ts#L6"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 202,
+										"name": "CloneInitiate",
+										"package": "@beecode/msh-base-frame"
+									},
+									"overwrites": {
+										"type": "reference",
+										"target": -1,
+										"name": "LifeCycle.constructor"
+									}
+								}
+							],
+							"overwrites": {
+								"type": "reference",
+								"target": -1,
+								"name": "LifeCycle.constructor"
+							}
+						},
+						{
+							"id": 209,
+							"name": "name",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": "app-boot/src/life-cycle.ts",
+									"line": 7,
+									"character": 10,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L7"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"target": -1,
+								"name": "LifeCycle.name"
+							}
+						},
+						{
+							"id": 205,
+							"name": "_createFn",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "base-frame/src/app/init/clone-initate.ts",
+									"line": 10,
+									"character": 17,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/init/clone-initate.ts#L10"
+								}
+							],
+							"signatures": [
+								{
+									"id": 206,
+									"name": "_createFn",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/app/init/clone-initate.ts",
+											"line": 10,
+											"character": 17,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/init/clone-initate.ts#L10"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									},
+									"overwrites": {
+										"type": "reference",
+										"target": -1,
+										"name": "LifeCycle._createFn"
+									}
+								}
+							],
+							"overwrites": {
+								"type": "reference",
+								"target": -1,
+								"name": "LifeCycle._createFn"
+							}
+						},
+						{
+							"id": 207,
+							"name": "_destroyFn",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "base-frame/src/app/init/clone-initate.ts",
+									"line": 14,
+									"character": 17,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/init/clone-initate.ts#L14"
+								}
+							],
+							"signatures": [
+								{
+									"id": 208,
+									"name": "_destroyFn",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/app/init/clone-initate.ts",
+											"line": 14,
+											"character": 17,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/init/clone-initate.ts#L14"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									},
+									"overwrites": {
+										"type": "reference",
+										"target": -1,
+										"name": "LifeCycle._destroyFn"
+									}
+								}
+							],
+							"overwrites": {
+								"type": "reference",
+								"target": -1,
+								"name": "LifeCycle._destroyFn"
+							}
+						},
+						{
+							"id": 210,
+							"name": "create",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "app-boot/src/life-cycle.ts",
+									"line": 14,
+									"character": 7,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L14"
+								}
+							],
+							"signatures": [
+								{
+									"id": 211,
+									"name": "create",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "app-boot/src/life-cycle.ts",
+											"line": 14,
+											"character": 7,
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L14"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "any"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"target": -1,
+										"name": "LifeCycle.create"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"target": -1,
+								"name": "LifeCycle.create"
+							}
+						},
+						{
+							"id": 212,
+							"name": "destroy",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "app-boot/src/life-cycle.ts",
+									"line": 22,
+									"character": 7,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L22"
+								}
+							],
+							"signatures": [
+								{
+									"id": 213,
+									"name": "destroy",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "app-boot/src/life-cycle.ts",
+											"line": 22,
+											"character": 7,
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L22"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "any"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"target": -1,
+										"name": "LifeCycle.destroy"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"target": -1,
+								"name": "LifeCycle.destroy"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								203
+							]
+						},
+						{
+							"title": "Properties",
+							"children": [
+								209
+							]
+						},
+						{
+							"title": "Methods",
+							"children": [
+								205,
+								207,
+								210,
+								212
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "base-frame/src/app/init/clone-initate.ts",
+							"line": 5,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/init/clone-initate.ts#L5"
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"target": {
+								"sourceFileName": "../app-boot/src/life-cycle.ts",
+								"qualifiedName": "LifeCycle"
+							},
+							"name": "LifeCycle",
+							"package": "@beecode/msh-app-boot"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						202
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "base-frame/src/app/init/clone-initate.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/init/clone-initate.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 214,
+			"name": "app/init/setup-initiate",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 215,
+					"name": "SetupInitiate",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 216,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "base-frame/src/app/init/setup-initiate.ts",
+									"line": 6,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/init/setup-initiate.ts#L6"
+								}
+							],
+							"signatures": [
+								{
+									"id": 217,
+									"name": "new SetupInitiate",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/app/init/setup-initiate.ts",
+											"line": 6,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/init/setup-initiate.ts#L6"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 215,
+										"name": "SetupInitiate",
+										"package": "@beecode/msh-base-frame"
+									},
+									"overwrites": {
+										"type": "reference",
+										"target": -1,
+										"name": "LifeCycle.constructor"
+									}
+								}
+							],
+							"overwrites": {
+								"type": "reference",
+								"target": -1,
+								"name": "LifeCycle.constructor"
+							}
+						},
+						{
+							"id": 222,
+							"name": "name",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": "app-boot/src/life-cycle.ts",
+									"line": 7,
+									"character": 10,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L7"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"target": -1,
+								"name": "LifeCycle.name"
+							}
+						},
+						{
+							"id": 218,
+							"name": "_createFn",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "base-frame/src/app/init/setup-initiate.ts",
+									"line": 10,
+									"character": 17,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/init/setup-initiate.ts#L10"
+								}
+							],
+							"signatures": [
+								{
+									"id": 219,
+									"name": "_createFn",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/app/init/setup-initiate.ts",
+											"line": 10,
+											"character": 17,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/init/setup-initiate.ts#L10"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									},
+									"overwrites": {
+										"type": "reference",
+										"target": -1,
+										"name": "LifeCycle._createFn"
+									}
+								}
+							],
+							"overwrites": {
+								"type": "reference",
+								"target": -1,
+								"name": "LifeCycle._createFn"
+							}
+						},
+						{
+							"id": 220,
+							"name": "_destroyFn",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "base-frame/src/app/init/setup-initiate.ts",
+									"line": 14,
+									"character": 17,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/init/setup-initiate.ts#L14"
+								}
+							],
+							"signatures": [
+								{
+									"id": 221,
+									"name": "_destroyFn",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/app/init/setup-initiate.ts",
+											"line": 14,
+											"character": 17,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/init/setup-initiate.ts#L14"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									},
+									"overwrites": {
+										"type": "reference",
+										"target": -1,
+										"name": "LifeCycle._destroyFn"
+									}
+								}
+							],
+							"overwrites": {
+								"type": "reference",
+								"target": -1,
+								"name": "LifeCycle._destroyFn"
+							}
+						},
+						{
+							"id": 223,
+							"name": "create",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "app-boot/src/life-cycle.ts",
+									"line": 14,
+									"character": 7,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L14"
+								}
+							],
+							"signatures": [
+								{
+									"id": 224,
+									"name": "create",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "app-boot/src/life-cycle.ts",
+											"line": 14,
+											"character": 7,
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L14"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "any"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"target": -1,
+										"name": "LifeCycle.create"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"target": -1,
+								"name": "LifeCycle.create"
+							}
+						},
+						{
+							"id": 225,
+							"name": "destroy",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "app-boot/src/life-cycle.ts",
+									"line": 22,
+									"character": 7,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L22"
+								}
+							],
+							"signatures": [
+								{
+									"id": 226,
+									"name": "destroy",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "app-boot/src/life-cycle.ts",
+											"line": 22,
+											"character": 7,
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L22"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "any"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"target": -1,
+										"name": "LifeCycle.destroy"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"target": -1,
+								"name": "LifeCycle.destroy"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								216
+							]
+						},
+						{
+							"title": "Properties",
+							"children": [
+								222
+							]
+						},
+						{
+							"title": "Methods",
+							"children": [
+								218,
+								220,
+								223,
+								225
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "base-frame/src/app/init/setup-initiate.ts",
+							"line": 5,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/init/setup-initiate.ts#L5"
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"target": {
+								"sourceFileName": "../app-boot/src/life-cycle.ts",
+								"qualifiedName": "LifeCycle"
+							},
+							"name": "LifeCycle",
+							"package": "@beecode/msh-app-boot"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						215
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "base-frame/src/app/init/setup-initiate.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/app/init/setup-initiate.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"name": "index",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "base-frame/src/index.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/index.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "index-jest-setup",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "base-frame/src/index-jest-setup.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/index-jest-setup.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 24,
+			"name": "service/file-service",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 25,
+					"name": "fileService",
+					"variant": "declaration",
+					"kind": 32,
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "base-frame/src/service/file-service.ts",
+							"line": 8,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L8"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 26,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 27,
+									"name": "copy",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/file-service.ts",
+											"line": 9,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L9"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 28,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/file-service.ts",
+													"line": 9,
+													"character": 7,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L9"
+												}
+											],
+											"signatures": [
+												{
+													"id": 29,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/file-service.ts",
+															"line": 9,
+															"character": 7,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L9"
+														}
+													],
+													"parameters": [
+														{
+															"id": 30,
+															"name": "src",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														},
+														{
+															"id": 31,
+															"name": "dest",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														},
+														{
+															"id": 32,
+															"name": "options",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "reflection",
+																"declaration": {
+																	"id": 33,
+																	"name": "__type",
+																	"variant": "declaration",
+																	"kind": 65536,
+																	"flags": {},
+																	"children": [
+																		{
+																			"id": 34,
+																			"name": "ignore",
+																			"variant": "declaration",
+																			"kind": 1024,
+																			"flags": {},
+																			"sources": [
+																				{
+																					"fileName": "base-frame/src/service/file-service.ts",
+																					"line": 9,
+																					"character": 52,
+																					"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L9"
+																				}
+																			],
+																			"type": {
+																				"type": "array",
+																				"elementType": {
+																					"type": "intrinsic",
+																					"name": "string"
+																				}
+																			}
+																		}
+																	],
+																	"groups": [
+																		{
+																			"title": "Properties",
+																			"children": [
+																				34
+																			]
+																		}
+																	],
+																	"sources": [
+																		{
+																			"fileName": "base-frame/src/service/file-service.ts",
+																			"line": 9,
+																			"character": 50,
+																			"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L9"
+																		}
+																	]
+																}
+															},
+															"defaultValue": "..."
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "void"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 35,
+									"name": "copyFilesIfNotExists",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/file-service.ts",
+											"line": 17,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L17"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 36,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/file-service.ts",
+													"line": 17,
+													"character": 23,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L17"
+												}
+											],
+											"signatures": [
+												{
+													"id": 37,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/file-service.ts",
+															"line": 17,
+															"character": 23,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L17"
+														}
+													],
+													"parameters": [
+														{
+															"id": 38,
+															"name": "src",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														},
+														{
+															"id": 39,
+															"name": "dest",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "void"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 40,
+									"name": "filterFiles",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/file-service.ts",
+											"line": 20,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L20"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 41,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/file-service.ts",
+													"line": 20,
+													"character": 14,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L20"
+												}
+											],
+											"signatures": [
+												{
+													"id": 42,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/file-service.ts",
+															"line": 20,
+															"character": 14,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L20"
+														}
+													],
+													"parameters": [
+														{
+															"id": 43,
+															"name": "fileFolderList",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "array",
+																"elementType": {
+																	"type": "intrinsic",
+																	"name": "string"
+																}
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "array",
+																"elementType": {
+																	"type": "intrinsic",
+																	"name": "string"
+																}
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 44,
+									"name": "getFolderContent",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/file-service.ts",
+											"line": 33,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L33"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 45,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/file-service.ts",
+													"line": 33,
+													"character": 19,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L33"
+												}
+											],
+											"signatures": [
+												{
+													"id": 46,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/file-service.ts",
+															"line": 33,
+															"character": 19,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L33"
+														}
+													],
+													"parameters": [
+														{
+															"id": 47,
+															"name": "path",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "array",
+																"elementType": {
+																	"type": "intrinsic",
+																	"name": "string"
+																}
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 48,
+									"name": "getRecurringFolderContent",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/file-service.ts",
+											"line": 36,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L36"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 49,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/file-service.ts",
+													"line": 36,
+													"character": 28,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L36"
+												}
+											],
+											"signatures": [
+												{
+													"id": 50,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/file-service.ts",
+															"line": 36,
+															"character": 28,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L36"
+														}
+													],
+													"parameters": [
+														{
+															"id": 51,
+															"name": "path",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "array",
+																"elementType": {
+																	"type": "intrinsic",
+																	"name": "string"
+																}
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 52,
+									"name": "isDirectory",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/file-service.ts",
+											"line": 45,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L45"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 53,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/file-service.ts",
+													"line": 45,
+													"character": 14,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L45"
+												}
+											],
+											"signatures": [
+												{
+													"id": 54,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/file-service.ts",
+															"line": 45,
+															"character": 14,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L45"
+														}
+													],
+													"parameters": [
+														{
+															"id": 55,
+															"name": "path",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "boolean"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 56,
+									"name": "isFile",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/file-service.ts",
+											"line": 56,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L56"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 57,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/file-service.ts",
+													"line": 56,
+													"character": 9,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L56"
+												}
+											],
+											"signatures": [
+												{
+													"id": 58,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/file-service.ts",
+															"line": 56,
+															"character": 9,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L56"
+														}
+													],
+													"parameters": [
+														{
+															"id": 59,
+															"name": "path",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "boolean"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 60,
+									"name": "makeFolderIfNotExist",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/file-service.ts",
+											"line": 67,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L67"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 61,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/file-service.ts",
+													"line": 67,
+													"character": 23,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L67"
+												}
+											],
+											"signatures": [
+												{
+													"id": 62,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/file-service.ts",
+															"line": 67,
+															"character": 23,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L67"
+														}
+													],
+													"parameters": [
+														{
+															"id": 63,
+															"name": "folderPath",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "void"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 64,
+									"name": "readFile",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/file-service.ts",
+											"line": 73,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L73"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 65,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/file-service.ts",
+													"line": 73,
+													"character": 11,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L73"
+												}
+											],
+											"signatures": [
+												{
+													"id": 66,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/file-service.ts",
+															"line": 73,
+															"character": 11,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L73"
+														}
+													],
+													"parameters": [
+														{
+															"id": 67,
+															"name": "filePath",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "string"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 68,
+									"name": "readIgnoreList",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/file-service.ts",
+											"line": 76,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L76"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 69,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/file-service.ts",
+													"line": 76,
+													"character": 17,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L76"
+												}
+											],
+											"signatures": [
+												{
+													"id": 70,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/file-service.ts",
+															"line": 76,
+															"character": 17,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L76"
+														}
+													],
+													"parameters": [
+														{
+															"id": 71,
+															"name": "path",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "array",
+																"elementType": {
+																	"type": "intrinsic",
+																	"name": "string"
+																}
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 72,
+									"name": "removeFile",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/file-service.ts",
+											"line": 90,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L90"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 73,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/file-service.ts",
+													"line": 90,
+													"character": 13,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L90"
+												}
+											],
+											"signatures": [
+												{
+													"id": 74,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/file-service.ts",
+															"line": 90,
+															"character": 13,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L90"
+														}
+													],
+													"parameters": [
+														{
+															"id": 75,
+															"name": "filePath",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "void"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 76,
+									"name": "removeFolder",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/file-service.ts",
+											"line": 96,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L96"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 77,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/file-service.ts",
+													"line": 96,
+													"character": 15,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L96"
+												}
+											],
+											"signatures": [
+												{
+													"id": 78,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/file-service.ts",
+															"line": 96,
+															"character": 15,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L96"
+														}
+													],
+													"parameters": [
+														{
+															"id": 79,
+															"name": "folderPath",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "void"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 80,
+									"name": "unzip",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/file-service.ts",
+											"line": 103,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L103"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 81,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/file-service.ts",
+													"line": 103,
+													"character": 8,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L103"
+												}
+											],
+											"signatures": [
+												{
+													"id": 82,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/file-service.ts",
+															"line": 103,
+															"character": 8,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L103"
+														}
+													],
+													"parameters": [
+														{
+															"id": 83,
+															"name": "src",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														},
+														{
+															"id": 84,
+															"name": "dest",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "void"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 85,
+									"name": "writeToFile",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/file-service.ts",
+											"line": 106,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L106"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 86,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/file-service.ts",
+													"line": 106,
+													"character": 14,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L106"
+												}
+											],
+											"signatures": [
+												{
+													"id": 87,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/file-service.ts",
+															"line": 106,
+															"character": 14,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L106"
+														}
+													],
+													"parameters": [
+														{
+															"id": 88,
+															"name": "filePath",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														},
+														{
+															"id": 89,
+															"name": "data",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "void"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										27,
+										35,
+										40,
+										44,
+										48,
+										52,
+										56,
+										60,
+										64,
+										68,
+										72,
+										76,
+										80,
+										85
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "base-frame/src/service/file-service.ts",
+									"line": 8,
+									"character": 27,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L8"
+								}
+							]
+						}
+					},
+					"defaultValue": "..."
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"children": [
+						25
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "base-frame/src/service/file-service.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/file-service.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 90,
+			"name": "service/git-service",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 91,
+					"name": "GitService",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 92,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"signatures": [
+								{
+									"id": 93,
+									"name": "new GitService",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 91,
+										"name": "GitService",
+										"package": "@beecode/msh-base-frame"
+									}
+								}
+							]
+						},
+						{
+							"id": 94,
+							"name": "_getAxiosHeader",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "base-frame/src/service/git-service.ts",
+									"line": 8,
+									"character": 11,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/git-service.ts#L8"
+								}
+							],
+							"signatures": [
+								{
+									"id": 95,
+									"name": "_getAxiosHeader",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/git-service.ts",
+											"line": 8,
+											"character": 11,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/git-service.ts#L8"
+										}
+									],
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "undefined"
+											},
+											{
+												"type": "reference",
+												"target": {
+													"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+													"qualifiedName": "Record"
+												},
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												],
+												"name": "Record",
+												"package": "typescript"
+											}
+										]
+									}
+								}
+							]
+						},
+						{
+							"id": 96,
+							"name": "downloadZipToTempFolder",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "base-frame/src/service/git-service.ts",
+									"line": 17,
+									"character": 7,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/git-service.ts#L17"
+								}
+							],
+							"signatures": [
+								{
+									"id": 97,
+									"name": "downloadZipToTempFolder",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/git-service.ts",
+											"line": 17,
+											"character": 7,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/git-service.ts#L17"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								92
+							]
+						},
+						{
+							"title": "Methods",
+							"children": [
+								94,
+								96
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "base-frame/src/service/git-service.ts",
+							"line": 7,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/git-service.ts#L7"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						91
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "base-frame/src/service/git-service.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/git-service.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 98,
+			"name": "service/temp-folder-service",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 99,
+					"name": "tempFolderService",
+					"variant": "declaration",
+					"kind": 32,
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "base-frame/src/service/temp-folder-service.ts",
+							"line": 6,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/temp-folder-service.ts#L6"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 100,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 101,
+									"name": "cleanAll",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/temp-folder-service.ts",
+											"line": 7,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/temp-folder-service.ts#L7"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 102,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/temp-folder-service.ts",
+													"line": 7,
+													"character": 11,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/temp-folder-service.ts#L7"
+												}
+											],
+											"signatures": [
+												{
+													"id": 103,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/temp-folder-service.ts",
+															"line": 7,
+															"character": 11,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/temp-folder-service.ts#L7"
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "void"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 104,
+									"name": "flattenFolderByOneLevelAndRemoveIgnored",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/temp-folder-service.ts",
+											"line": 11,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/temp-folder-service.ts#L11"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 105,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/temp-folder-service.ts",
+													"line": 11,
+													"character": 42,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/temp-folder-service.ts#L11"
+												}
+											],
+											"signatures": [
+												{
+													"id": 106,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/temp-folder-service.ts",
+															"line": 11,
+															"character": 42,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/temp-folder-service.ts#L11"
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "void"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 107,
+									"name": "makeTempFolderIfNotExist",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/temp-folder-service.ts",
+											"line": 22,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/temp-folder-service.ts#L22"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 108,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/temp-folder-service.ts",
+													"line": 22,
+													"character": 27,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/temp-folder-service.ts#L22"
+												}
+											],
+											"signatures": [
+												{
+													"id": 109,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/temp-folder-service.ts",
+															"line": 22,
+															"character": 27,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/temp-folder-service.ts#L22"
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "void"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 110,
+									"name": "readIgnoreList",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/temp-folder-service.ts",
+											"line": 25,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/temp-folder-service.ts#L25"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 111,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/temp-folder-service.ts",
+													"line": 25,
+													"character": 17,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/temp-folder-service.ts#L25"
+												}
+											],
+											"signatures": [
+												{
+													"id": 112,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/temp-folder-service.ts",
+															"line": 25,
+															"character": 17,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/temp-folder-service.ts#L25"
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "array",
+																"elementType": {
+																	"type": "intrinsic",
+																	"name": "string"
+																}
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										101,
+										104,
+										107,
+										110
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "base-frame/src/service/temp-folder-service.ts",
+									"line": 6,
+									"character": 33,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/temp-folder-service.ts#L6"
+								}
+							]
+						}
+					},
+					"defaultValue": "..."
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"children": [
+						99
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "base-frame/src/service/temp-folder-service.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/temp-folder-service.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 113,
+			"name": "service/template-service",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 114,
+					"name": "templateService",
+					"variant": "declaration",
+					"kind": 32,
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "base-frame/src/service/template-service.ts",
+							"line": 6,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/template-service.ts#L6"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 115,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 116,
+									"name": "render",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/template-service.ts",
+											"line": 7,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/template-service.ts#L7"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 117,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/template-service.ts",
+													"line": 7,
+													"character": 9,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/template-service.ts#L7"
+												}
+											],
+											"signatures": [
+												{
+													"id": 118,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/template-service.ts",
+															"line": 7,
+															"character": 9,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/template-service.ts#L7"
+														}
+													],
+													"parameters": [
+														{
+															"id": 119,
+															"name": "template",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														},
+														{
+															"id": 120,
+															"name": "templateValues",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "any"
+															}
+														}
+													],
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 121,
+									"name": "renderAndOverrideFile",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/template-service.ts",
+											"line": 10,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/template-service.ts#L10"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 122,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/template-service.ts",
+													"line": 10,
+													"character": 24,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/template-service.ts#L10"
+												}
+											],
+											"signatures": [
+												{
+													"id": 123,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/template-service.ts",
+															"line": 10,
+															"character": 24,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/template-service.ts#L10"
+														}
+													],
+													"parameters": [
+														{
+															"id": 124,
+															"name": "filePath",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "void"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 125,
+									"name": "renderFile",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/service/template-service.ts",
+											"line": 14,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/template-service.ts#L14"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 126,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/service/template-service.ts",
+													"line": 14,
+													"character": 13,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/template-service.ts#L14"
+												}
+											],
+											"signatures": [
+												{
+													"id": 127,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/service/template-service.ts",
+															"line": 14,
+															"character": 13,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/template-service.ts#L14"
+														}
+													],
+													"parameters": [
+														{
+															"id": 128,
+															"name": "filePath",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														},
+														{
+															"id": 129,
+															"name": "templateValues",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "any"
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "string"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										116,
+										121,
+										125
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "base-frame/src/service/template-service.ts",
+									"line": 6,
+									"character": 31,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/template-service.ts#L6"
+								}
+							]
+						}
+					},
+					"defaultValue": "..."
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"children": [
+						114
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "base-frame/src/service/template-service.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/service/template-service.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 130,
+			"name": "use-case/action-use-case",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 131,
+					"name": "actionUseCase",
+					"variant": "declaration",
+					"kind": 32,
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "base-frame/src/use-case/action-use-case.ts",
+							"line": 4,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/action-use-case.ts#L4"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 132,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 133,
+									"name": "clone",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/use-case/action-use-case.ts",
+											"line": 5,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/action-use-case.ts#L5"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 134,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/use-case/action-use-case.ts",
+													"line": 5,
+													"character": 8,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/action-use-case.ts#L5"
+												}
+											],
+											"signatures": [
+												{
+													"id": 135,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/use-case/action-use-case.ts",
+															"line": 5,
+															"character": 8,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/action-use-case.ts#L5"
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "void"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										133
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "base-frame/src/use-case/action-use-case.ts",
+									"line": 4,
+									"character": 29,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/action-use-case.ts#L4"
+								}
+							]
+						}
+					},
+					"defaultValue": "..."
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"children": [
+						131
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "base-frame/src/use-case/action-use-case.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/action-use-case.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 136,
+			"name": "use-case/git-use-case",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 137,
+					"name": "gitUseCase",
+					"variant": "declaration",
+					"kind": 32,
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "base-frame/src/use-case/git-use-case.ts",
+							"line": 9,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/git-use-case.ts#L9"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 138,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 139,
+									"name": "cleanAndGetNewCopyOfTemplateRepo",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/use-case/git-use-case.ts",
+											"line": 10,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/git-use-case.ts#L10"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 140,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/use-case/git-use-case.ts",
+													"line": 10,
+													"character": 35,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/git-use-case.ts#L10"
+												}
+											],
+											"signatures": [
+												{
+													"id": 141,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/use-case/git-use-case.ts",
+															"line": 10,
+															"character": 35,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/git-use-case.ts#L10"
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "void"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 142,
+									"name": "copyFilesFromBaseIfTheyDontExist",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/use-case/git-use-case.ts",
+											"line": 14,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/git-use-case.ts#L14"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 143,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/use-case/git-use-case.ts",
+													"line": 14,
+													"character": 35,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/git-use-case.ts#L14"
+												}
+											],
+											"signatures": [
+												{
+													"id": 144,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/use-case/git-use-case.ts",
+															"line": 14,
+															"character": 35,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/git-use-case.ts#L14"
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "void"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 145,
+									"name": "extractAndRemoveZipFileAndPrepareTempFolder",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/use-case/git-use-case.ts",
+											"line": 18,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/git-use-case.ts#L18"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 146,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/use-case/git-use-case.ts",
+													"line": 18,
+													"character": 46,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/git-use-case.ts#L18"
+												}
+											],
+											"signatures": [
+												{
+													"id": 147,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/use-case/git-use-case.ts",
+															"line": 18,
+															"character": 46,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/git-use-case.ts#L18"
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "void"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 148,
+									"name": "renderAllTemplateWithValuesFromConfig",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/use-case/git-use-case.ts",
+											"line": 24,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/git-use-case.ts#L24"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 149,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/use-case/git-use-case.ts",
+													"line": 24,
+													"character": 40,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/git-use-case.ts#L24"
+												}
+											],
+											"signatures": [
+												{
+													"id": 150,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/use-case/git-use-case.ts",
+															"line": 24,
+															"character": 40,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/git-use-case.ts#L24"
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": {
+															"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+															"qualifiedName": "Promise"
+														},
+														"typeArguments": [
+															{
+																"type": "intrinsic",
+																"name": "void"
+															}
+														],
+														"name": "Promise",
+														"package": "typescript"
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										139,
+										142,
+										145,
+										148
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "base-frame/src/use-case/git-use-case.ts",
+									"line": 9,
+									"character": 26,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/git-use-case.ts#L9"
+								}
+							]
+						}
+					},
+					"defaultValue": "..."
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"children": [
+						137
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "base-frame/src/use-case/git-use-case.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/use-case/git-use-case.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 151,
+			"name": "util/config",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 164,
+					"name": "ConfigSetup",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 165,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"signatures": [
+								{
+									"id": 166,
+									"name": "new ConfigSetup",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 164,
+										"name": "ConfigSetup",
+										"package": "@beecode/msh-base-frame"
+									}
+								}
+							]
+						},
+						{
+							"id": 167,
+							"name": "_configuration",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isProtected": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "base-frame/src/util/config.ts",
+									"line": 37,
+									"character": 11,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L37"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 155,
+								"name": "ConfigurationType",
+								"package": "@beecode/msh-base-frame"
+							},
+							"defaultValue": "undefined"
+						},
+						{
+							"id": 168,
+							"name": "configuration",
+							"variant": "declaration",
+							"kind": 262144,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "base-frame/src/util/config.ts",
+									"line": 39,
+									"character": 5,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L39"
+								}
+							],
+							"getSignature": {
+								"id": 169,
+								"name": "configuration",
+								"variant": "signature",
+								"kind": 524288,
+								"flags": {},
+								"sources": [
+									{
+										"fileName": "base-frame/src/util/config.ts",
+										"line": 39,
+										"character": 5,
+										"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L39"
+									}
+								],
+								"type": {
+									"type": "union",
+									"types": [
+										{
+											"type": "intrinsic",
+											"name": "undefined"
+										},
+										{
+											"type": "reference",
+											"target": 155,
+											"name": "ConfigurationType",
+											"package": "@beecode/msh-base-frame"
+										}
+									]
+								}
+							}
+						},
+						{
+							"id": 170,
+							"name": "_getUserConfigIfExists",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "base-frame/src/util/config.ts",
+									"line": 43,
+									"character": 17,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L43"
+								}
+							],
+							"signatures": [
+								{
+									"id": 171,
+									"name": "_getUserConfigIfExists",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/util/config.ts",
+											"line": 43,
+											"character": 17,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L43"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "any"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						},
+						{
+							"id": 172,
+							"name": "initialize",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "base-frame/src/util/config.ts",
+									"line": 54,
+									"character": 7,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L54"
+								}
+							],
+							"signatures": [
+								{
+									"id": 173,
+									"name": "initialize",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/util/config.ts",
+											"line": 54,
+											"character": 7,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L54"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								165
+							]
+						},
+						{
+							"title": "Properties",
+							"children": [
+								167
+							]
+						},
+						{
+							"title": "Accessors",
+							"children": [
+								168
+							]
+						},
+						{
+							"title": "Methods",
+							"children": [
+								170,
+								172
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "base-frame/src/util/config.ts",
+							"line": 36,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L36"
+						}
+					]
+				},
+				{
+					"id": 152,
+					"name": "ConfigurationTemplateType",
+					"variant": "declaration",
+					"kind": 2097152,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "base-frame/src/util/config.ts",
+							"line": 11,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L11"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 153,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 154,
+									"name": "projectName",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/util/config.ts",
+											"line": 12,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L12"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										154
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "base-frame/src/util/config.ts",
+									"line": 11,
+									"character": 40,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L11"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 155,
+					"name": "ConfigurationType",
+					"variant": "declaration",
+					"kind": 2097152,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "base-frame/src/util/config.ts",
+							"line": 15,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L15"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 156,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 158,
+									"name": "gitZipUrl",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/util/config.ts",
+											"line": 17,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L17"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 159,
+									"name": "githubPersonAccessToken",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "base-frame/src/util/config.ts",
+											"line": 18,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L18"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 160,
+									"name": "localTemplateFolder",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "base-frame/src/util/config.ts",
+											"line": 19,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L19"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 161,
+									"name": "tempFolderPath",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/util/config.ts",
+											"line": 21,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L21"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 157,
+									"name": "template",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/util/config.ts",
+											"line": 16,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L16"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 152,
+										"name": "ConfigurationTemplateType",
+										"package": "@beecode/msh-base-frame"
+									}
+								},
+								{
+									"id": 162,
+									"name": "templateZipName",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/util/config.ts",
+											"line": 22,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L22"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										158,
+										159,
+										160,
+										161,
+										157,
+										162
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "base-frame/src/util/config.ts",
+									"line": 15,
+									"character": 32,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L15"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 163,
+					"name": "configSchema",
+					"variant": "declaration",
+					"kind": 32,
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "base-frame/src/util/config.ts",
+							"line": 25,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L25"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"sourceFileName": "../../node_modules/joi/lib/index.d.ts",
+							"qualifiedName": "Joi.ObjectSchema"
+						},
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": 155,
+								"name": "ConfigurationType",
+								"package": "@beecode/msh-base-frame"
+							}
+						],
+						"name": "ObjectSchema",
+						"package": "joi",
+						"qualifiedName": "Joi.ObjectSchema"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 176,
+					"name": "config",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "base-frame/src/util/config.ts",
+							"line": 78,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L78"
+						}
+					],
+					"signatures": [
+						{
+							"id": 177,
+							"name": "config",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "base-frame/src/util/config.ts",
+									"line": 78,
+									"character": 22,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L78"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 155,
+								"name": "ConfigurationType",
+								"package": "@beecode/msh-base-frame"
+							}
+						}
+					]
+				},
+				{
+					"id": 174,
+					"name": "configSetupSingleton",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "base-frame/src/util/config.ts",
+							"line": 74,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L74"
+						}
+					],
+					"signatures": [
+						{
+							"id": 175,
+							"name": "configSetupSingleton",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "base-frame/src/util/config.ts",
+									"line": 74,
+									"character": 13,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L74"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 164,
+								"name": "ConfigSetup",
+								"package": "@beecode/msh-base-frame"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						164
+					]
+				},
+				{
+					"title": "Type Aliases",
+					"children": [
+						152,
+						155
+					]
+				},
+				{
+					"title": "Variables",
+					"children": [
+						163
+					]
+				},
+				{
+					"title": "Functions",
+					"children": [
+						176,
+						174
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "base-frame/src/util/config.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/config.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 178,
+			"name": "util/constant",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 179,
+					"name": "constant",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "base-frame/src/util/constant.ts",
+							"line": 5,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/constant.ts#L5"
+						}
+					],
+					"signatures": [
+						{
+							"id": 180,
+							"name": "constant",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "base-frame/src/util/constant.ts",
+									"line": 5,
+									"character": 13,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/constant.ts#L5"
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 181,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 182,
+											"name": "configFilePath",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isReadonly": true
+											},
+											"sources": [
+												{
+													"fileName": "base-frame/src/util/constant.ts",
+													"line": 7,
+													"character": 2,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/constant.ts#L7"
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												182
+											]
+										}
+									],
+									"sources": [
+										{
+											"fileName": "base-frame/src/util/constant.ts",
+											"line": 6,
+											"character": 8,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/constant.ts#L6"
+										}
+									]
+								}
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						179
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "base-frame/src/util/constant.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/constant.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 183,
+			"name": "util/logger",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 184,
+					"name": "logger",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "base-frame/src/util/logger.ts",
+							"line": 6,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/logger.ts#L6"
+						}
+					],
+					"signatures": [
+						{
+							"id": 185,
+							"name": "logger",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "base-frame/src/util/logger.ts",
+									"line": 6,
+									"character": 13,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/logger.ts#L6"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "../logger/src/logger-strategy/console.ts",
+									"qualifiedName": "LoggerStrategyConsole"
+								},
+								"name": "LoggerStrategyConsole",
+								"package": "@beecode/msh-logger"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						184
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "base-frame/src/util/logger.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/logger.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 186,
+			"name": "util/validation-util",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 187,
+					"name": "validationUtil",
+					"variant": "declaration",
+					"kind": 32,
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "base-frame/src/util/validation-util.ts",
+							"line": 4,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/validation-util.ts#L4"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 188,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 189,
+									"name": "sanitize",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/util/validation-util.ts",
+											"line": 5,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/validation-util.ts#L5"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 190,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/util/validation-util.ts",
+													"line": 5,
+													"character": 11,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/validation-util.ts#L5"
+												}
+											],
+											"signatures": [
+												{
+													"id": 191,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/util/validation-util.ts",
+															"line": 5,
+															"character": 11,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/validation-util.ts#L5"
+														}
+													],
+													"typeParameter": [
+														{
+															"id": 192,
+															"name": "T",
+															"variant": "typeParam",
+															"kind": 131072,
+															"flags": {}
+														}
+													],
+													"parameters": [
+														{
+															"id": 193,
+															"name": "objectToValidate",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "any"
+															}
+														},
+														{
+															"id": 194,
+															"name": "schema",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "reference",
+																"target": {
+																	"sourceFileName": "../../node_modules/joi/lib/index.d.ts",
+																	"qualifiedName": "Joi.Schema"
+																},
+																"typeArguments": [
+																	{
+																		"type": "reference",
+																		"target": 192,
+																		"name": "T",
+																		"package": "@beecode/msh-base-frame",
+																		"refersToTypeParameter": true
+																	}
+																],
+																"name": "Schema",
+																"package": "joi",
+																"qualifiedName": "Joi.Schema"
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": 192,
+														"name": "T",
+														"package": "@beecode/msh-base-frame",
+														"refersToTypeParameter": true
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 195,
+									"name": "validate",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "base-frame/src/util/validation-util.ts",
+											"line": 8,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/validation-util.ts#L8"
+										}
+									],
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 196,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "base-frame/src/util/validation-util.ts",
+													"line": 8,
+													"character": 11,
+													"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/validation-util.ts#L8"
+												}
+											],
+											"signatures": [
+												{
+													"id": 197,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "base-frame/src/util/validation-util.ts",
+															"line": 8,
+															"character": 11,
+															"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/validation-util.ts#L8"
+														}
+													],
+													"typeParameter": [
+														{
+															"id": 198,
+															"name": "T",
+															"variant": "typeParam",
+															"kind": 131072,
+															"flags": {}
+														}
+													],
+													"parameters": [
+														{
+															"id": 199,
+															"name": "objectToValidate",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "any"
+															}
+														},
+														{
+															"id": 200,
+															"name": "schema",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "reference",
+																"target": {
+																	"sourceFileName": "../../node_modules/joi/lib/index.d.ts",
+																	"qualifiedName": "Joi.Schema"
+																},
+																"typeArguments": [
+																	{
+																		"type": "reference",
+																		"target": 198,
+																		"name": "T",
+																		"package": "@beecode/msh-base-frame",
+																		"refersToTypeParameter": true
+																	}
+																],
+																"name": "Schema",
+																"package": "joi",
+																"qualifiedName": "Joi.Schema"
+															}
+														}
+													],
+													"type": {
+														"type": "reference",
+														"target": 198,
+														"name": "T",
+														"package": "@beecode/msh-base-frame",
+														"refersToTypeParameter": true
+													}
+												}
+											]
+										}
+									},
+									"defaultValue": "..."
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										189,
+										195
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "base-frame/src/util/validation-util.ts",
+									"line": 4,
+									"character": 30,
+									"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/validation-util.ts#L4"
+								}
+							]
+						}
+					},
+					"defaultValue": "..."
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"children": [
+						187
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "base-frame/src/util/validation-util.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-base-frame/blob/20a571f/src/util/validation-util.ts#L1"
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"children": [
+				3,
+				201,
+				214,
+				2,
+				1,
+				24,
+				90,
+				98,
+				113,
+				130,
+				136,
+				151,
+				178,
+				183,
+				186
+			]
+		}
+	],
+	"packageName": "@beecode/msh-base-frame",
+	"symbolIdMap": {
+		"1": {
+			"sourceFileName": "src/index-jest-setup.ts",
+			"qualifiedName": ""
+		},
+		"2": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"3": {
+			"sourceFileName": "src/app/clone-app.ts",
+			"qualifiedName": ""
+		},
+		"4": {
+			"sourceFileName": "src/app/clone-app.ts",
+			"qualifiedName": "CloneApp"
+		},
+		"5": {
+			"sourceFileName": "../app-boot/src/app-flow.ts",
+			"qualifiedName": "AppFlow.DeepExecFlowList"
+		},
+		"6": {
+			"sourceFileName": "../app-boot/src/app-flow.ts",
+			"qualifiedName": "AppFlow.DeepExecFlowList"
+		},
+		"7": {
+			"sourceFileName": "../app-boot/src/app-flow.ts",
+			"qualifiedName": "params"
+		},
+		"8": {
+			"sourceFileName": "../app-boot/src/app-flow.ts",
+			"qualifiedName": "__type"
+		},
+		"9": {
+			"sourceFileName": "../app-boot/src/app-flow.ts",
+			"qualifiedName": "__type.flowList"
+		},
+		"10": {
+			"sourceFileName": "../app-boot/src/app-flow.ts",
+			"qualifiedName": "__type.direction"
+		},
+		"11": {
+			"sourceFileName": "../app-boot/src/app-flow.ts",
+			"qualifiedName": "AppFlow.ExecSyncFlowList"
+		},
+		"12": {
+			"sourceFileName": "../app-boot/src/app-flow.ts",
+			"qualifiedName": "AppFlow.ExecSyncFlowList"
+		},
+		"13": {
+			"sourceFileName": "../app-boot/src/app-flow.ts",
+			"qualifiedName": "lifeCycleList"
+		},
+		"14": {
+			"sourceFileName": "../app-boot/src/app-flow.ts",
+			"qualifiedName": "createOrDestroy"
+		},
+		"15": {
+			"sourceFileName": "src/app/clone-app.ts",
+			"qualifiedName": "CloneApp.__constructor"
+		},
+		"16": {
+			"sourceFileName": "src/app/clone-app.ts",
+			"qualifiedName": "CloneApp"
+		},
+		"17": {
+			"sourceFileName": "../app-boot/src/app-flow.ts",
+			"qualifiedName": "AppFlow._flowList"
+		},
+		"18": {
+			"sourceFileName": "../app-boot/src/app-flow.ts",
+			"qualifiedName": "AppFlow.create"
+		},
+		"19": {
+			"sourceFileName": "../app-boot/src/app-flow.ts",
+			"qualifiedName": "AppFlow.create"
+		},
+		"20": {
+			"sourceFileName": "../app-boot/src/app-flow.ts",
+			"qualifiedName": "AppFlow.destroy"
+		},
+		"21": {
+			"sourceFileName": "../app-boot/src/app-flow.ts",
+			"qualifiedName": "AppFlow.destroy"
+		},
+		"22": {
+			"sourceFileName": "../app-boot/src/app-flow.ts",
+			"qualifiedName": "AppFlow._topLevelReversedFlowList"
+		},
+		"23": {
+			"sourceFileName": "../app-boot/src/app-flow.ts",
+			"qualifiedName": "AppFlow._topLevelReversedFlowList"
+		},
+		"24": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": ""
+		},
+		"25": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "fileService"
+		},
+		"26": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__object"
+		},
+		"27": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__object.copy"
+		},
+		"28": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"29": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"30": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "src"
+		},
+		"31": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "dest"
+		},
+		"32": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "options"
+		},
+		"33": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__type"
+		},
+		"34": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__type.ignore"
+		},
+		"35": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__object.copyFilesIfNotExists"
+		},
+		"36": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"37": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"38": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "src"
+		},
+		"39": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "dest"
+		},
+		"40": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__object.filterFiles"
+		},
+		"41": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"42": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"43": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "fileFolderList"
+		},
+		"44": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__object.getFolderContent"
+		},
+		"45": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"46": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"47": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "path"
+		},
+		"48": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__object.getRecurringFolderContent"
+		},
+		"49": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"50": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"51": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "path"
+		},
+		"52": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__object.isDirectory"
+		},
+		"53": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"54": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"55": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "path"
+		},
+		"56": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__object.isFile"
+		},
+		"57": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"58": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"59": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "path"
+		},
+		"60": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__object.makeFolderIfNotExist"
+		},
+		"61": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"62": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"63": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "folderPath"
+		},
+		"64": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__object.readFile"
+		},
+		"65": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"66": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"67": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "filePath"
+		},
+		"68": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__object.readIgnoreList"
+		},
+		"69": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"70": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"71": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "path"
+		},
+		"72": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__object.removeFile"
+		},
+		"73": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"74": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"75": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "filePath"
+		},
+		"76": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__object.removeFolder"
+		},
+		"77": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"78": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"79": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "folderPath"
+		},
+		"80": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__object.unzip"
+		},
+		"81": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"82": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"83": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "src"
+		},
+		"84": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "dest"
+		},
+		"85": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__object.writeToFile"
+		},
+		"86": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"87": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "__function"
+		},
+		"88": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "filePath"
+		},
+		"89": {
+			"sourceFileName": "src/service/file-service.ts",
+			"qualifiedName": "data"
+		},
+		"90": {
+			"sourceFileName": "src/service/git-service.ts",
+			"qualifiedName": ""
+		},
+		"91": {
+			"sourceFileName": "src/service/git-service.ts",
+			"qualifiedName": "GitService"
+		},
+		"94": {
+			"sourceFileName": "src/service/git-service.ts",
+			"qualifiedName": "GitService._getAxiosHeader"
+		},
+		"95": {
+			"sourceFileName": "src/service/git-service.ts",
+			"qualifiedName": "GitService._getAxiosHeader"
+		},
+		"96": {
+			"sourceFileName": "src/service/git-service.ts",
+			"qualifiedName": "GitService.downloadZipToTempFolder"
+		},
+		"97": {
+			"sourceFileName": "src/service/git-service.ts",
+			"qualifiedName": "GitService.downloadZipToTempFolder"
+		},
+		"98": {
+			"sourceFileName": "src/service/temp-folder-service.ts",
+			"qualifiedName": ""
+		},
+		"99": {
+			"sourceFileName": "src/service/temp-folder-service.ts",
+			"qualifiedName": "tempFolderService"
+		},
+		"100": {
+			"sourceFileName": "src/service/temp-folder-service.ts",
+			"qualifiedName": "__object"
+		},
+		"101": {
+			"sourceFileName": "src/service/temp-folder-service.ts",
+			"qualifiedName": "__object.cleanAll"
+		},
+		"102": {
+			"sourceFileName": "src/service/temp-folder-service.ts",
+			"qualifiedName": "__function"
+		},
+		"103": {
+			"sourceFileName": "src/service/temp-folder-service.ts",
+			"qualifiedName": "__function"
+		},
+		"104": {
+			"sourceFileName": "src/service/temp-folder-service.ts",
+			"qualifiedName": "__object.flattenFolderByOneLevelAndRemoveIgnored"
+		},
+		"105": {
+			"sourceFileName": "src/service/temp-folder-service.ts",
+			"qualifiedName": "__function"
+		},
+		"106": {
+			"sourceFileName": "src/service/temp-folder-service.ts",
+			"qualifiedName": "__function"
+		},
+		"107": {
+			"sourceFileName": "src/service/temp-folder-service.ts",
+			"qualifiedName": "__object.makeTempFolderIfNotExist"
+		},
+		"108": {
+			"sourceFileName": "src/service/temp-folder-service.ts",
+			"qualifiedName": "__function"
+		},
+		"109": {
+			"sourceFileName": "src/service/temp-folder-service.ts",
+			"qualifiedName": "__function"
+		},
+		"110": {
+			"sourceFileName": "src/service/temp-folder-service.ts",
+			"qualifiedName": "__object.readIgnoreList"
+		},
+		"111": {
+			"sourceFileName": "src/service/temp-folder-service.ts",
+			"qualifiedName": "__function"
+		},
+		"112": {
+			"sourceFileName": "src/service/temp-folder-service.ts",
+			"qualifiedName": "__function"
+		},
+		"113": {
+			"sourceFileName": "src/service/template-service.ts",
+			"qualifiedName": ""
+		},
+		"114": {
+			"sourceFileName": "src/service/template-service.ts",
+			"qualifiedName": "templateService"
+		},
+		"115": {
+			"sourceFileName": "src/service/template-service.ts",
+			"qualifiedName": "__object"
+		},
+		"116": {
+			"sourceFileName": "src/service/template-service.ts",
+			"qualifiedName": "__object.render"
+		},
+		"117": {
+			"sourceFileName": "src/service/template-service.ts",
+			"qualifiedName": "__function"
+		},
+		"118": {
+			"sourceFileName": "src/service/template-service.ts",
+			"qualifiedName": "__function"
+		},
+		"119": {
+			"sourceFileName": "src/service/template-service.ts",
+			"qualifiedName": "template"
+		},
+		"120": {
+			"sourceFileName": "src/service/template-service.ts",
+			"qualifiedName": "templateValues"
+		},
+		"121": {
+			"sourceFileName": "src/service/template-service.ts",
+			"qualifiedName": "__object.renderAndOverrideFile"
+		},
+		"122": {
+			"sourceFileName": "src/service/template-service.ts",
+			"qualifiedName": "__function"
+		},
+		"123": {
+			"sourceFileName": "src/service/template-service.ts",
+			"qualifiedName": "__function"
+		},
+		"124": {
+			"sourceFileName": "src/service/template-service.ts",
+			"qualifiedName": "filePath"
+		},
+		"125": {
+			"sourceFileName": "src/service/template-service.ts",
+			"qualifiedName": "__object.renderFile"
+		},
+		"126": {
+			"sourceFileName": "src/service/template-service.ts",
+			"qualifiedName": "__function"
+		},
+		"127": {
+			"sourceFileName": "src/service/template-service.ts",
+			"qualifiedName": "__function"
+		},
+		"128": {
+			"sourceFileName": "src/service/template-service.ts",
+			"qualifiedName": "filePath"
+		},
+		"129": {
+			"sourceFileName": "src/service/template-service.ts",
+			"qualifiedName": "templateValues"
+		},
+		"130": {
+			"sourceFileName": "src/use-case/action-use-case.ts",
+			"qualifiedName": ""
+		},
+		"131": {
+			"sourceFileName": "src/use-case/action-use-case.ts",
+			"qualifiedName": "actionUseCase"
+		},
+		"132": {
+			"sourceFileName": "src/use-case/action-use-case.ts",
+			"qualifiedName": "__object"
+		},
+		"133": {
+			"sourceFileName": "src/use-case/action-use-case.ts",
+			"qualifiedName": "__object.clone"
+		},
+		"134": {
+			"sourceFileName": "src/use-case/action-use-case.ts",
+			"qualifiedName": "__function"
+		},
+		"135": {
+			"sourceFileName": "src/use-case/action-use-case.ts",
+			"qualifiedName": "__function"
+		},
+		"136": {
+			"sourceFileName": "src/use-case/git-use-case.ts",
+			"qualifiedName": ""
+		},
+		"137": {
+			"sourceFileName": "src/use-case/git-use-case.ts",
+			"qualifiedName": "gitUseCase"
+		},
+		"138": {
+			"sourceFileName": "src/use-case/git-use-case.ts",
+			"qualifiedName": "__object"
+		},
+		"139": {
+			"sourceFileName": "src/use-case/git-use-case.ts",
+			"qualifiedName": "__object.cleanAndGetNewCopyOfTemplateRepo"
+		},
+		"140": {
+			"sourceFileName": "src/use-case/git-use-case.ts",
+			"qualifiedName": "__function"
+		},
+		"141": {
+			"sourceFileName": "src/use-case/git-use-case.ts",
+			"qualifiedName": "__function"
+		},
+		"142": {
+			"sourceFileName": "src/use-case/git-use-case.ts",
+			"qualifiedName": "__object.copyFilesFromBaseIfTheyDontExist"
+		},
+		"143": {
+			"sourceFileName": "src/use-case/git-use-case.ts",
+			"qualifiedName": "__function"
+		},
+		"144": {
+			"sourceFileName": "src/use-case/git-use-case.ts",
+			"qualifiedName": "__function"
+		},
+		"145": {
+			"sourceFileName": "src/use-case/git-use-case.ts",
+			"qualifiedName": "__object.extractAndRemoveZipFileAndPrepareTempFolder"
+		},
+		"146": {
+			"sourceFileName": "src/use-case/git-use-case.ts",
+			"qualifiedName": "__function"
+		},
+		"147": {
+			"sourceFileName": "src/use-case/git-use-case.ts",
+			"qualifiedName": "__function"
+		},
+		"148": {
+			"sourceFileName": "src/use-case/git-use-case.ts",
+			"qualifiedName": "__object.renderAllTemplateWithValuesFromConfig"
+		},
+		"149": {
+			"sourceFileName": "src/use-case/git-use-case.ts",
+			"qualifiedName": "__function"
+		},
+		"150": {
+			"sourceFileName": "src/use-case/git-use-case.ts",
+			"qualifiedName": "__function"
+		},
+		"151": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": ""
+		},
+		"152": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "ConfigurationTemplateType"
+		},
+		"153": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "__type"
+		},
+		"154": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "__type.projectName"
+		},
+		"155": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "ConfigurationType"
+		},
+		"156": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "__type"
+		},
+		"157": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "__type.template"
+		},
+		"158": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "__type.gitZipUrl"
+		},
+		"159": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "__type.githubPersonAccessToken"
+		},
+		"160": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "__type.localTemplateFolder"
+		},
+		"161": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "__type.tempFolderPath"
+		},
+		"162": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "__type.templateZipName"
+		},
+		"163": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "configSchema"
+		},
+		"164": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "ConfigSetup"
+		},
+		"167": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "ConfigSetup._configuration"
+		},
+		"168": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "ConfigSetup.configuration"
+		},
+		"169": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "ConfigSetup.configuration"
+		},
+		"170": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "ConfigSetup._getUserConfigIfExists"
+		},
+		"171": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "ConfigSetup._getUserConfigIfExists"
+		},
+		"172": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "ConfigSetup.initialize"
+		},
+		"173": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "ConfigSetup.initialize"
+		},
+		"174": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "configSetupSingleton"
+		},
+		"175": {
+			"sourceFileName": "../util/src/singleton/pattern.ts",
+			"qualifiedName": "configSetupSingleton"
+		},
+		"176": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "config"
+		},
+		"177": {
+			"sourceFileName": "src/util/config.ts",
+			"qualifiedName": "config"
+		},
+		"178": {
+			"sourceFileName": "src/util/constant.ts",
+			"qualifiedName": ""
+		},
+		"179": {
+			"sourceFileName": "src/util/constant.ts",
+			"qualifiedName": "constant"
+		},
+		"180": {
+			"sourceFileName": "../util/src/singleton/pattern.ts",
+			"qualifiedName": "constant"
+		},
+		"181": {
+			"sourceFileName": "src/util/constant.ts",
+			"qualifiedName": "__object"
+		},
+		"182": {
+			"sourceFileName": "src/util/constant.ts",
+			"qualifiedName": "__object.configFilePath"
+		},
+		"183": {
+			"sourceFileName": "src/util/logger.ts",
+			"qualifiedName": ""
+		},
+		"184": {
+			"sourceFileName": "src/util/logger.ts",
+			"qualifiedName": "logger"
+		},
+		"185": {
+			"sourceFileName": "../util/src/singleton/pattern.ts",
+			"qualifiedName": "logger"
+		},
+		"186": {
+			"sourceFileName": "src/util/validation-util.ts",
+			"qualifiedName": ""
+		},
+		"187": {
+			"sourceFileName": "src/util/validation-util.ts",
+			"qualifiedName": "validationUtil"
+		},
+		"188": {
+			"sourceFileName": "src/util/validation-util.ts",
+			"qualifiedName": "__object"
+		},
+		"189": {
+			"sourceFileName": "src/util/validation-util.ts",
+			"qualifiedName": "__object.sanitize"
+		},
+		"190": {
+			"sourceFileName": "src/util/validation-util.ts",
+			"qualifiedName": "__function"
+		},
+		"191": {
+			"sourceFileName": "src/util/validation-util.ts",
+			"qualifiedName": "__function"
+		},
+		"192": {
+			"sourceFileName": "src/util/validation-util.ts",
+			"qualifiedName": "T"
+		},
+		"193": {
+			"sourceFileName": "src/util/validation-util.ts",
+			"qualifiedName": "objectToValidate"
+		},
+		"194": {
+			"sourceFileName": "src/util/validation-util.ts",
+			"qualifiedName": "schema"
+		},
+		"195": {
+			"sourceFileName": "src/util/validation-util.ts",
+			"qualifiedName": "__object.validate"
+		},
+		"196": {
+			"sourceFileName": "src/util/validation-util.ts",
+			"qualifiedName": "__function"
+		},
+		"197": {
+			"sourceFileName": "src/util/validation-util.ts",
+			"qualifiedName": "__function"
+		},
+		"198": {
+			"sourceFileName": "src/util/validation-util.ts",
+			"qualifiedName": "T"
+		},
+		"199": {
+			"sourceFileName": "src/util/validation-util.ts",
+			"qualifiedName": "objectToValidate"
+		},
+		"200": {
+			"sourceFileName": "src/util/validation-util.ts",
+			"qualifiedName": "schema"
+		},
+		"201": {
+			"sourceFileName": "src/app/init/clone-initate.ts",
+			"qualifiedName": ""
+		},
+		"202": {
+			"sourceFileName": "src/app/init/clone-initate.ts",
+			"qualifiedName": "CloneInitiate"
+		},
+		"203": {
+			"sourceFileName": "src/app/init/clone-initate.ts",
+			"qualifiedName": "CloneInitiate.__constructor"
+		},
+		"204": {
+			"sourceFileName": "src/app/init/clone-initate.ts",
+			"qualifiedName": "CloneInitiate"
+		},
+		"205": {
+			"sourceFileName": "src/app/init/clone-initate.ts",
+			"qualifiedName": "CloneInitiate._createFn"
+		},
+		"206": {
+			"sourceFileName": "src/app/init/clone-initate.ts",
+			"qualifiedName": "CloneInitiate._createFn"
+		},
+		"207": {
+			"sourceFileName": "src/app/init/clone-initate.ts",
+			"qualifiedName": "CloneInitiate._destroyFn"
+		},
+		"208": {
+			"sourceFileName": "src/app/init/clone-initate.ts",
+			"qualifiedName": "CloneInitiate._destroyFn"
+		},
+		"209": {
+			"sourceFileName": "../app-boot/src/life-cycle.ts",
+			"qualifiedName": "LifeCycle.name"
+		},
+		"210": {
+			"sourceFileName": "../app-boot/src/life-cycle.ts",
+			"qualifiedName": "LifeCycle.create"
+		},
+		"211": {
+			"sourceFileName": "../app-boot/src/life-cycle.ts",
+			"qualifiedName": "LifeCycle.create"
+		},
+		"212": {
+			"sourceFileName": "../app-boot/src/life-cycle.ts",
+			"qualifiedName": "LifeCycle.destroy"
+		},
+		"213": {
+			"sourceFileName": "../app-boot/src/life-cycle.ts",
+			"qualifiedName": "LifeCycle.destroy"
+		},
+		"214": {
+			"sourceFileName": "src/app/init/setup-initiate.ts",
+			"qualifiedName": ""
+		},
+		"215": {
+			"sourceFileName": "src/app/init/setup-initiate.ts",
+			"qualifiedName": "SetupInitiate"
+		},
+		"216": {
+			"sourceFileName": "src/app/init/setup-initiate.ts",
+			"qualifiedName": "SetupInitiate.__constructor"
+		},
+		"217": {
+			"sourceFileName": "src/app/init/setup-initiate.ts",
+			"qualifiedName": "SetupInitiate"
+		},
+		"218": {
+			"sourceFileName": "src/app/init/setup-initiate.ts",
+			"qualifiedName": "SetupInitiate._createFn"
+		},
+		"219": {
+			"sourceFileName": "src/app/init/setup-initiate.ts",
+			"qualifiedName": "SetupInitiate._createFn"
+		},
+		"220": {
+			"sourceFileName": "src/app/init/setup-initiate.ts",
+			"qualifiedName": "SetupInitiate._destroyFn"
+		},
+		"221": {
+			"sourceFileName": "src/app/init/setup-initiate.ts",
+			"qualifiedName": "SetupInitiate._destroyFn"
+		},
+		"222": {
+			"sourceFileName": "../app-boot/src/life-cycle.ts",
+			"qualifiedName": "LifeCycle.name"
+		},
+		"223": {
+			"sourceFileName": "../app-boot/src/life-cycle.ts",
+			"qualifiedName": "LifeCycle.create"
+		},
+		"224": {
+			"sourceFileName": "../app-boot/src/life-cycle.ts",
+			"qualifiedName": "LifeCycle.create"
+		},
+		"225": {
+			"sourceFileName": "../app-boot/src/life-cycle.ts",
+			"qualifiedName": "LifeCycle.destroy"
+		},
+		"226": {
+			"sourceFileName": "../app-boot/src/life-cycle.ts",
+			"qualifiedName": "LifeCycle.destroy"
+		}
+	}
+}
