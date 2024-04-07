@@ -85,7 +85,7 @@
 		"lint-eslint-fix": "npm run lint-eslint -- --fix",
 		"lint-fix": "npm run lint-prettier-fix && npm run lint-eslint-fix && npm run lint-json-fix",
 		"lint-json": "npm run lint-json-fix -- -c",
-		"lint-json-fix": "jsonsort * .*.json '!./test/node_modules' '!./resource' '!**/.env*' -t",
+		"lint-json-fix": "jsonsort * .*.json '!./dist' '!./lib' '!./test/node_modules' '!./resource' '!**/.env*'  '!**/.gitignore' -t",
 		"lint-prettier": "prettier --check {**/*,*}.{js,jsx,ts,tsx}",
 		"lint-prettier-fix": "prettier --write {**/*,*}.{js,jsx,ts,tsx}",
 		"npm-bump-version": "npm --no-git-tag-version version",
@@ -133,9 +133,9 @@
 		}
 	},
 	"dependencies": {
-		"@beecode/msh-app-boot": "0.1.1",
-		"@beecode/msh-logger": "0.2.1",
-		"@beecode/msh-util": "1.2.1",
+		"@beecode/msh-app-boot": "1.0.0",
+		"@beecode/msh-logger": "1.0.1",
+		"@beecode/msh-util": "2.0.1",
 		"axios": "1.6.8",
 		"compare-versions": "6.1.0",
 		"dotenv": "16.4.5",

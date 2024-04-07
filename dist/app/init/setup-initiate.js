@@ -1,0 +1,14 @@
+import { LifeCycle } from '@beecode/msh-app-boot';
+import { configSetupSingleton } from '../../util/config.js';
+export class SetupInitiate extends LifeCycle {
+    constructor() {
+        super({ name: 'Setup' });
+    }
+    async _createFn() {
+        await configSetupSingleton().initialize();
+    }
+    async _destroyFn() {
+        return Promise.resolve(undefined);
+    }
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2V0dXAtaW5pdGlhdGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvYXBwL2luaXQvc2V0dXAtaW5pdGlhdGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxNQUFNLHVCQUF1QixDQUFBO0FBRWpELE9BQU8sRUFBRSxvQkFBb0IsRUFBRSxNQUFNLGtCQUFrQixDQUFBO0FBRXZELE1BQU0sT0FBTyxhQUFjLFNBQVEsU0FBUztJQUMzQztRQUNDLEtBQUssQ0FBQyxFQUFFLElBQUksRUFBRSxPQUFPLEVBQUUsQ0FBQyxDQUFBO0lBQ3pCLENBQUM7SUFFUyxLQUFLLENBQUMsU0FBUztRQUN4QixNQUFNLG9CQUFvQixFQUFFLENBQUMsVUFBVSxFQUFFLENBQUE7SUFDMUMsQ0FBQztJQUVTLEtBQUssQ0FBQyxVQUFVO1FBQ3pCLE9BQU8sT0FBTyxDQUFDLE9BQU8sQ0FBQyxTQUFTLENBQUMsQ0FBQTtJQUNsQyxDQUFDO0NBQ0QiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBMaWZlQ3ljbGUgfSBmcm9tICdAYmVlY29kZS9tc2gtYXBwLWJvb3QnXG5cbmltcG9ydCB7IGNvbmZpZ1NldHVwU2luZ2xldG9uIH0gZnJvbSAnI3NyYy91dGlsL2NvbmZpZydcblxuZXhwb3J0IGNsYXNzIFNldHVwSW5pdGlhdGUgZXh0ZW5kcyBMaWZlQ3ljbGUge1xuXHRjb25zdHJ1Y3RvcigpIHtcblx0XHRzdXBlcih7IG5hbWU6ICdTZXR1cCcgfSlcblx0fVxuXG5cdHByb3RlY3RlZCBhc3luYyBfY3JlYXRlRm4oKTogUHJvbWlzZTx2b2lkPiB7XG5cdFx0YXdhaXQgY29uZmlnU2V0dXBTaW5nbGV0b24oKS5pbml0aWFsaXplKClcblx0fVxuXG5cdHByb3RlY3RlZCBhc3luYyBfZGVzdHJveUZuKCk6IFByb21pc2U8dm9pZD4ge1xuXHRcdHJldHVybiBQcm9taXNlLnJlc29sdmUodW5kZWZpbmVkKVxuXHR9XG59XG4iXX0=

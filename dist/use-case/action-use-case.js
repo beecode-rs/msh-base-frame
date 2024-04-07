@@ -1,0 +1,13 @@
+import { gitUseCase } from '../use-case/git-use-case.js';
+import { logger } from '../util/logger.js';
+export const actionUseCase = {
+    clone: async () => {
+        await gitUseCase.cleanAndGetNewCopyOfTemplateRepo();
+        await gitUseCase.extractAndRemoveZipFileAndPrepareTempFolder();
+        await gitUseCase.renderAllTemplateWithValuesFromConfig();
+        await gitUseCase
+            .copyFilesFromBaseIfTheyDontExist()
+            .catch((err) => logger().error('Some file already exist, you need to compare folder manually', { err }));
+    },
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYWN0aW9uLXVzZS1jYXNlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3VzZS1jYXNlL2FjdGlvbi11c2UtY2FzZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUUsVUFBVSxFQUFFLE1BQU0sNEJBQTRCLENBQUE7QUFDdkQsT0FBTyxFQUFFLE1BQU0sRUFBRSxNQUFNLGtCQUFrQixDQUFBO0FBRXpDLE1BQU0sQ0FBQyxNQUFNLGFBQWEsR0FBRztJQUM1QixLQUFLLEVBQUUsS0FBSyxJQUFtQixFQUFFO1FBQ2hDLE1BQU0sVUFBVSxDQUFDLGdDQUFnQyxFQUFFLENBQUE7UUFDbkQsTUFBTSxVQUFVLENBQUMsMkNBQTJDLEVBQUUsQ0FBQTtRQUM5RCxNQUFNLFVBQVUsQ0FBQyxxQ0FBcUMsRUFBRSxDQUFBO1FBQ3hELE1BQU0sVUFBVTthQUNkLGdDQUFnQyxFQUFFO2FBQ2xDLEtBQUssQ0FBQyxDQUFDLEdBQUcsRUFBRSxFQUFFLENBQUMsTUFBTSxFQUFFLENBQUMsS0FBSyxDQUFDLDhEQUE4RCxFQUFFLEVBQUUsR0FBRyxFQUFFLENBQUMsQ0FBQyxDQUFBO0lBQzFHLENBQUM7Q0FDRCxDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgZ2l0VXNlQ2FzZSB9IGZyb20gJyNzcmMvdXNlLWNhc2UvZ2l0LXVzZS1jYXNlJ1xuaW1wb3J0IHsgbG9nZ2VyIH0gZnJvbSAnI3NyYy91dGlsL2xvZ2dlcidcblxuZXhwb3J0IGNvbnN0IGFjdGlvblVzZUNhc2UgPSB7XG5cdGNsb25lOiBhc3luYyAoKTogUHJvbWlzZTx2b2lkPiA9PiB7XG5cdFx0YXdhaXQgZ2l0VXNlQ2FzZS5jbGVhbkFuZEdldE5ld0NvcHlPZlRlbXBsYXRlUmVwbygpXG5cdFx0YXdhaXQgZ2l0VXNlQ2FzZS5leHRyYWN0QW5kUmVtb3ZlWmlwRmlsZUFuZFByZXBhcmVUZW1wRm9sZGVyKClcblx0XHRhd2FpdCBnaXRVc2VDYXNlLnJlbmRlckFsbFRlbXBsYXRlV2l0aFZhbHVlc0Zyb21Db25maWcoKVxuXHRcdGF3YWl0IGdpdFVzZUNhc2Vcblx0XHRcdC5jb3B5RmlsZXNGcm9tQmFzZUlmVGhleURvbnRFeGlzdCgpXG5cdFx0XHQuY2F0Y2goKGVycikgPT4gbG9nZ2VyKCkuZXJyb3IoJ1NvbWUgZmlsZSBhbHJlYWR5IGV4aXN0LCB5b3UgbmVlZCB0byBjb21wYXJlIGZvbGRlciBtYW51YWxseScsIHsgZXJyIH0pKVxuXHR9LFxufVxuIl19
