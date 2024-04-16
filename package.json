@@ -133,9 +133,9 @@
 		}
 	},
 	"dependencies": {
-		"@beecode/msh-app-boot": "1.0.1",
-		"@beecode/msh-logger": "1.0.2",
-		"@beecode/msh-util": "2.0.3",
+		"@beecode/msh-app-boot": "1.0.2",
+		"@beecode/msh-logger": "1.0.3",
+		"@beecode/msh-util": "2.0.5",
 		"axios": "1.6.8",
 		"compare-versions": "6.1.0",
 		"dotenv": "16.4.5",
@@ -169,8 +169,8 @@
 		"@types/minimatch": "5.1.2",
 		"@types/mustache": "4.2.5",
 		"@types/node": "20.12.7",
-		"@typescript-eslint/eslint-plugin": "7.6.0",
-		"@typescript-eslint/parser": "7.6.0",
+		"@typescript-eslint/eslint-plugin": "7.7.0",
+		"@typescript-eslint/parser": "7.7.0",
 		"commitizen": "4.3.0",
 		"concurrently": "8.2.2",
 		"eslint": "8.57.0",
