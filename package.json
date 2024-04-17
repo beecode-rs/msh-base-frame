@@ -57,6 +57,9 @@
 	"main": "./lib/index.js",
 	"module": "./dist/index.js",
 	"types": "./dist/index.d.ts",
+	"bin": {
+		"msh-base": "./bin/msh-base.js"
+	},
 	"files": [
 		"./bin",
 		"./dist",

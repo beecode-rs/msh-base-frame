@@ -1,4 +1,4 @@
-import 'source-map-support/register'
+import 'source-map-support/register.js'
 
 import { AppStarter } from '@beecode/msh-app-boot'
 import { setAppBootLogger } from '@beecode/msh-app-boot/util/logger'
