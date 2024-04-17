@@ -1,3 +1,10 @@
+## [0.3.3](https://github.com/beecode-rs/msh-base-frame/compare/v0.3.2...v0.3.3) (2024-04-17)
+
+
+### Bug Fixes
+
+* add missing bin link ([6733153](https://github.com/beecode-rs/msh-base-frame/commit/67331533425ebd45c8f29cfe03d8f308e1d8ebdf))
+
 ## [0.3.2](https://github.com/beecode-rs/msh-base-frame/compare/v0.3.1...v0.3.2) (2024-04-17)
 
 
