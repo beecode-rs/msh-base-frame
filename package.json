@@ -1,6 +1,6 @@
 {
 	"name": "@beecode/msh-base-frame",
-	"version": "0.3.1",
+	"version": "0.3.2",
 	"description": "MicroService helper",
 	"keywords": [
 		"shell",
