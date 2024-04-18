@@ -11,6 +11,8 @@ process.on('unhandledRejection', (error) => logger().error('Unhandled Rejection'
 
 setAppBootLogger(logger())
 
-new AppStarter(new CloneApp()).start().catch((err: unknown) => {
-	return console.log(err) // eslint-disable-line no-console
-})
+try {
+	await new AppStarter(new CloneApp()).start()
+} catch (err) {
+	console.log(err) // eslint-disable-line no-console
+}
