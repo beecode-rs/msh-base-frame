@@ -2,7 +2,7 @@ import extractZip from 'extract-zip';
 import { promises as fs } from 'fs';
 import { copy } from 'fs-extra';
 import { glob } from 'glob';
-import { logger } from '../util/logger.js';
+import { logger } from '#src/util/logger';
 export const fileService = {
     copy: async (src, dest, options = { ignore: [] }) => {
         const copyContentList = await glob('**/*', { cwd: src, dot: true, ignore: [...options.ignore, '.bfignore'], nodir: true });

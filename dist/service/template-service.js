@@ -1,6 +1,6 @@
 import mustache from 'mustache';
-import { fileService } from '../service/file-service.js';
-import { config } from '../util/config.js';
+import { fileService } from '#src/service/file-service';
+import { config } from '#src/util/config';
 export const templateService = {
     render: (template, templateValues) => {
         return mustache.render(template, templateValues);
