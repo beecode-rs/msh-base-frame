@@ -1,9 +1,9 @@
 // import validationUtilContract from './validation-util.contract'
 import { mocker } from '@beecode/msh-test-contractor'
-import { afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
+import { promises as fs } from 'fs'
+import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 // import { MockerJestObjectResult } from '@beecode/msh-test-contractor/mocker/mocker-jest-object-strategy'
 // import { ContractMockRevertFn } from '@beecode/msh-test-contractor/types'
-import { promises as fs } from 'fs'
 
 import { config, configSetupSingleton } from '#src/util/config'
 import constantContract from '#src/util/constant.contract'
@@ -13,13 +13,13 @@ const cwd = process.cwd()
 
 describe('config', () => {
 	describe('_init', () => {
-		let spy_constantContract: jest.SpiedFunction<any>
+		let spy_constantContract: Mock
 		// let constantMockRestore: ContractMockRevertFn
 		// let spy_validationUtilContract: MockerJestObjectResult
 		// let validationUtilMockRestore: ContractMockRevertFn
 
-		let spy_fsStat: jest.SpiedFunction<any>
-		let spy_fsReadFile: jest.SpiedFunction<any>
+		let spy_fsStat: Mock
+		let spy_fsReadFile: Mock
 
 		beforeEach(() => {
 			configSetupSingleton()['_configuration'] = undefined
@@ -29,16 +29,15 @@ describe('config', () => {
 			// const validationUtilMocker = mocker.contract<MockerJestObjectResult>(validationUtilContract)
 			// spy_validationUtilContract = validationUtilMocker.spy
 			// validationUtilMockRestore = validationUtilMocker.mockRestore
-			spy_fsStat = jest.spyOn(fs, 'stat') as any
-			spy_fsReadFile = jest.spyOn(fs, 'readFile') as any
+			spy_fsStat = vi.spyOn(fs, 'stat') as any
+			spy_fsReadFile = vi.spyOn(fs, 'readFile') as any
 		})
 
 		afterEach(() => {
 			// configMockRestore()
 			// constantMockRestore()
 			// validationUtilMockRestore()
-			jest.restoreAllMocks()
-			jest.resetAllMocks()
+			vi.restoreAllMocks()
 		})
 
 		it('should fail if config file does not exist', async () => {

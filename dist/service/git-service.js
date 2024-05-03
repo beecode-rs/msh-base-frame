@@ -1,7 +1,7 @@
 import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
-import { config } from '../util/config.js';
+import { config } from '#src/util/config';
 export class GitService {
     _getAxiosHeader() {
         const { githubPersonAccessToken } = config();
