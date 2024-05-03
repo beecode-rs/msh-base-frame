@@ -1,3 +1,10 @@
+## [0.3.4](https://github.com/beecode-rs/msh-base-frame/compare/v0.3.3...v0.3.4) (2024-05-03)
+
+
+### Bug Fixes
+
+* update package.json, esmodule remove alias, use vitest instead of jest([#20](https://github.com/beecode-rs/msh-base-frame/issues/20)) ([1fc4a95](https://github.com/beecode-rs/msh-base-frame/commit/1fc4a95b126374c52b5f49f495efa4e314809f00))
+
 ## [0.3.3](https://github.com/beecode-rs/msh-base-frame/compare/v0.3.2...v0.3.3) (2024-04-17)
 
 
