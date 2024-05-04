@@ -1,3 +1,10 @@
+## [0.3.5](https://github.com/beecode-rs/msh-base-frame/compare/v0.3.4...v0.3.5) (2024-05-04)
+
+
+### Bug Fixes
+
+* update package.json, use shared config for eslint and prettier ([541479c](https://github.com/beecode-rs/msh-base-frame/commit/541479cde90bbd36fce2eddabf719d398370f62d))
+
 ## [0.3.4](https://github.com/beecode-rs/msh-base-frame/compare/v0.3.3...v0.3.4) (2024-05-03)
 
 
