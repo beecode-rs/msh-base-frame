@@ -136,7 +136,7 @@
 		}
 	},
 	"dependencies": {
-		"@beecode/msh-app-boot": "1.0.2",
+		"@beecode/msh-app-boot": "1.0.4",
 		"@beecode/msh-logger": "1.0.3",
 		"@beecode/msh-util": "2.0.5",
 		"axios": "1.6.8",
