@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/beecode-rs/msh-base-frame/compare/v0.3.5...v0.4.0) (2024-05-08)
+
+
+### Features
+
+* add shared semantic release config ([e06db94](https://github.com/beecode-rs/msh-base-frame/commit/e06db94ebaea638ce3cb08c1993f9046b765f0e3))
+
 ## [0.3.5](https://github.com/beecode-rs/msh-base-frame/compare/v0.3.4...v0.3.5) (2024-05-04)
 
 
