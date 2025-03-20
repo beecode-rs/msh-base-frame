@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/beecode-rs/msh-base-frame/compare/v0.4.0...v0.4.1) (2025-03-20)
+
+
+### Bug Fixes
+
+* update Node.js version, add Prettier and ESLint configurations ([3033c48](https://github.com/beecode-rs/msh-base-frame/commit/3033c48baf7af20b6d0ee854086e283e6d73b7e8))
+
 # [0.4.0](https://github.com/beecode-rs/msh-base-frame/compare/v0.3.5...v0.4.0) (2024-05-08)
 
 
