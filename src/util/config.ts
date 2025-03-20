@@ -40,6 +40,7 @@ export class ConfigSetup {
 		return this._configuration
 	}
 
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	protected async _getUserConfigIfExists(): Promise<any> {
 		try {
 			const userConfigFileLocation = path.join(os.homedir(), '.base-frame.user.json')

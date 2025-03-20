@@ -1,7 +1,7 @@
 // import validationUtilContract from './validation-util.contract'
 import { mocker } from '@beecode/msh-test-contractor'
 import { promises as fs } from 'fs'
-import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { type Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 // import { MockerJestObjectResult } from '@beecode/msh-test-contractor/mocker/mocker-jest-object-strategy'
 // import { ContractMockRevertFn } from '@beecode/msh-test-contractor/types'
 
@@ -24,12 +24,15 @@ describe('config', () => {
 		beforeEach(() => {
 			configSetupSingleton()['_configuration'] = undefined
 			const constantMocker = mocker.contract(constantContract)
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			spy_constantContract = constantMocker.spy as any
 			// constantMockRestore = constantMocker.mockRestore
 			// const validationUtilMocker = mocker.contract<MockerJestObjectResult>(validationUtilContract)
 			// spy_validationUtilContract = validationUtilMocker.spy
 			// validationUtilMockRestore = validationUtilMocker.mockRestore
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			spy_fsStat = vi.spyOn(fs, 'stat') as any
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			spy_fsReadFile = vi.spyOn(fs, 'readFile') as any
 		})
 

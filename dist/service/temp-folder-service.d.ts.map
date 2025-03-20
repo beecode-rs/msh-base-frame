@@ -1,1 +1,1 @@
-{"version":3,"file":"temp-folder-service.d.ts","sourceRoot":"","sources":["../../src/service/temp-folder-service.ts"],"names":[],"mappings":"AAKA,eAAO,MAAM,iBAAiB;oBACT,QAAQ,IAAI,CAAC;mDAIkB,QAAQ,IAAI,CAAC;oCAWlC,QAAQ,IAAI,CAAC;0BAGjB,QAAQ,MAAM,EAAE,CAAC;CAG3C,CAAA"}
+{"version":3,"file":"temp-folder-service.d.ts","sourceRoot":"","sources":["../../src/service/temp-folder-service.ts"],"names":[],"mappings":"AAKA,eAAO,MAAM,iBAAiB;oBACT,OAAO,CAAC,IAAI,CAAC;mDAIkB,OAAO,CAAC,IAAI,CAAC;oCAWlC,OAAO,CAAC,IAAI,CAAC;0BAIjB,OAAO,CAAC,MAAM,EAAE,CAAC;CAG3C,CAAA"}

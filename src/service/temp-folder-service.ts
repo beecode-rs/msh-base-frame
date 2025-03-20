@@ -22,6 +22,8 @@ export const tempFolderService = {
 	makeTempFolderIfNotExist: (): Promise<void> => {
 		return fileService.makeFolderIfNotExist(config().tempFolderPath)
 	},
+
+	// eslint-disable-next-line @typescript-eslint/require-await
 	readIgnoreList: async (): Promise<string[]> => {
 		return fileService.readIgnoreList(config().tempFolderPath)
 	},

@@ -1,1 +1,1 @@
-{"version":3,"file":"action-use-case.d.ts","sourceRoot":"","sources":["../../src/use-case/action-use-case.ts"],"names":[],"mappings":"AAGA,eAAO,MAAM,aAAa;iBACR,QAAQ,IAAI,CAAC;CAQ9B,CAAA"}
+{"version":3,"file":"action-use-case.d.ts","sourceRoot":"","sources":["../../src/use-case/action-use-case.ts"],"names":[],"mappings":"AAGA,eAAO,MAAM,aAAa;iBACR,OAAO,CAAC,IAAI,CAAC;CAQ9B,CAAA"}
