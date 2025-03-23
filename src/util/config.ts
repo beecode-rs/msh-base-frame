@@ -60,7 +60,7 @@ export class ConfigSetup {
 
 		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 		if (!(await fs.stat(configFilePath))) {
-			throw Error(`Config file missing [${configFilePath}]`)
+			throw Error(`Config file missing [${String(configFilePath)}]`)
 		}
 		const jsonContent = JSON.parse(await fs.readFile(configFilePath, 'utf8'))
 		const userJsonContent = await this._getUserConfigIfExists()

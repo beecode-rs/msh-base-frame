@@ -17,8 +17,8 @@ export const gitUseCase = {
 	},
 	extractAndRemoveZipFileAndPrepareTempFolder: async (): Promise<void> => {
 		const { templateZipName, tempFolderPath } = config()
-		await fileService.unzip(path.resolve(tempFolderPath, `./${templateZipName}`), config().tempFolderPath)
-		await fileService.removeFile(path.resolve(tempFolderPath, `./${templateZipName}`))
+		await fileService.unzip(path.resolve(tempFolderPath, `./${String(templateZipName)}`), config().tempFolderPath)
+		await fileService.removeFile(path.resolve(tempFolderPath, `./${String(templateZipName)}`))
 		await tempFolderService.flattenFolderByOneLevelAndRemoveIgnored()
 	},
 	renderAllTemplateWithValuesFromConfig: async (): Promise<void> => {

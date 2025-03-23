@@ -11,14 +11,14 @@ export class GitService {
 			return undefined
 		}
 
-		return { Authorization: `token ${githubPersonAccessToken}` }
+		return { Authorization: `token ${String(githubPersonAccessToken)}` }
 	}
 
 	async downloadZipToTempFolder(): Promise<void> {
 		const { gitZipUrl, tempFolderPath, templateZipName } = config()
 		const axiosHeader = this._getAxiosHeader()
 		const { data: stream } = await axios.get(gitZipUrl, { headers: axiosHeader, responseType: 'stream' })
-		stream.pipe(fs.createWriteStream(path.resolve(tempFolderPath, `./${templateZipName}`)))
+		stream.pipe(fs.createWriteStream(path.resolve(tempFolderPath, `./${String(templateZipName)}`)))
 
 		return new Promise((resolve, reject) => {
 			stream.on('end', resolve)
