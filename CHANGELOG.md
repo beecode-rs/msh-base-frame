@@ -1,3 +1,12 @@
+## [0.4.2](https://github.com/beecode-rs/msh-base-frame/compare/v0.4.1...v0.4.2) (2025-03-23)
+
+
+### Bug Fixes
+
+* refactor ESLint configuration and update dependencies ([2e32639](https://github.com/beecode-rs/msh-base-frame/commit/2e32639eab56b8ddc684e312d50a624167d098fa))
+* refactor ESLint configuration and update dependencies ([ace5edd](https://github.com/beecode-rs/msh-base-frame/commit/ace5edd2bd407d4fcb729ca06529557bec8c82d0))
+* refactor ESLint configuration and update dependencies ([3eac524](https://github.com/beecode-rs/msh-base-frame/commit/3eac524e38ab22497e27c1e79d785f041f3eb3e9))
+
 ## [0.4.1](https://github.com/beecode-rs/msh-base-frame/compare/v0.4.0...v0.4.1) (2025-03-20)
 
 
