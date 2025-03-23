@@ -58,6 +58,7 @@ export class ConfigSetup {
 		}
 		const { configFilePath } = constant()
 
+		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 		if (!(await fs.stat(configFilePath))) {
 			throw Error(`Config file missing [${configFilePath}]`)
 		}

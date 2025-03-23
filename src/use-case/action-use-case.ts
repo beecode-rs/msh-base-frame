@@ -6,8 +6,13 @@ export const actionUseCase = {
 		await gitUseCase.cleanAndGetNewCopyOfTemplateRepo()
 		await gitUseCase.extractAndRemoveZipFileAndPrepareTempFolder()
 		await gitUseCase.renderAllTemplateWithValuesFromConfig()
-		await gitUseCase
-			.copyFilesFromBaseIfTheyDontExist()
-			.catch((err) => logger().error('Some file already exist, you need to compare folder manually', { err }))
+		await gitUseCase.copyFilesFromBaseIfTheyDontExist().catch((err: unknown) => {
+			if (err instanceof Error) {
+				logger().error('Some file already exist, you need to compare folder manually', { errorMessage: err.message })
+
+				return
+			}
+			logger().error('Some file already exist, you need to compare folder manually', { err })
+		})
 	},
 }
