@@ -1,3 +1,10 @@
+## [0.4.4](https://github.com/beecode-rs/msh-base-frame/compare/v0.4.3...v0.4.4) (2025-03-29)
+
+
+### Bug Fixes
+
+* update package.json to use TypeScript source files and add ESM build script ([d1247f5](https://github.com/beecode-rs/msh-base-frame/commit/d1247f5d09ea797dc8c8656b5e61e8ac5f43b62d))
+
 ## [0.4.3](https://github.com/beecode-rs/msh-base-frame/compare/v0.4.2...v0.4.3) (2025-03-27)
 
 
