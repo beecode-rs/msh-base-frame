@@ -1,6 +1,6 @@
 import { LifeCycle } from '@beecode/msh-app-boot'
 
-import { actionUseCase } from '#src/use-case/action-use-case'
+import { actionUseCase } from '#src/business/use-case/action-use-case'
 
 export class CloneInitiate extends LifeCycle {
 	constructor() {

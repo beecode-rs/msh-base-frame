@@ -1,37 +1,36 @@
 import { singletonPattern } from '@beecode/msh-util/singleton/pattern'
 import { promises as fs } from 'fs'
-import Joi from 'joi'
 import os from 'os'
 import path from 'path'
 
+import { zEnumFetchTemplateStrategyType } from '#src/business/service/fetch-template/service'
+import { z } from '#src/lib/zod-wrapper'
 import { constant } from '#src/util/constant'
 import { logger } from '#src/util/logger'
 import { validationUtil } from '#src/util/validation-util'
 
-export type ConfigurationTemplateType = {
-	projectName: string
-}
-
-export type ConfigurationType = {
-	template: ConfigurationTemplateType
-	gitZipUrl: string
-	githubPersonAccessToken?: string
-	localTemplateFolder?: string
-
-	tempFolderPath: string
-	templateZipName: string
-}
-
-export const configSchema = Joi.object<ConfigurationType>()
-	.keys({
-		githubPersonAccessToken: Joi.string().allow(null).empty([null, '']).optional(),
-		gitZipUrl: Joi.string().required(),
-		localTemplateFolder: Joi.string().allow(null).empty([null, '']).optional(),
-		tempFolderPath: Joi.string().allow(null).empty([null, '']).required(),
-		template: Joi.object<ConfigurationTemplateType>().keys({ projectName: Joi.string().required() }).unknown(),
-		templateZipName: Joi.string().required(),
+export const userConfigurationTypeSchema = z
+	.object({
+		githubPersonAccessToken: z.string().optional(),
 	})
-	.required()
+	.optional()
+
+export type UserConfigurationType = z.infer<typeof userConfigurationTypeSchema>
+
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+export const configurationTypeSchemaFactory = () =>
+	z.object({
+		authorization: userConfigurationTypeSchema,
+		localTemplateFolder: z.string().optional().default(path.resolve(process.cwd(), './.base-frame-tmp/')),
+		template: z.object({
+			fetchStrategy: zEnumFetchTemplateStrategyType,
+			location: z.string(),
+			variables: z.object({ projectName: z.string() }).loose(),
+		}),
+		tmpFolderPath: z.string(),
+	})
+
+type ConfigurationType = z.infer<ReturnType<typeof configurationTypeSchemaFactory>>
 
 export class ConfigSetup {
 	protected _configuration?: ConfigurationType = undefined
@@ -40,14 +39,19 @@ export class ConfigSetup {
 		return this._configuration
 	}
 
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	protected async _getUserConfigIfExists(): Promise<any> {
+	protected async _getUserConfigIfExists(): Promise<UserConfigurationType> {
 		try {
 			const userConfigFileLocation = path.join(os.homedir(), '.base-frame.user.json')
 			const userConfigContent = await fs.readFile(userConfigFileLocation, 'utf8')
 
-			return JSON.parse(userConfigContent)
-		} catch (_e) {
+			return validationUtil.parse(userConfigContent, userConfigurationTypeSchema)
+		} catch (error: unknown) {
+			if (error instanceof Error) {
+				logger().warn('Error reading user config, continuing without it', error.message)
+			} else {
+				logger().warn('Unknown error reading user config, continuing without it', String(error))
+			}
+
 			return {}
 		}
 	}
@@ -62,14 +66,19 @@ export class ConfigSetup {
 		if (!(await fs.stat(configFilePath))) {
 			throw Error(`Config file missing [${String(configFilePath)}]`)
 		}
-		const jsonContent = JSON.parse(await fs.readFile(configFilePath, 'utf8'))
+
 		const userJsonContent = await this._getUserConfigIfExists()
-		const defaultValues = {
-			tempFolderPath: path.resolve(process.cwd(), './.base-frame-tmp/'),
-			templateZipName: 'template.zip',
-		}
+		const jsonContent = JSON.parse(await fs.readFile(configFilePath, 'utf8'))
 		logger().debug('jsonContent', { jsonContent, userJsonContent })
-		this._configuration = validationUtil.validate({ ...defaultValues, ...userJsonContent, ...jsonContent }, configSchema)
+		console.log('json content', { jsonContent, userJsonContent }) // eslint-disable-line no-console
+
+		this._configuration = validationUtil.parse(
+			{
+				...jsonContent,
+				authorisation: { ...userJsonContent, ...jsonContent.authorisation },
+			},
+			configurationTypeSchemaFactory()
+		)
 	}
 }
 

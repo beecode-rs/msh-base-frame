@@ -6,6 +6,7 @@ import { type Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vite
 // import { ContractMockRevertFn } from '@beecode/msh-test-contractor/types'
 
 import { config, configSetupSingleton } from '#src/util/config'
+import { constant } from '#src/util/constant'
 import constantContract from '#src/util/constant.contract'
 
 // get node js working directory
@@ -53,13 +54,15 @@ describe('config', () => {
 		})
 
 		it('should successfully init config', async () => {
+			const { templateTmpZipName } = constant()
+
 			const dummyConfig = {
 				gitZipUrl: 'https://test.local',
-				tempFolderPath: `${cwd}/.base-frame-tmp`,
 				template: {
 					projectName: 'test-project',
 				},
-				templateZipName: 'template.zip',
+				templateZipName: templateTmpZipName,
+				tmpFolderPath: `${cwd}/.base-frame-tmp`,
 			}
 
 			spy_fsStat.mockResolvedValue(true)

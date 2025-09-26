@@ -1,0 +1,1 @@
+{"version":3,"file":"strategy-web.d.ts","sourceRoot":"","sources":["../../../../src/business/service/fetch-template/strategy-web.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,KAAK,qBAAqB,EAAE,MAAM,+CAA+C,CAAA;AAE1F,qBAAa,wBAAyB,YAAW,qBAAqB;IACrE,KAAK,IAAI,OAAO,CAAC,IAAI,CAAC;CAGtB"}
