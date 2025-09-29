@@ -3,10 +3,11 @@ import { promises as fs } from 'fs'
 import os from 'os'
 import path from 'path'
 
-import { zEnumFetchTemplateStrategyType } from '#src/business/service/fetch-template/service'
-import { z } from '#src/lib/zod-wrapper'
+import { FetchTemplateStrategyType } from '#src/business/model/fetch-template-strategy-type'
+import { z } from '#src/lib/zod-adapter'
 import { constant } from '#src/util/constant'
 import { logger } from '#src/util/logger'
+import { stringUtil } from '#src/util/string-util'
 import { validationUtil } from '#src/util/validation-util'
 
 export const userConfigurationTypeSchema = z
@@ -17,20 +18,19 @@ export const userConfigurationTypeSchema = z
 
 export type UserConfigurationType = z.infer<typeof userConfigurationTypeSchema>
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-export const configurationTypeSchemaFactory = () =>
-	z.object({
-		authorization: userConfigurationTypeSchema,
-		localTemplateFolder: z.string().optional().default(path.resolve(process.cwd(), './.base-frame-tmp/')),
-		template: z.object({
-			fetchStrategy: zEnumFetchTemplateStrategyType,
-			location: z.string(),
-			variables: z.object({ projectName: z.string() }).loose(),
-		}),
-		tmpFolderPath: z.string(),
-	})
+export const configurationTypeSchema = z.object({
+	authorization: userConfigurationTypeSchema,
+	template: z.object({
+		fetchStrategy: z.enum(FetchTemplateStrategyType),
+		localDestinationFolder: z.string().optional().default(path.resolve(process.cwd(), './.base-frame-template/')),
+		location: z.string(),
+		subFolderLocation: z.string().optional(),
+	}),
+	tmpFolderPath: z.string().optional().default(stringUtil.generateRandomTmpFolderName()),
+	variables: z.object({ projectName: z.string() }).loose(),
+})
 
-type ConfigurationType = z.infer<ReturnType<typeof configurationTypeSchemaFactory>>
+export type ConfigurationType = z.infer<typeof configurationTypeSchema>
 
 export class ConfigSetup {
 	protected _configuration?: ConfigurationType = undefined
@@ -70,14 +70,13 @@ export class ConfigSetup {
 		const userJsonContent = await this._getUserConfigIfExists()
 		const jsonContent = JSON.parse(await fs.readFile(configFilePath, 'utf8'))
 		logger().debug('jsonContent', { jsonContent, userJsonContent })
-		console.log('json content', { jsonContent, userJsonContent }) // eslint-disable-line no-console
 
 		this._configuration = validationUtil.parse(
 			{
 				...jsonContent,
 				authorisation: { ...userJsonContent, ...jsonContent.authorisation },
 			},
-			configurationTypeSchemaFactory()
+			configurationTypeSchema
 		)
 	}
 }

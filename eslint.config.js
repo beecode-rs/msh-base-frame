@@ -3,7 +3,7 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
 	globalIgnores([
-		'.base-frame-tmp',
+		'.base-frame-template',
 		'.idea',
 		'.semaphore',
 		'coverage',

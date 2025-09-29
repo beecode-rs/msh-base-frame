@@ -1,14 +1,13 @@
 import { type FetchTemplateStrategy } from '#src/business/service/fetch-template/strategy'
-import { fileService } from '#src/business/service/file-service'
+import { FileAdapter } from '#src/lib/file-adapter'
 import { config } from '#src/util/config'
 
 export class FetchTemplateStrategyLocalFolder implements FetchTemplateStrategy {
 	async fetch(): Promise<void> {
 		const {
-			tmpFolderPath,
-			template: { location },
+			template: { location: templateLocation, localDestinationFolder },
 		} = config()
 
-		await fileService.copy(location, tmpFolderPath)
+		await new FileAdapter().copy({ destinationFilePath: localDestinationFolder, sourceFilePath: templateLocation })
 	}
 }

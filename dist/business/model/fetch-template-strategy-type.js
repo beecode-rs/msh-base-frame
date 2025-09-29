@@ -1,0 +1,7 @@
+export var FetchTemplateStrategyType;
+(function (FetchTemplateStrategyType) {
+    FetchTemplateStrategyType["LOCAL_FOLDER"] = "LOCAL_FOLDER";
+    FetchTemplateStrategyType["WEB_ZIP"] = "WEB_ZIP";
+    FetchTemplateStrategyType["GIT"] = "GIT";
+})(FetchTemplateStrategyType || (FetchTemplateStrategyType = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmV0Y2gtdGVtcGxhdGUtc3RyYXRlZ3ktdHlwZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9idXNpbmVzcy9tb2RlbC9mZXRjaC10ZW1wbGF0ZS1zdHJhdGVneS10eXBlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE1BQU0sQ0FBTixJQUFZLHlCQUlYO0FBSkQsV0FBWSx5QkFBeUI7SUFDcEMsMERBQTZCLENBQUE7SUFDN0IsZ0RBQW1CLENBQUE7SUFDbkIsd0NBQVcsQ0FBQTtBQUNaLENBQUMsRUFKVyx5QkFBeUIsS0FBekIseUJBQXlCLFFBSXBDIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGVudW0gRmV0Y2hUZW1wbGF0ZVN0cmF0ZWd5VHlwZSB7XG5cdExPQ0FMX0ZPTERFUiA9ICdMT0NBTF9GT0xERVInLFxuXHRXRUJfWklQID0gJ1dFQl9aSVAnLFxuXHRHSVQgPSAnR0lUJyxcbn1cbiJdfQ==

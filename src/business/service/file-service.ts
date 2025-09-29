@@ -1,110 +1,23 @@
-import extractZip from 'extract-zip'
-import { promises as fs } from 'fs'
-import { copy } from 'fs-extra'
-import { glob } from 'glob'
+import { arrayUtil } from '@beecode/msh-util/array-util'
 
-import { pathService } from '#src/business/service/path-service'
+import { FileAdapter } from '#src/lib/file-adapter'
 import { logger } from '#src/util/logger'
 
 export const fileService = {
-	copy: async (src: string, dest: string, options: { ignore: string[] } = { ignore: [] }): Promise<void> => {
-		const copyContentList = await glob('**/*', { cwd: src, dot: true, ignore: [...options.ignore, '.bfignore'], nodir: true })
-		await Promise.all(
-			// eslint-disable-next-line @typescript-eslint/no-explicit-any
-			(copyContentList as any).map((file: string) => {
-				return copy(`${src}/${file}`, `${dest}/${file}`)
-			})
-		)
-	},
-	copyFilesIfNotExists: async (src: string, dest: string): Promise<void> => {
-		await copy(src, dest, { overwrite: false })
-	},
-	filterFiles: async (fileFolderList: string[]): Promise<string[]> => {
-		const filtered = await Promise.all(
-			fileFolderList.map(async (f) => {
-				if (await fileService.isFile(f)) {
-					return f
-				}
+	readIgnoreFileFolderList: async (params: { folderPath: string }): Promise<string[]> => {
+		const { folderPath } = params
 
-				return undefined
-			})
-		)
-
-		return filtered.filter(Boolean) as string[]
-	},
-	getFolderContent: async (path: string): Promise<string[]> => {
-		return fs.readdir(path)
-	},
-	getRecurringFolderContent: async (path: string): Promise<string[]> => {
-		if (!(await fileService.isDirectory(path))) {
-			return []
-		}
-		const folderContent = (await fileService.getFolderContent(path)).map((f) => `${path}/${f}`)
-		const subFolderContents = await Promise.all(folderContent.map(fileService.getRecurringFolderContent))
-
-		return [...folderContent, ...subFolderContents.flat()]
-	},
-	isDirectory: async (path: string): Promise<boolean> => {
 		try {
-			const stat = await fs.stat(path)
-
-			return stat.isDirectory()
-		} catch (e) {
-			logger().error('fileService.isDirectory', { error: e })
-
-			return false
-		}
-	},
-	isFile: async (path: string): Promise<boolean> => {
-		try {
-			const stat = await fs.stat(path)
-
-			return stat.isFile()
-		} catch (e) {
-			logger().error('fileService.isFile', { error: e })
-
-			return false
-		}
-	},
-	makeFolderIfNotExist: async (folderPath: string): Promise<void> => {
-		if (await fs.stat(folderPath).catch(() => false)) {
-			return
-		}
-		await fs.mkdir(folderPath)
-	},
-	readFile: async (filePath: string): Promise<string> => {
-		return fs.readFile(filePath, { encoding: 'utf-8' })
-	},
-	readIgnoreList: async (path: string): Promise<string[]> => {
-		try {
-			const body = await fileService.readFile(`${path}/.bfignore`)
+			const body = await new FileAdapter().readFile({ filePath: `${folderPath}/.bfignore` })
 
 			return body
 				.split('\n')
-				.map((v) => v.trim())
-				.filter(Boolean)
-		} catch (e) {
-			logger().error('fileService.readIgnoreList', { error: e })
+				.map((stringLine) => stringLine.trim())
+				.filter(arrayUtil.notFalsy)
+		} catch (error) {
+			logger().error('fileService.readIgnoreFileFolderList', { error })
 
 			return []
 		}
-	},
-	removeFile: async (filePath: string): Promise<void> => {
-		if (!(await fs.stat(filePath).catch(() => false))) {
-			return
-		}
-		await fs.rm(filePath)
-	},
-	removeFolder: async (folderPath: string): Promise<void> => {
-		if (!(await fs.stat(folderPath).catch(() => false))) {
-			return
-		}
-		await fs.rm(folderPath, { force: true, recursive: true })
-	},
-	unzip: async (src: string, dest: string): Promise<void> => {
-		await extractZip(pathService.getAbsolutePath(src), { dir: pathService.getAbsolutePath(dest) })
-	},
-	writeToFile: async (filePath: string, data: string): Promise<void> => {
-		await fs.writeFile(filePath, data, 'utf-8')
 	},
 }

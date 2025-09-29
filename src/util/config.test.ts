@@ -6,7 +6,7 @@ import { type Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vite
 // import { ContractMockRevertFn } from '@beecode/msh-test-contractor/types'
 
 import { config, configSetupSingleton } from '#src/util/config'
-import { constant } from '#src/util/constant'
+// import { constant } from '#src/util/constant'
 import constantContract from '#src/util/constant.contract'
 
 // get node js working directory
@@ -47,22 +47,24 @@ describe('config', () => {
 		it('should fail if config file does not exist', async () => {
 			spy_fsStat.mockResolvedValue(false)
 
-			await expect(configSetupSingleton().initialize()).rejects.toThrow(`Config file missing [${cwd}/.base-frame]`)
+			await expect(configSetupSingleton().initialize()).rejects.toThrow(`Config file missing [${cwd}/.base-frame.json]`)
 			expect(spy_constantContract).toHaveBeenCalledTimes(1)
 			expect(spy_fsReadFile).not.toHaveBeenCalled()
 			// expect(spy_validationUtilContract.validate).not.toHaveBeenCalled()
 		})
 
 		it('should successfully init config', async () => {
-			const { templateTmpZipName } = constant()
-
 			const dummyConfig = {
-				gitZipUrl: 'https://test.local',
 				template: {
+					fetchStrategy: 'GIT',
+					localDestinationFolder: `${cwd}/.base-frame-template`,
+					location: 'https://test.local',
+					subFolderLocation: './template/msh-lib',
+				},
+				tmpFolderPath: '/tmp',
+				variables: {
 					projectName: 'test-project',
 				},
-				templateZipName: templateTmpZipName,
-				tmpFolderPath: `${cwd}/.base-frame-tmp`,
 			}
 
 			spy_fsStat.mockResolvedValue(true)
@@ -71,7 +73,7 @@ describe('config', () => {
 			await configSetupSingleton().initialize()
 			expect(spy_constantContract).toHaveBeenCalledTimes(1)
 			expect(spy_fsReadFile).toHaveBeenCalledTimes(2)
-			expect(spy_fsReadFile).toHaveBeenCalledWith(`${cwd}/.base-frame`, 'utf8')
+			expect(spy_fsReadFile).toHaveBeenCalledWith(`${cwd}/.base-frame.json`, 'utf8')
 			// expect(spy_validationUtilContract.validate).toHaveBeenCalledTimes(1)
 
 			expect(config()).toEqual(dummyConfig)

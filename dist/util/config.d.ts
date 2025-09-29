@@ -1,23 +1,25 @@
-import { z } from '#src/lib/zod-wrapper';
+import { FetchTemplateStrategyType } from '#src/business/model/fetch-template-strategy-type';
+import { z } from '#src/lib/zod-adapter';
 export declare const userConfigurationTypeSchema: z.ZodOptional<z.ZodObject<{
     githubPersonAccessToken: z.ZodOptional<z.ZodString>;
 }, z.core.$strip>>;
 export type UserConfigurationType = z.infer<typeof userConfigurationTypeSchema>;
-export declare const configurationTypeSchemaFactory: () => z.ZodObject<{
+export declare const configurationTypeSchema: z.ZodObject<{
     authorization: z.ZodOptional<z.ZodObject<{
         githubPersonAccessToken: z.ZodOptional<z.ZodString>;
     }, z.core.$strip>>;
-    localTemplateFolder: z.ZodDefault<z.ZodOptional<z.ZodString>>;
     template: z.ZodObject<{
-        fetchStrategy: z.ZodEnum<typeof import("#src/business/service/fetch-template/service").FetchTemplateStrategyType>;
+        fetchStrategy: z.ZodEnum<typeof FetchTemplateStrategyType>;
+        localDestinationFolder: z.ZodDefault<z.ZodOptional<z.ZodString>>;
         location: z.ZodString;
-        variables: z.ZodObject<{
-            projectName: z.ZodString;
-        }, z.core.$loose>;
+        subFolderLocation: z.ZodOptional<z.ZodString>;
     }, z.core.$strip>;
-    tmpFolderPath: z.ZodString;
+    tmpFolderPath: z.ZodDefault<z.ZodOptional<z.ZodString>>;
+    variables: z.ZodObject<{
+        projectName: z.ZodString;
+    }, z.core.$loose>;
 }, z.core.$strip>;
-type ConfigurationType = z.infer<ReturnType<typeof configurationTypeSchemaFactory>>;
+export type ConfigurationType = z.infer<typeof configurationTypeSchema>;
 export declare class ConfigSetup {
     protected _configuration?: ConfigurationType;
     get configuration(): ConfigurationType | undefined;
@@ -26,5 +28,4 @@ export declare class ConfigSetup {
 }
 export declare const configSetupSingleton: import("@beecode/msh-util/singleton/pattern").AnyFunctionNoParams<ConfigSetup>;
 export declare const config: () => ConfigurationType;
-export {};
 //# sourceMappingURL=config.d.ts.map

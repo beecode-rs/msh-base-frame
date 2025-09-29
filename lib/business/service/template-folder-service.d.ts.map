@@ -1,0 +1,1 @@
+{"version":3,"file":"template-folder-service.d.ts","sourceRoot":"","sources":["../../../src/business/service/template-folder-service.ts"],"names":[],"mappings":"AAOA,qBAAa,qBAAqB;IAC3B,QAAQ,IAAI,OAAO,CAAC,IAAI,CAAC;IAM/B,wBAAwB,IAAI,OAAO,CAAC,IAAI,CAAC;IAInC,sBAAsB,CAAC,MAAM,EAAE;QAAE,iBAAiB,EAAE,MAAM,CAAC;QAAC,cAAc,EAAE,MAAM,CAAA;KAAE,GAAG,OAAO,CAAC,IAAI,CAAC;CAW1G"}
