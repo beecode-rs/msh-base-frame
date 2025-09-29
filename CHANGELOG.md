@@ -1,3 +1,10 @@
+# [0.5.0](https://github.com/beecode-rs/msh-base-frame/compare/v0.4.4...v0.5.0) (2025-09-29)
+
+
+### Features
+
+* implement fetch and extract strategies for template handling ([#78](https://github.com/beecode-rs/msh-base-frame/issues/78)) ([00892bd](https://github.com/beecode-rs/msh-base-frame/commit/00892bd0121304d2d0f3fd07e29b22d0369163c4))
+
 ## [0.4.4](https://github.com/beecode-rs/msh-base-frame/compare/v0.4.3...v0.4.4) (2025-03-29)
 
 
