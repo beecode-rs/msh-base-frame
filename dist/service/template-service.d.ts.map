@@ -1,1 +1,0 @@
-{"version":3,"file":"template-service.d.ts","sourceRoot":"","sources":["../../src/service/template-service.ts"],"names":[],"mappings":"AAKA,eAAO,MAAM,eAAe;uBAER,MAAM,kBAAkB,GAAG,KAAG,MAAM;sCAGf,MAAM,KAAG,OAAO,CAAC,IAAI,CAAC;2BAKjC,MAAM,kBAAkB,GAAG,KAAG,OAAO,CAAC,MAAM,CAAC;CAK1E,CAAA"}

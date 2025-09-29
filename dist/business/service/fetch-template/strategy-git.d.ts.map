@@ -1,0 +1,1 @@
+{"version":3,"file":"strategy-git.d.ts","sourceRoot":"","sources":["../../../../src/business/service/fetch-template/strategy-git.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,KAAK,qBAAqB,EAAE,MAAM,+CAA+C,CAAA;AAK1F,qBAAa,wBAAyB,YAAW,qBAAqB;IAC/D,KAAK,IAAI,OAAO,CAAC,IAAI,CAAC;CAQ5B"}

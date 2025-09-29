@@ -3,6 +3,7 @@ import path from 'path'
 
 export const constant = singletonPattern(() => {
 	return {
-		configFilePath: path.resolve(process.cwd(), './.base-frame'),
+		configFilePath: path.resolve(process.cwd(), './.base-frame.json'),
+		templateTmpZipName: 'template.zip',
 	} as const
 })

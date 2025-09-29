@@ -1,0 +1,1 @@
+{"version":3,"file":"templating-adapter.d.ts","sourceRoot":"","sources":["../../src/lib/templating-adapter.ts"],"names":[],"mappings":"AAEA,eAAO,MAAM,iBAAiB;wBACT;QAAE,eAAe,EAAE,MAAM,CAAC;QAAC,SAAS,EAAE,MAAM,CAAC,MAAM,EAAE,OAAO,CAAC,CAAA;KAAE,KAAG,MAAM;CAK5F,CAAA"}

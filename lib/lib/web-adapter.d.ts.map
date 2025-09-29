@@ -1,0 +1,1 @@
+{"version":3,"file":"web-adapter.d.ts","sourceRoot":"","sources":["../../src/lib/web-adapter.ts"],"names":[],"mappings":"AAAA,OAAc,EAAE,KAAK,YAAY,EAAE,KAAK,sBAAsB,EAAE,MAAM,OAAO,CAAA;AAG7E,eAAO,MAAM,UAAU;yBACK;QAC1B,OAAO,EAAE,MAAM,CAAA;QACf,mBAAmB,EAAE,MAAM,CAAA;QAC3B,OAAO,CAAC,EAAE,sBAAsB,GAAG,YAAY,CAAA;KAC/C,GAAG,OAAO,CAAC,IAAI,CAAC;CAcjB,CAAA"}

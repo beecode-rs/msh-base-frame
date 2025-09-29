@@ -1,0 +1,45 @@
+export declare class FileAdapter {
+    copy(params: {
+        sourceFilePath: string;
+        destinationFilePath: string;
+        options?: {
+            ignore: string[];
+        };
+    }): Promise<void>;
+    copyFilesIfNotExists(params: {
+        sourceFilePath: string;
+        destinationFilePath: string;
+    }): Promise<void>;
+    filterFiles(params: {
+        fileFolderPathList: string[];
+    }): Promise<string[]>;
+    getFolderContent(params: {
+        folderPath: string;
+    }): Promise<string[]>;
+    getRecurringFolderContent(params: {
+        folderPath: string;
+    }): Promise<string[]>;
+    isDirectory(params: {
+        folderPath: string;
+    }): Promise<boolean>;
+    isFile(params: {
+        filePath: string;
+    }): Promise<boolean>;
+    makeFolderIfNotExist(params: {
+        folderPath: string;
+    }): Promise<void>;
+    readFile(params: {
+        filePath: string;
+    }): Promise<string>;
+    removeFile(params: {
+        filePath: string;
+    }): Promise<void>;
+    removeFolder(params: {
+        folderPath: string;
+    }): Promise<void>;
+    writeToFile(params: {
+        filePath: string;
+        fileContent: string;
+    }): Promise<void>;
+}
+//# sourceMappingURL=file-adapter.d.ts.map
