@@ -1,3 +1,10 @@
+## [0.6.1](https://github.com/beecode-rs/msh-base-frame/compare/v0.6.0...v0.6.1) (2025-10-06)
+
+
+### Bug Fixes
+
+* update source-map-support dependency in package.json ([1e070a8](https://github.com/beecode-rs/msh-base-frame/commit/1e070a8364c22aaff2fb1881fef73bc8bc25386a))
+
 # [0.6.0](https://github.com/beecode-rs/msh-base-frame/compare/v0.5.0...v0.6.0) (2025-10-06)
 
 
