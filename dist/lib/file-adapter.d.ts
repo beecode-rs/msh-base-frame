@@ -3,10 +3,14 @@ export declare class FileAdapter {
         sourceFilePath: string;
         destinationFilePath: string;
         options?: {
-            ignore: string[];
+            ignoreList: string[];
         };
     }): Promise<void>;
     copyFilesIfNotExists(params: {
+        sourceFilePath: string;
+        destinationFilePath: string;
+    }): Promise<void>;
+    copyAndOverride(params: {
         sourceFilePath: string;
         destinationFilePath: string;
     }): Promise<void>;

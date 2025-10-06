@@ -22,6 +22,7 @@ export const configurationTypeSchema = z.object({
 	authorization: userConfigurationTypeSchema,
 	template: z.object({
 		fetchStrategy: z.enum(FetchTemplateStrategyType),
+		forceOverride: z.boolean().optional().default(false),
 		localDestinationFolder: z.string().optional().default(path.resolve(process.cwd(), './.base-frame-template/')),
 		location: z.string(),
 		subFolderLocation: z.string().optional(),
@@ -46,11 +47,8 @@ export class ConfigSetup {
 
 			return validationUtil.parse(userConfigContent, userConfigurationTypeSchema)
 		} catch (error: unknown) {
-			if (error instanceof Error) {
-				logger().warn('Error reading user config, continuing without it', error.message)
-			} else {
-				logger().warn('Unknown error reading user config, continuing without it', String(error))
-			}
+			const errorMessage = (error as { message?: string }).message ?? String(error)
+			logger().info('Unknown error reading user config, continuing without it', errorMessage)
 
 			return {}
 		}

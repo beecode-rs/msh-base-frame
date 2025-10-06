@@ -57,6 +57,7 @@ describe('config', () => {
 			const dummyConfig = {
 				template: {
 					fetchStrategy: 'GIT',
+					forceOverride: false,
 					localDestinationFolder: `${cwd}/.base-frame-template`,
 					location: 'https://test.local',
 					subFolderLocation: './template/msh-lib',

@@ -1,5 +1,5 @@
 export declare class TemplatingService {
-    renderAndOverrideFile(params: {
+    replaceFileWithRenderedTemplate(params: {
         filePath: string;
     }): Promise<void>;
     renderFile(params: {

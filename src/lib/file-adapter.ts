@@ -1,24 +1,24 @@
 import { arrayUtil } from '@beecode/msh-util/array-util'
 import { promises as fs } from 'fs'
-import { copy } from 'fs-extra'
+import { copy } from 'fs-extra/esm'
 import { glob } from 'glob'
 
 import { logger } from '#src/util/logger'
 
 export class FileAdapter {
-	async copy(params: { sourceFilePath: string; destinationFilePath: string; options?: { ignore: string[] } }): Promise<void> {
-		const { sourceFilePath, destinationFilePath, options = { ignore: [] } } = params
+	async copy(params: { sourceFilePath: string; destinationFilePath: string; options?: { ignoreList: string[] } }): Promise<void> {
+		const { sourceFilePath, destinationFilePath, options: { ignoreList } = { ignoreList: [] } } = params
 
 		const copyContentList = await glob('**/*', {
 			cwd: sourceFilePath,
 			dot: true,
-			ignore: [...options.ignore, '.bfignore'],
+			ignore: ignoreList,
 			nodir: true,
 		})
 
 		await Promise.all(
-			copyContentList.map((file: string) => {
-				return copy(`${sourceFilePath}/${file}`, `${destinationFilePath}/${file}`)
+			copyContentList.map(async (file: string) => {
+				await copy(`${sourceFilePath}/${file}`, `${destinationFilePath}/${file}`)
 			})
 		)
 	}
@@ -26,7 +26,13 @@ export class FileAdapter {
 	async copyFilesIfNotExists(params: { sourceFilePath: string; destinationFilePath: string }): Promise<void> {
 		const { sourceFilePath, destinationFilePath } = params
 
-		await copy(sourceFilePath, destinationFilePath, { overwrite: false })
+		await copy(sourceFilePath, destinationFilePath, { errorOnExist: true, overwrite: false })
+	}
+
+	async copyAndOverride(params: { sourceFilePath: string; destinationFilePath: string }): Promise<void> {
+		const { sourceFilePath, destinationFilePath } = params
+
+		await copy(sourceFilePath, destinationFilePath, { errorOnExist: false, overwrite: true })
 	}
 
 	async filterFiles(params: { fileFolderPathList: string[] }): Promise<string[]> {

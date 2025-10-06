@@ -3,7 +3,7 @@ import { templatingAdapter } from '#src/lib/templating-adapter'
 import { config } from '#src/util/config'
 
 export class TemplatingService {
-	async renderAndOverrideFile(params: { filePath: string }): Promise<void> {
+	async replaceFileWithRenderedTemplate(params: { filePath: string }): Promise<void> {
 		const { filePath } = params
 
 		const renderedContent = await this.renderFile({ filePath, templateValues: config().variables })

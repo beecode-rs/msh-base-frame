@@ -10,6 +10,7 @@ export declare const configurationTypeSchema: z.ZodObject<{
     }, z.core.$strip>>;
     template: z.ZodObject<{
         fetchStrategy: z.ZodEnum<typeof FetchTemplateStrategyType>;
+        forceOverride: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
         localDestinationFolder: z.ZodDefault<z.ZodOptional<z.ZodString>>;
         location: z.ZodString;
         subFolderLocation: z.ZodOptional<z.ZodString>;

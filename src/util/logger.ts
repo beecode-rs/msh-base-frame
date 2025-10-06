@@ -6,6 +6,6 @@ import { singletonPattern } from '@beecode/msh-util/singleton/pattern'
 export const logger = singletonPattern(() => {
 	return new LoggerStrategyConsole({
 		consoleLogStrategy: new ConsoleLogStrategySimple(),
-		logLevel: LogLevel.DEBUG,
+		logLevel: LogLevel.INFO,
 	})
 })

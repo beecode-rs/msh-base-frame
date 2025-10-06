@@ -25,20 +25,22 @@ export const actionUseCase = {
 		const templateService = new TemplatingService()
 		await Promise.all(
 			files.map((filePath) => {
-				return templateService.renderAndOverrideFile({ filePath })
+				return templateService.replaceFileWithRenderedTemplate({ filePath })
 			})
 		)
 
 		try {
-			await fileAdapter.copyFilesIfNotExists({ destinationFilePath: process.cwd(), sourceFilePath: localDestinationFolder })
+			// TODO create a strategy for override
+			if (!config().template.forceOverride) {
+				await fileAdapter.copyAndOverride({ destinationFilePath: process.cwd(), sourceFilePath: localDestinationFolder })
+			} else {
+				await fileAdapter.copyFilesIfNotExists({ destinationFilePath: process.cwd(), sourceFilePath: localDestinationFolder })
+			}
 			await fileAdapter.removeFolder({ folderPath: localDestinationFolder })
 		} catch (error: unknown) {
-			if (error instanceof Error) {
-				logger().error('Some file already exist, you need to compare folder manually', error.message)
+			const errorMessageOrObject = (error as { message?: string }).message ?? error
 
-				return
-			}
-			logger().error('Some file already exist, you need to compare folder manually', { error })
+			logger().error('Some file already exist, you need to compare folder manually', errorMessageOrObject)
 		}
 	},
 }
