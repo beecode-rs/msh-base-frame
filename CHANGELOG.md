@@ -1,3 +1,10 @@
+# [0.6.0](https://github.com/beecode-rs/msh-base-frame/compare/v0.5.0...v0.6.0) (2025-10-06)
+
+
+### Features
+
+* refactor templating service methods and update logger log level ([06dd8e3](https://github.com/beecode-rs/msh-base-frame/commit/06dd8e3ce0d41a60584686b377df422f22e63e5c))
+
 # [0.5.0](https://github.com/beecode-rs/msh-base-frame/compare/v0.4.4...v0.5.0) (2025-09-29)
 
 
