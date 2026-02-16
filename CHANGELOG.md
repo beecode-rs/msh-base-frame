@@ -1,3 +1,11 @@
+## [0.6.2](https://github.com/beecode-rs/msh-base-frame/compare/v0.6.1...v0.6.2) (2026-02-16)
+
+
+### Bug Fixes
+
+* remove build artifacts from version control ([b2efa49](https://github.com/beecode-rs/msh-base-frame/commit/b2efa49a0bbe1da2107ef97596a171a0f18df2b1))
+* remove redundant string wrappers ([48d09d0](https://github.com/beecode-rs/msh-base-frame/commit/48d09d03c45d57769f94e7a48617084d178d5269))
+
 ## [0.6.1](https://github.com/beecode-rs/msh-base-frame/compare/v0.6.0...v0.6.1) (2025-10-06)
 
 
