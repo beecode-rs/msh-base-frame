@@ -19,7 +19,7 @@ export class FetchTemplateStrategyWebZip implements FetchTemplateStrategy {
 		await webAdapter.downloadFile({ fileDestinationPath: tmpFolderPath, fileUrl: templateLocation })
 
 		const absoluteSourcePath = pathAdapter.getAbsolutePath({
-			path: path.resolve(tmpFolderPath, `./${String(templateTmpZipName)}`),
+			path: path.resolve(tmpFolderPath, `./${templateTmpZipName}`),
 		})
 		const absoluteDestinationPath = pathAdapter.getAbsolutePath({ path: localDestinationFolder })
 
