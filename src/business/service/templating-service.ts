@@ -1,6 +1,6 @@
-import { FileAdapter } from '#src/lib/file-adapter'
-import { templatingAdapter } from '#src/lib/templating-adapter'
-import { config } from '#src/util/config'
+import { FileAdapter } from '#src/lib/file-adapter.js'
+import { templatingAdapter } from '#src/lib/templating-adapter.js'
+import { config } from '#src/util/config.js'
 
 export class TemplatingService {
 	async replaceFileWithRenderedTemplate(params: { filePath: string }): Promise<void> {

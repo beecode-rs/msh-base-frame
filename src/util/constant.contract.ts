@@ -3,7 +3,7 @@ import { SpecialFnName } from '@beecode/msh-test-contractor/enum/special-fn-name
 import { type ContractMockRevertFns } from '@beecode/msh-test-contractor/types'
 import { vi } from 'vitest'
 
-import * as constant from '#src/util/constant'
+import * as constant from '#src/util/constant.js'
 
 export default contractFactory(
 	{

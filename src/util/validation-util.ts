@@ -1,4 +1,4 @@
-import { type ZodType, type z } from '#src/lib/zod-adapter'
+import { type ZodType, type z } from '#src/lib/zod-adapter.js'
 
 export const validationUtil = {
 	parse: <T extends ZodType>(objectToValidate: unknown, schema: T): z.infer<T> => {

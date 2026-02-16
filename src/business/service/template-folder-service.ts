@@ -1,9 +1,9 @@
 import path from 'path'
 
-// import { fileService } from '#src/business/service/file-service'
-import { FileAdapter } from '#src/lib/file-adapter'
-import { config } from '#src/util/config'
-import { stringUtil } from '#src/util/string-util'
+// import { fileService } from '#src/business/service/file-service.js'
+import { FileAdapter } from '#src/lib/file-adapter.js'
+import { config } from '#src/util/config.js'
+import { stringUtil } from '#src/util/string-util.js'
 
 export class TemplateFolderService {
 	async cleanAll(): Promise<void> {

@@ -5,9 +5,9 @@ import { type Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vite
 // import { MockerJestObjectResult } from '@beecode/msh-test-contractor/mocker/mocker-jest-object-strategy'
 // import { ContractMockRevertFn } from '@beecode/msh-test-contractor/types'
 
-import { config, configSetupSingleton } from '#src/util/config'
-// import { constant } from '#src/util/constant'
-import constantContract from '#src/util/constant.contract'
+import { config, configSetupSingleton } from '#src/util/config.js'
+// import { constant } from '#src/util/constant.js'
+import constantContract from '#src/util/constant.contract.js'
 
 // get node js working directory
 const cwd = process.cwd()

@@ -3,12 +3,12 @@ import { promises as fs } from 'fs'
 import os from 'os'
 import path from 'path'
 
-import { FetchTemplateStrategyType } from '#src/business/model/fetch-template-strategy-type'
-import { z } from '#src/lib/zod-adapter'
-import { constant } from '#src/util/constant'
-import { logger } from '#src/util/logger'
-import { stringUtil } from '#src/util/string-util'
-import { validationUtil } from '#src/util/validation-util'
+import { FetchTemplateStrategyType } from '#src/business/model/fetch-template-strategy-type.js'
+import { z } from '#src/lib/zod-adapter.js'
+import { constant } from '#src/util/constant.js'
+import { logger } from '#src/util/logger.js'
+import { stringUtil } from '#src/util/string-util.js'
+import { validationUtil } from '#src/util/validation-util.js'
 
 export const userConfigurationTypeSchema = z
 	.object({
@@ -62,7 +62,7 @@ export class ConfigSetup {
 
 		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 		if (!(await fs.stat(configFilePath))) {
-			throw Error(`Config file missing [${configFilePath}]`)
+			throw Error(`Config file missing [${String(configFilePath)}]`)
 		}
 
 		const userJsonContent = await this._getUserConfigIfExists()

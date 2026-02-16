@@ -1,9 +1,9 @@
 import { typeUtil } from '@beecode/msh-util/type-util'
 
-import { FetchTemplateStrategyType } from '#src/business/model/fetch-template-strategy-type'
-import { FetchTemplateStrategyGit } from '#src/business/service/fetch-template/strategy-git'
-import { FetchTemplateStrategyLocalFolder } from '#src/business/service/fetch-template/strategy-local-folder'
-import { FetchTemplateStrategyWebZip } from '#src/business/service/fetch-template/strategy-web-zip'
+import { FetchTemplateStrategyType } from '#src/business/model/fetch-template-strategy-type.js'
+import { FetchTemplateStrategyGit } from '#src/business/service/fetch-template/strategy-git.js'
+import { FetchTemplateStrategyLocalFolder } from '#src/business/service/fetch-template/strategy-local-folder.js'
+import { FetchTemplateStrategyWebZip } from '#src/business/service/fetch-template/strategy-web-zip.js'
 
 export const fetchTemplateService = {
 	getStrategy: (type: FetchTemplateStrategyType) => {

@@ -1,9 +1,0 @@
-import { singletonPattern } from '@beecode/msh-util/singleton/pattern';
-import path from 'path';
-export const constant = singletonPattern(() => {
-    return {
-        configFilePath: path.resolve(process.cwd(), './.base-frame.json'),
-        templateTmpZipName: 'template.zip',
-    };
-});
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uc3RhbnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvdXRpbC9jb25zdGFudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUUsZ0JBQWdCLEVBQUUsTUFBTSxxQ0FBcUMsQ0FBQTtBQUN0RSxPQUFPLElBQUksTUFBTSxNQUFNLENBQUE7QUFFdkIsTUFBTSxDQUFDLE1BQU0sUUFBUSxHQUFHLGdCQUFnQixDQUFDLEdBQUcsRUFBRTtJQUM3QyxPQUFPO1FBQ04sY0FBYyxFQUFFLElBQUksQ0FBQyxPQUFPLENBQUMsT0FBTyxDQUFDLEdBQUcsRUFBRSxFQUFFLG9CQUFvQixDQUFDO1FBQ2pFLGtCQUFrQixFQUFFLGNBQWM7S0FDekIsQ0FBQTtBQUNYLENBQUMsQ0FBQyxDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgc2luZ2xldG9uUGF0dGVybiB9IGZyb20gJ0BiZWVjb2RlL21zaC11dGlsL3NpbmdsZXRvbi9wYXR0ZXJuJ1xuaW1wb3J0IHBhdGggZnJvbSAncGF0aCdcblxuZXhwb3J0IGNvbnN0IGNvbnN0YW50ID0gc2luZ2xldG9uUGF0dGVybigoKSA9PiB7XG5cdHJldHVybiB7XG5cdFx0Y29uZmlnRmlsZVBhdGg6IHBhdGgucmVzb2x2ZShwcm9jZXNzLmN3ZCgpLCAnLi8uYmFzZS1mcmFtZS5qc29uJyksXG5cdFx0dGVtcGxhdGVUbXBaaXBOYW1lOiAndGVtcGxhdGUuemlwJyxcblx0fSBhcyBjb25zdFxufSlcbiJdfQ==

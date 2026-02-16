@@ -22,6 +22,7 @@ export default defineConfig([
 		'babel.config.cjs',
 		'release.config.cjs',
 		'bin/msh-base.js',
+		'.history',
 	]),
 	...eslintNode,
 ])

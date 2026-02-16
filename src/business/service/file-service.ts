@@ -1,7 +1,7 @@
 import { arrayUtil } from '@beecode/msh-util/array-util'
 
-import { FileAdapter } from '#src/lib/file-adapter'
-import { logger } from '#src/util/logger'
+import { FileAdapter } from '#src/lib/file-adapter.js'
+import { logger } from '#src/util/logger.js'
 
 export const fileService = {
 	readIgnoreFileFolderList: async (params: { folderPath: string }): Promise<string[]> => {

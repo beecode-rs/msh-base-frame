@@ -1,9 +1,9 @@
-import { fetchTemplateService } from '#src/business/service/fetch-template/service'
-import { TemplateFolderService } from '#src/business/service/template-folder-service'
-import { TemplatingService } from '#src/business/service/templating-service'
-import { FileAdapter } from '#src/lib/file-adapter'
-import { config } from '#src/util/config'
-import { logger } from '#src/util/logger'
+import { fetchTemplateService } from '#src/business/service/fetch-template/service.js'
+import { TemplateFolderService } from '#src/business/service/template-folder-service.js'
+import { TemplatingService } from '#src/business/service/templating-service.js'
+import { FileAdapter } from '#src/lib/file-adapter.js'
+import { config } from '#src/util/config.js'
+import { logger } from '#src/util/logger.js'
 
 export const actionUseCase = {
 	clone: async (): Promise<void> => {

@@ -1,7 +1,7 @@
-import { type FetchTemplateStrategy } from '#src/business/service/fetch-template/strategy'
-import { fileService } from '#src/business/service/file-service'
-import { FileAdapter } from '#src/lib/file-adapter'
-import { config } from '#src/util/config'
+import { type FetchTemplateStrategy } from '#src/business/service/fetch-template/strategy.js'
+import { fileService } from '#src/business/service/file-service.js'
+import { FileAdapter } from '#src/lib/file-adapter.js'
+import { config } from '#src/util/config.js'
 
 export class FetchTemplateStrategyLocalFolder implements FetchTemplateStrategy {
 	async fetch(): Promise<void> {
