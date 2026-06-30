@@ -8,8 +8,8 @@ const srcDir = path.resolve(projectRoot, 'src')
 export default defineConfig({
 	plugins: [
 		{
-			name: 'resolve-local-src-alias',
 			enforce: 'pre',
+			name: 'resolve-local-src-alias',
 			async resolveId(source, importer) {
 				// Rewrite the package-private '#src' alias only for files inside
 				// this package. Symlinked workspace deps (e.g. @beecode/msh-logger)
@@ -17,7 +17,9 @@ export default defineConfig({
 				// '#src' imports — a global alias would hijack those and break them.
 				if (!source.startsWith('#src')) return null
 				if (!importer || !importer.startsWith(projectRoot) || importer.includes('/node_modules/')) return null
+				// eslint-disable-next-line no-ternary
 				const target = source === '#src' ? srcDir : path.join(srcDir, source.slice('#src/'.length))
+
 				return (await this.resolve(target, importer, { skipSelf: true })) ?? target
 			},
 		},
