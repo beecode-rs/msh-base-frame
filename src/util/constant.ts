@@ -1,5 +1,6 @@
-import { singletonPattern } from '@beecode/msh-util/singleton/pattern'
 import path from 'path'
+
+import { singletonPattern } from '@beecode/msh-util/singleton/pattern'
 
 export const constant = singletonPattern(() => {
 	return {

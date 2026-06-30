@@ -1,0 +1,25 @@
+[**@beecode/msh-base-frame**](../../../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../../../README.md) / [lib/zod-adapter](../../../../../README.md) / [z](../../../README.md) / [core](../README.md) / $ZodCheckUpperCase
+
+# Interface: $ZodCheckUpperCase
+
+Defined in: node\_modules/zod/v4/core/checks.d.cts:202
+
+## Extends
+
+- [`$ZodCheck`]($ZodCheck.md)\<`string`\>
+
+## Properties
+
+### \_zod
+
+> **\_zod**: [`$ZodCheckUpperCaseInternals`]($ZodCheckUpperCaseInternals.md)
+
+Defined in: node\_modules/zod/v4/core/checks.d.cts:203
+
+#### Overrides
+
+[`$ZodCheck`]($ZodCheck.md).[`_zod`]($ZodCheck.md#_zod)

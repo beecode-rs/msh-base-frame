@@ -1,0 +1,17 @@
+[**@beecode/msh-base-frame**](../../../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../../../README.md) / [lib/zod-adapter](../../../../../README.md) / [z](../../../README.md) / [core](../README.md) / $ZodSuperRefineIssue
+
+# Type Alias: $ZodSuperRefineIssue\<T\>
+
+> **$ZodSuperRefineIssue**\<`T`\> = `T` *extends* `any` ? `RawIssue`\<`T`\> : `never`
+
+Defined in: node\_modules/zod/v4/core/api.d.cts:292
+
+## Type Parameters
+
+### T
+
+`T` *extends* [`$ZodIssueBase`](../interfaces/$ZodIssueBase.md) = [`$ZodIssue`]($ZodIssue.md)

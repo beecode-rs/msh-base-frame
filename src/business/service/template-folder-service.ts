@@ -22,7 +22,10 @@ export class TemplateFolderService {
 		const tmpCopyPath = stringUtil.generateRandomTmpFolderName()
 
 		const fileAdapter = new FileAdapter()
-		await fileAdapter.copy({ destinationFilePath: tmpCopyPath, sourceFilePath: path.join(rootFolderPath, subFolderLocation) })
+		await fileAdapter.copy({
+			destinationFilePath: tmpCopyPath,
+			sourceFilePath: path.join(rootFolderPath, subFolderLocation),
+		})
 		await fileAdapter.removeFolder({ folderPath: rootFolderPath })
 		await fileAdapter.copy({ destinationFilePath: rootFolderPath, sourceFilePath: tmpCopyPath })
 		await fileAdapter.removeFolder({ folderPath: tmpCopyPath })

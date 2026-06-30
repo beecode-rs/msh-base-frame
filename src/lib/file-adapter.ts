@@ -1,12 +1,17 @@
-import { arrayUtil } from '@beecode/msh-util/array-util'
 import { promises as fs } from 'fs'
+
+import { arrayUtil } from '@beecode/msh-util/array-util'
 import { copy } from 'fs-extra/esm'
 import { glob } from 'glob'
 
 import { logger } from '#src/util/logger.js'
 
 export class FileAdapter {
-	async copy(params: { sourceFilePath: string; destinationFilePath: string; options?: { ignoreList: string[] } }): Promise<void> {
+	async copy(params: {
+		sourceFilePath: string
+		destinationFilePath: string
+		options?: { ignoreList: string[] }
+	}): Promise<void> {
 		const { sourceFilePath, destinationFilePath, options: { ignoreList } = { ignoreList: [] } } = params
 
 		const copyContentList = await glob('**/*', {

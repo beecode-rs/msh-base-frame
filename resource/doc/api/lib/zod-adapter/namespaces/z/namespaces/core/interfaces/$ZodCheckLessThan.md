@@ -1,0 +1,31 @@
+[**@beecode/msh-base-frame**](../../../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../../../README.md) / [lib/zod-adapter](../../../../../README.md) / [z](../../../README.md) / [core](../README.md) / $ZodCheckLessThan
+
+# Interface: $ZodCheckLessThan\<T\>
+
+Defined in: node\_modules/zod/v4/core/checks.d.cts:33
+
+## Extends
+
+- [`$ZodCheck`]($ZodCheck.md)\<`T`\>
+
+## Type Parameters
+
+### T
+
+`T` *extends* [`Numeric`](../../util/type-aliases/Numeric.md) = [`Numeric`](../../util/type-aliases/Numeric.md)
+
+## Properties
+
+### \_zod
+
+> **\_zod**: [`$ZodCheckLessThanInternals`]($ZodCheckLessThanInternals.md)\<`T`\>
+
+Defined in: node\_modules/zod/v4/core/checks.d.cts:34
+
+#### Overrides
+
+[`$ZodCheck`]($ZodCheck.md).[`_zod`]($ZodCheck.md#_zod)

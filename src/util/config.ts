@@ -1,7 +1,8 @@
-import { singletonPattern } from '@beecode/msh-util/singleton/pattern'
 import { promises as fs } from 'fs'
 import os from 'os'
 import path from 'path'
+
+import { singletonPattern } from '@beecode/msh-util/singleton/pattern'
 
 import { FetchTemplateStrategyType } from '#src/business/model/fetch-template-strategy-type.js'
 import { z } from '#src/lib/zod-adapter.js'

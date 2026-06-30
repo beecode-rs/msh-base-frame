@@ -1,5 +1,6 @@
-import axios, { type AxiosHeaders, type RawAxiosRequestHeaders } from 'axios'
 import fs from 'fs'
+
+import axios, { type AxiosHeaders, type RawAxiosRequestHeaders } from 'axios'
 
 export const webAdapter = {
 	async downloadFile(params: {

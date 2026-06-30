@@ -1,0 +1,35 @@
+[**@beecode/msh-base-frame**](../../../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../../../README.md) / [lib/zod-adapter](../../../../../README.md) / [z](../../../README.md) / [core](../README.md) / $SafeParse
+
+# Type Alias: $SafeParse
+
+> **$SafeParse** = \<`T`\>(`schema`, `value`, `_ctx?`) => [`SafeParseResult`](../../util/type-aliases/SafeParseResult.md)\<[`output`](output.md)\<`T`\>\>
+
+Defined in: node\_modules/zod/v4/core/parse.d.cts:20
+
+## Type Parameters
+
+### T
+
+`T` *extends* [`$ZodType`](../interfaces/$ZodType-1.md)
+
+## Parameters
+
+### schema
+
+`T`
+
+### value
+
+`unknown`
+
+### \_ctx?
+
+[`ParseContext`](../interfaces/ParseContext.md)\<[`$ZodIssue`]($ZodIssue.md)\>
+
+## Returns
+
+[`SafeParseResult`](../../util/type-aliases/SafeParseResult.md)\<[`output`](output.md)\<`T`\>\>

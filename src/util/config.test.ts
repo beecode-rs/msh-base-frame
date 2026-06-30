@@ -1,4 +1,5 @@
 import { promises as fs } from 'fs'
+
 import { type Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { config, configSetupSingleton } from '#src/util/config.js'
@@ -29,7 +30,9 @@ describe('config', () => {
 		it('should fail if config file does not exist', async () => {
 			spy_fsStat.mockResolvedValue(false)
 
-			await expect(configSetupSingleton().initialize()).rejects.toThrow('Config file missing [/home/dummy/.base-frame.json]')
+			await expect(configSetupSingleton().initialize()).rejects.toThrow(
+				'Config file missing [/home/dummy/.base-frame.json]'
+			)
 			expect(spy_constantContract).toHaveBeenCalledTimes(1)
 			expect(spy_fsReadFile).not.toHaveBeenCalled()
 		})
@@ -50,8 +53,10 @@ describe('config', () => {
 			}
 
 			spy_fsStat.mockResolvedValue(true)
+			// eslint-disable-next-line @typescript-eslint/require-await
 			spy_fsReadFile.mockImplementation(async (filePath: string) => {
 				if (filePath.includes('.base-frame.user.json')) return '{}'
+
 				return JSON.stringify(dummyConfig)
 			})
 

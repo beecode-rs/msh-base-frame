@@ -1,0 +1,25 @@
+[**@beecode/msh-base-frame**](../../../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../../../README.md) / [lib/zod-adapter](../../../../../README.md) / [z](../../../README.md) / [util](../README.md) / extend
+
+# Function: extend()
+
+> **extend**(`schema`, `shape`): `any`
+
+Defined in: node\_modules/zod/v4/core/util.d.cts:173
+
+## Parameters
+
+### schema
+
+[`$ZodObject`](../../core/interfaces/$ZodObject.md)
+
+### shape
+
+[`$ZodShape`](../../core/type-aliases/$ZodShape.md)
+
+## Returns
+
+`any`

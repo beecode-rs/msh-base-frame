@@ -1,0 +1,11 @@
+[**@beecode/msh-base-frame**](../../../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../../../README.md) / [lib/zod-adapter](../../../../../README.md) / [z](../../../README.md) / [core](../README.md) / $ZodChecks
+
+# Type Alias: $ZodChecks
+
+> **$ZodChecks** = [`$ZodCheckLessThan`](../interfaces/$ZodCheckLessThan.md) \| [`$ZodCheckGreaterThan`](../interfaces/$ZodCheckGreaterThan.md) \| [`$ZodCheckMultipleOf`](../interfaces/$ZodCheckMultipleOf.md) \| [`$ZodCheckNumberFormat`](../interfaces/$ZodCheckNumberFormat.md) \| [`$ZodCheckBigIntFormat`](../interfaces/$ZodCheckBigIntFormat.md) \| [`$ZodCheckMaxSize`](../interfaces/$ZodCheckMaxSize.md) \| [`$ZodCheckMinSize`](../interfaces/$ZodCheckMinSize.md) \| [`$ZodCheckSizeEquals`](../interfaces/$ZodCheckSizeEquals.md) \| [`$ZodCheckMaxLength`](../interfaces/$ZodCheckMaxLength.md) \| [`$ZodCheckMinLength`](../interfaces/$ZodCheckMinLength.md) \| [`$ZodCheckLengthEquals`](../interfaces/$ZodCheckLengthEquals.md) \| [`$ZodCheckStringFormat`](../interfaces/$ZodCheckStringFormat.md) \| [`$ZodCheckProperty`](../interfaces/$ZodCheckProperty.md) \| [`$ZodCheckMimeType`](../interfaces/$ZodCheckMimeType.md) \| [`$ZodCheckOverwrite`](../interfaces/$ZodCheckOverwrite.md)
+
+Defined in: node\_modules/zod/v4/core/checks.d.cts:277

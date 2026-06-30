@@ -1,7 +1,8 @@
 import { ContractReporter } from '@beecode/msh-test-contractor/contract-reporter'
 import { contractYamlPlugin } from '@beecode/msh-test-contractor/vitest-plugin'
-import baseDefaultConfig from './vitest.config.js'
 import { defineConfig, mergeConfig } from 'vite'
+
+import baseDefaultConfig from './vitest.config.js'
 
 export default mergeConfig(
 	baseDefaultConfig,

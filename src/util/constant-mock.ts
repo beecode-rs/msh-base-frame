@@ -1,10 +1,13 @@
-import type { ContractMockFn } from '@beecode/msh-test-contractor/types'
 import { vi } from 'vitest'
 
-const ContractMock: ContractMockFn = () => {
+import type { ContractMockRevertFns } from '@beecode/msh-test-contractor/business/model/contract-model'
+
+export default function constantMock(): ContractMockRevertFns {
 	const spy = vi.spyOn(process, 'cwd').mockReturnValue('/home/dummy')
 
-	return [() => { spy.mockRestore() }]
+	return [
+		(): void => {
+			spy.mockRestore()
+		},
+	]
 }
-
-export default ContractMock

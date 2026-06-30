@@ -1,0 +1,11 @@
+[**@beecode/msh-base-frame**](../../../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../../../README.md) / [lib/zod-adapter](../../../../../README.md) / [z](../../../README.md) / [core](../README.md) / $ZodBase64Params
+
+# Type Alias: $ZodBase64Params
+
+> **$ZodBase64Params** = [`StringFormatParams`](StringFormatParams.md)\<[`$ZodBase64`](../interfaces/$ZodBase64.md), `"pattern"` \| `"when"`\>
+
+Defined in: node\_modules/zod/v4/core/api.d.cts:97
