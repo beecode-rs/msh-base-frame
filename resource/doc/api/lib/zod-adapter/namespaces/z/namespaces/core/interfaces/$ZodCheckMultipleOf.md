@@ -1,0 +1,31 @@
+[**@beecode/msh-base-frame**](../../../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../../../README.md) / [lib/zod-adapter](../../../../../README.md) / [z](../../../README.md) / [core](../README.md) / $ZodCheckMultipleOf
+
+# Interface: $ZodCheckMultipleOf\<T\>
+
+Defined in: node\_modules/zod/v4/core/checks.d.cts:58
+
+## Extends
+
+- [`$ZodCheck`]($ZodCheck.md)\<`T`\>
+
+## Type Parameters
+
+### T
+
+`T` *extends* `number` \| `bigint` = `number` \| `bigint`
+
+## Properties
+
+### \_zod
+
+> **\_zod**: [`$ZodCheckMultipleOfInternals`]($ZodCheckMultipleOfInternals.md)\<`T`\>
+
+Defined in: node\_modules/zod/v4/core/checks.d.cts:59
+
+#### Overrides
+
+[`$ZodCheck`]($ZodCheck.md).[`_zod`]($ZodCheck.md#_zod)

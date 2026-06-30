@@ -1,0 +1,17 @@
+[**@beecode/msh-base-frame**](../../../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../../../README.md) / [lib/zod-adapter](../../../../../README.md) / [z](../../../README.md) / [util](../README.md) / CleanKey
+
+# Type Alias: CleanKey\<T\>
+
+> **CleanKey**\<`T`\> = `T` *extends* `` `?${infer K}` `` ? `K` : `T` *extends* `` `${infer K}?` `` ? `K` : `T`
+
+Defined in: node\_modules/zod/v4/core/util.d.cts:162
+
+## Type Parameters
+
+### T
+
+`T` *extends* `PropertyKey`

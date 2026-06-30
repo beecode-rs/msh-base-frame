@@ -1,0 +1,17 @@
+[**@beecode/msh-base-frame**](../../../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../../../README.md) / [lib/zod-adapter](../../../../../README.md) / [z](../../../README.md) / [util](../README.md) / Flatten
+
+# Type Alias: Flatten\<T\>
+
+> **Flatten**\<`T`\> = [`Identity`](Identity.md)\<`{ [k in keyof T]: T[k] }`\>
+
+Defined in: node\_modules/zod/v4/core/util.d.cts:45
+
+## Type Parameters
+
+### T
+
+`T`

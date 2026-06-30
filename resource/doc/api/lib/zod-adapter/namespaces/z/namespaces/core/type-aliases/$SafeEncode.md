@@ -1,0 +1,35 @@
+[**@beecode/msh-base-frame**](../../../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../../../README.md) / [lib/zod-adapter](../../../../../README.md) / [z](../../../README.md) / [core](../README.md) / $SafeEncode
+
+# Type Alias: $SafeEncode
+
+> **$SafeEncode** = \<`T`\>(`schema`, `value`, `_ctx?`) => [`SafeParseResult`](../../util/type-aliases/SafeParseResult.md)\<[`input`](input.md)\<`T`\>\>
+
+Defined in: node\_modules/zod/v4/core/parse.d.cts:38
+
+## Type Parameters
+
+### T
+
+`T` *extends* [`$ZodType`](../interfaces/$ZodType-1.md)
+
+## Parameters
+
+### schema
+
+`T`
+
+### value
+
+[`output`](output.md)\<`T`\>
+
+### \_ctx?
+
+[`ParseContext`](../interfaces/ParseContext.md)\<[`$ZodIssue`]($ZodIssue.md)\>
+
+## Returns
+
+[`SafeParseResult`](../../util/type-aliases/SafeParseResult.md)\<[`input`](input.md)\<`T`\>\>

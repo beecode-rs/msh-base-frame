@@ -15,7 +15,10 @@ export const actionUseCase = {
 		await fetchTemplateService.getStrategy(fetchStrategy).fetch()
 
 		if (subFolderLocation) {
-			await new TemplateFolderService().promoteSubfolderToRoot({ rootFolderPath: localDestinationFolder, subFolderLocation })
+			await new TemplateFolderService().promoteSubfolderToRoot({
+				rootFolderPath: localDestinationFolder,
+				subFolderLocation,
+			})
 		}
 
 		const fileAdapter = new FileAdapter()
@@ -32,9 +35,15 @@ export const actionUseCase = {
 		try {
 			// TODO create a strategy for override
 			if (!config().template.forceOverride) {
-				await fileAdapter.copyAndOverride({ destinationFilePath: process.cwd(), sourceFilePath: localDestinationFolder })
+				await fileAdapter.copyAndOverride({
+					destinationFilePath: process.cwd(),
+					sourceFilePath: localDestinationFolder,
+				})
 			} else {
-				await fileAdapter.copyFilesIfNotExists({ destinationFilePath: process.cwd(), sourceFilePath: localDestinationFolder })
+				await fileAdapter.copyFilesIfNotExists({
+					destinationFilePath: process.cwd(),
+					sourceFilePath: localDestinationFolder,
+				})
 			}
 			await fileAdapter.removeFolder({ folderPath: localDestinationFolder })
 		} catch (error: unknown) {

@@ -1,0 +1,35 @@
+[**@beecode/msh-base-frame**](../../../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../../../README.md) / [lib/zod-adapter](../../../../../README.md) / [z](../../../README.md) / [core](../README.md) / createStandardJSONSchemaMethod
+
+# Variable: createStandardJSONSchemaMethod
+
+> `const` **createStandardJSONSchemaMethod**: \<`T`\>(`schema`, `io`, `processors?`) => (`params?`) => [`BaseSchema`](../namespaces/JSONSchema/type-aliases/BaseSchema.md)
+
+Defined in: node\_modules/zod/v4/core/to-json-schema.d.cts:113
+
+## Type Parameters
+
+### T
+
+`T` *extends* [`$ZodType`](../interfaces/$ZodType-1.md)
+
+## Parameters
+
+### schema
+
+`T`
+
+### io
+
+`"input"` \| `"output"`
+
+### processors?
+
+`Record`\<`string`, [`Processor`](../type-aliases/Processor.md)\>
+
+## Returns
+
+(`params?`) => [`BaseSchema`](../namespaces/JSONSchema/type-aliases/BaseSchema.md)

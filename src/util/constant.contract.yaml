@@ -1,0 +1,12 @@
+subject: constant
+module: ./constant.js
+subjectType: function
+mock:
+  - __import__:./constant-mock.js
+methods:
+  __self__:
+    terms:
+      - params: []
+        result:
+          configFilePath: '/home/dummy/.base-frame.json'
+          templateTmpZipName: 'template.zip'

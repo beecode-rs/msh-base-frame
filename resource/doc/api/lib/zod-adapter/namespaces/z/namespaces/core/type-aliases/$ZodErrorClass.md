@@ -1,0 +1,21 @@
+[**@beecode/msh-base-frame**](../../../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../../../README.md) / [lib/zod-adapter](../../../../../README.md) / [z](../../../README.md) / [core](../README.md) / $ZodErrorClass
+
+# Type Alias: $ZodErrorClass
+
+> **$ZodErrorClass** = (`issues`) => [`$ZodError`](../interfaces/$ZodError.md)
+
+Defined in: node\_modules/zod/v4/core/parse.d.cts:5
+
+## Parameters
+
+### issues
+
+[`$ZodIssue`]($ZodIssue.md)[]
+
+## Returns
+
+[`$ZodError`](../interfaces/$ZodError.md)

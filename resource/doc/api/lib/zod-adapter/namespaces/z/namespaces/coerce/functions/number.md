@@ -1,0 +1,47 @@
+[**@beecode/msh-base-frame**](../../../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../../../README.md) / [lib/zod-adapter](../../../../../README.md) / [z](../../../README.md) / [coerce](../README.md) / number
+
+# Function: number()
+
+> **number**\<`T`\>(`params?`): [`ZodCoercedNumber`](../../../interfaces/ZodCoercedNumber.md)\<`T`\>
+
+Defined in: node\_modules/zod/v4/classic/coerce.d.cts:8
+
+## Type Parameters
+
+### T
+
+`T` = `unknown`
+
+## Parameters
+
+### params?
+
+`string` \| \{ `error?`: `string` \| [`$ZodErrorMap`](../../core/interfaces/$ZodErrorMap.md)\<[`$ZodIssueInvalidType`](../../core/interfaces/$ZodIssueInvalidType.md)\<`unknown`\>\>; `message?`: `string`; \}
+
+`string`
+
+***
+
+#### Type Literal
+
+\{ `error?`: `string` \| [`$ZodErrorMap`](../../core/interfaces/$ZodErrorMap.md)\<[`$ZodIssueInvalidType`](../../core/interfaces/$ZodIssueInvalidType.md)\<`unknown`\>\>; `message?`: `string`; \}
+
+##### error?
+
+`string` \| [`$ZodErrorMap`](../../core/interfaces/$ZodErrorMap.md)\<[`$ZodIssueInvalidType`](../../core/interfaces/$ZodIssueInvalidType.md)\<`unknown`\>\>
+
+##### message?
+
+`string`
+
+**Deprecated**
+
+This parameter is deprecated. Use `error` instead.
+
+## Returns
+
+[`ZodCoercedNumber`](../../../interfaces/ZodCoercedNumber.md)\<`T`\>

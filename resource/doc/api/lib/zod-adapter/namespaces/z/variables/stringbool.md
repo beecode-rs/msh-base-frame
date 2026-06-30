@@ -1,0 +1,21 @@
+[**@beecode/msh-base-frame**](../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../README.md) / [lib/zod-adapter](../../../README.md) / [z](../README.md) / stringbool
+
+# Variable: stringbool
+
+> `const` **stringbool**: (`_params?`) => [`ZodCodec`](../interfaces/ZodCodec.md)\<[`ZodString`](../interfaces/ZodString-1.md), [`ZodBoolean`](../interfaces/ZodBoolean-1.md)\>
+
+Defined in: node\_modules/zod/v4/classic/schemas.d.cts:749
+
+## Parameters
+
+### \_params?
+
+`string` \| [`$ZodStringBoolParams`](../namespaces/core/interfaces/$ZodStringBoolParams.md)
+
+## Returns
+
+[`ZodCodec`](../interfaces/ZodCodec.md)\<[`ZodString`](../interfaces/ZodString-1.md), [`ZodBoolean`](../interfaces/ZodBoolean-1.md)\>

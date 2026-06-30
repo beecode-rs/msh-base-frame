@@ -1,0 +1,35 @@
+[**@beecode/msh-base-frame**](../../../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../../../README.md) / [lib/zod-adapter](../../../../../README.md) / [z](../../../README.md) / [core](../README.md) / $Decode
+
+# Type Alias: $Decode
+
+> **$Decode** = \<`T`\>(`schema`, `value`, `_ctx?`) => [`output`](output.md)\<`T`\>
+
+Defined in: node\_modules/zod/v4/core/parse.d.cts:29
+
+## Type Parameters
+
+### T
+
+`T` *extends* [`$ZodType`](../interfaces/$ZodType-1.md)
+
+## Parameters
+
+### schema
+
+`T`
+
+### value
+
+[`input`](input.md)\<`T`\>
+
+### \_ctx?
+
+[`ParseContext`](../interfaces/ParseContext.md)\<[`$ZodIssue`]($ZodIssue.md)\>
+
+## Returns
+
+[`output`](output.md)\<`T`\>

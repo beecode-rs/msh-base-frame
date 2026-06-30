@@ -1,0 +1,85 @@
+[**@beecode/msh-base-frame**](../../../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../../../README.md) / [lib/zod-adapter](../../../../../README.md) / [z](../../../README.md) / [core](../README.md) / $ZodIssueStringInvalidRegex
+
+# Interface: $ZodIssueStringInvalidRegex
+
+Defined in: node\_modules/zod/v4/core/errors.d.cts:94
+
+## Extends
+
+- [`$ZodIssueInvalidStringFormat`]($ZodIssueInvalidStringFormat.md)
+
+## Properties
+
+### code
+
+> `readonly` **code**: `"invalid_format"`
+
+Defined in: node\_modules/zod/v4/core/errors.d.cts:37
+
+#### Inherited from
+
+[`$ZodIssueInvalidStringFormat`]($ZodIssueInvalidStringFormat.md).[`code`]($ZodIssueInvalidStringFormat.md#code)
+
+***
+
+### format
+
+> **format**: `"regex"`
+
+Defined in: node\_modules/zod/v4/core/errors.d.cts:95
+
+#### Overrides
+
+[`$ZodIssueInvalidStringFormat`]($ZodIssueInvalidStringFormat.md).[`format`]($ZodIssueInvalidStringFormat.md#format)
+
+***
+
+### input?
+
+> `readonly` `optional` **input?**: `string`
+
+Defined in: node\_modules/zod/v4/core/errors.d.cts:40
+
+#### Inherited from
+
+[`$ZodIssueInvalidStringFormat`]($ZodIssueInvalidStringFormat.md).[`input`]($ZodIssueInvalidStringFormat.md#input)
+
+***
+
+### message
+
+> `readonly` **message**: `string`
+
+Defined in: node\_modules/zod/v4/core/errors.d.cts:10
+
+#### Inherited from
+
+[`$ZodIssueInvalidStringFormat`]($ZodIssueInvalidStringFormat.md).[`message`]($ZodIssueInvalidStringFormat.md#message)
+
+***
+
+### path
+
+> `readonly` **path**: `PropertyKey`[]
+
+Defined in: node\_modules/zod/v4/core/errors.d.cts:9
+
+#### Inherited from
+
+[`$ZodIssueInvalidStringFormat`]($ZodIssueInvalidStringFormat.md).[`path`]($ZodIssueInvalidStringFormat.md#path)
+
+***
+
+### pattern
+
+> **pattern**: `string`
+
+Defined in: node\_modules/zod/v4/core/errors.d.cts:96
+
+#### Overrides
+
+[`$ZodIssueInvalidStringFormat`]($ZodIssueInvalidStringFormat.md).[`pattern`]($ZodIssueInvalidStringFormat.md#pattern)

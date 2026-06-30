@@ -1,0 +1,35 @@
+[**@beecode/msh-base-frame**](../../../../../README.md)
+
+***
+
+[@beecode/msh-base-frame](../../../../../README.md) / [lib/zod-adapter](../../../README.md) / [z](../README.md) / intersection
+
+# Function: intersection()
+
+> **intersection**\<`T`, `U`\>(`left`, `right`): [`ZodIntersection`](../interfaces/ZodIntersection.md)\<`T`, `U`\>
+
+Defined in: node\_modules/zod/v4/classic/schemas.d.cts:519
+
+## Type Parameters
+
+### T
+
+`T` *extends* [`SomeType`](../namespaces/core/type-aliases/SomeType.md)
+
+### U
+
+`U` *extends* [`SomeType`](../namespaces/core/type-aliases/SomeType.md)
+
+## Parameters
+
+### left
+
+`T`
+
+### right
+
+`U`
+
+## Returns
+
+[`ZodIntersection`](../interfaces/ZodIntersection.md)\<`T`, `U`\>
