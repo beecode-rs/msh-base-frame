@@ -1,3 +1,14 @@
+# [1.0.0](https://github.com/beecode-rs/msh-base-frame/compare/v0.6.2...v1.0.0) (2026-06-30)
+
+
+* refactor!: modernize build tooling and update dependencies ([#82](https://github.com/beecode-rs/msh-base-frame/issues/82)) ([e0b135a](https://github.com/beecode-rs/msh-base-frame/commit/e0b135a82d7ab8a4266dbd7d8d8914d532acdf87))
+
+
+### BREAKING CHANGES
+
+* msh-app-boot v2 and msh-test-contractor v1 introduce
+breaking changes; requires Node >= 22.22.1
+
 ## [0.6.2](https://github.com/beecode-rs/msh-base-frame/compare/v0.6.1...v0.6.2) (2026-02-16)
 
 
