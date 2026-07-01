@@ -1,4 +1,4 @@
-import eslintNode from '@beecode/msh-config/src/eslint-config.mjs'
+import eslintNode from '@beecode/msh-config/eslint-config'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([

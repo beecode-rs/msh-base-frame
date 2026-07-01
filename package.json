@@ -54,7 +54,7 @@
 		"docker-rmi": "docker rmi bc-msh-base-frame",
 		"docker-run-package-lock-update": "docker run --rm -v ./:/usr/app/ milosbugarinovic/msh-lib-base:node22.22.1-alpine3.23 npm i --package-lock-only",
 		"docker-run-sh": "docker run --rm -it bc-msh-base-frame sh",
-		"fix-hybrid-lib-esm": "mkdir -p ./dist && echo '{\"type\": \"module\", \"imports\": {\"#packageJson\": \"../package.json\", \"#src\": \"./index.js\", \"#src/*.js\": \"./*.js\", \"#src/*\": \"./*.js\"}}' > ./dist/package.json",
+		"fix-hybrid-lib-esm": "mkdir -p ./dist && cp ./package.json ./dist/_package.json && echo '{\"type\": \"module\", \"imports\": {\"#packageJson\": \"./_package.json\", \"#src\": \"./index.js\", \"#src/*.js\": \"./*.js\", \"#src/*\": \"./*.js\"}}' > ./dist/package.json",
 		"init": "concurrently --group -c auto 'npm:init:*'",
 		"init:git-config": "git config include.path ./.git-config",
 		"init:husky": "npx husky init",
@@ -98,10 +98,10 @@
 		}
 	},
 	"dependencies": {
-		"@beecode/msh-app-boot": "^2.0.0",
-		"@beecode/msh-config": "^1.2.0",
+		"@beecode/msh-app-boot": "^2.0.1",
+		"@beecode/msh-config": "^1.2.2",
 		"@beecode/msh-logger": "^2.0.0",
-		"@beecode/msh-util": "^3.0.0",
+		"@beecode/msh-util": "^3.0.1",
 		"axios": "^1.18.1",
 		"simple-git": "^3.36.0",
 		"compare-versions": "^6.1.1",
@@ -116,7 +116,7 @@
 		"zod": "^4.4.3"
 	},
 	"devDependencies": {
-		"@beecode/msh-test-contractor": "^1.0.0",
+		"@beecode/msh-test-contractor": "^1.0.1",
 		"@commitlint/cli": "^21.2.0",
 		"@commitlint/config-conventional": "^21.2.0",
 		"@commitlint/prompt": "^21.2.0",
@@ -124,7 +124,7 @@
 		"@types/minimatch": "^6.0.0",
 		"@types/handlebars": "^4.1.0",
 		"@types/handlebars-helpers": "^0.5.6",
-		"@types/node": "^26.0.1",
+		"@types/node": "^26.1.0",
 		"@vitest/coverage-v8": "^4.1.9",
 		"commitizen": "^4.3.2",
 		"concurrently": "^10.0.3",
